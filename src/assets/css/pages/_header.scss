@@ -1,0 +1,47 @@
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $dark;
+  padding: 3rem 3rem;
+
+  .action {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .brand {
+    background-color: $yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    border: 1px solid $dark;
+    border-radius: 2rem;
+    box-shadow: 4px 4px 0px 0px $dark;
+
+    img {
+      height: 3rem;
+      // margin-left: -3rem;
+      // padding: 2rem;
+    }
+  }
+
+  // h1 {
+  //   padding: 1.2rem;
+  //   border-radius: 1.5rem;
+  //   background-color: $yellow;
+  //   border: 2px solid $dark;
+  //   text-transform: uppercase;
+  //   font-size: $sm;
+  //   cursor: pointer;
+  //   font-weight: $bold;
+  // }
+
+  a {
+    font-size: $sm;
+    font-weight: $bold;
+    color: $dark;
+  }
+}

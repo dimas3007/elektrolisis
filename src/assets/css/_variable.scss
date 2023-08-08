@@ -1,0 +1,41 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import "_font";
+
+// Colors
+$yellow: #f6cd5d;
+$oranye: #ffba88;
+$pink: #ffc8cd;
+$red: #e25d6a;
+$dark: #344972;
+$green: #b4d6b9;
+$white: #ffffff;
+$black: #020202;
+$cream: #fffae8;
+
+// Font Weight
+$thin: 300;
+$reguler: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$black: 900;
+
+// Size
+$big: 18rem;
+$xxl: 8rem;
+$xl: 5rem;
+$lg: 4.2rem;
+$md: 3.5rem;
+$rg: 2.4rem;
+$sm: 1.8rem;
+$xs: 1.6rem;
+$xxs: 1.4rem;
+
+// Media Query
+$phone: 600px;
+$tablet: 768px;
+$dekstop: 1200px;
+
+// Shadow
+$shadow: 3px 5px 10px 0px rgba(0, 0, 0, 0.5);

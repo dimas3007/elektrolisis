@@ -1,0 +1,47 @@
+@import "_variable";
+@import "_button";
+@import "_text";
+
+// Pages
+@import "./pages/landingPage.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $josefin;
+  font-size: $rg;
+  background: $white;
+  color: $black;
+}
+
+.container {
+  position: relative;
+  padding: 4rem 6rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+input,
+textarea {
+  border-radius: 1.5rem;
+  border: none;
+  padding: 1.8rem 2rem;
+  font-family: $josefin;
+  font-size: $xs;
+}
