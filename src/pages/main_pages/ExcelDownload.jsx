@@ -16,7 +16,9 @@ const ExcelDownload = () => {
             <p>Mahasiswi Pendidikan Kimia USK</p>
           </div>
         </div>
-        <h1 className="title">Video Tutorial</h1>
+        <h1 className="title">
+          <i>Excel</i> Elektrolisis Interaktif
+        </h1>
       </div>
 
       <div className="main-content">
@@ -50,7 +52,9 @@ const ExcelDownload = () => {
           </div>
         </div>
         <div className="content-description">
-          <h2>File Excel Elektrolisis</h2>
+          <h2>
+            Apa ya <i>Excel</i> Elektrolisis Interaktif itu?
+          </h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, a.
             Deserunt nihil at debitis, doloribus consectetur odit repellat quasi
