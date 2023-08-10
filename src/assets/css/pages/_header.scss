@@ -45,3 +45,87 @@
     color: $dark;
   }
 }
+
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 3rem 0;
+
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .user-info-wrapper {
+    display: flex;
+    justify-self: end;
+    grid-column: 2/13;
+    margin-right: 3rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid $dark;
+    box-shadow: $shadow;
+    grid-column: 1/2;
+    width: max-content;
+
+    img {
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+
+  .user-button {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .user-img {
+      background-color: $cream;
+      padding: 0.5rem;
+      border-radius: 1.5rem;
+      border: 2px solid $dark;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: self-start;
+
+      h3 {
+        font-size: $reguler;
+      }
+
+      p {
+        font-size: $xs;
+        margin-top: -0.5rem;
+      }
+    }
+
+    h3 {
+      color: $dark;
+      font-size: 2.2rem;
+      font-weight: $bold;
+    }
+  }
+}

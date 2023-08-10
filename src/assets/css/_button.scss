@@ -1,3 +1,13 @@
+button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  svg {
+    font-size: 1.8rem;
+  }
+}
+
 .btn-primary {
   font-weight: $bold;
   box-shadow: 2px 2px 0px 0px $dark;
@@ -56,6 +66,24 @@
   font-weight: $bold;
   box-shadow: 2px 2px 0px 0px $dark;
   background-color: $red;
+  border: 1.8px solid $dark;
+  padding: 1rem;
+  border-radius: 1.2rem;
+  color: $dark;
+  font-size: $xs;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+
+  &:hover {
+    box-shadow: 5px 5px 0px 0px $dark;
+    transform: translateY(0.2rem);
+  }
+}
+
+.btn-yellow {
+  font-weight: $bold;
+  box-shadow: 2px 2px 0px 0px $dark;
+  background-color: $yellow;
   border: 1.8px solid $dark;
   padding: 1rem;
   border-radius: 1.2rem;

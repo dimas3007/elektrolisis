@@ -9,6 +9,7 @@ $pink: #ffc8cd;
 $red: #e25d6a;
 $dark: #344972;
 $green: #b4d6b9;
+$light-green: #f0fff2;
 $white: #ffffff;
 $black: #020202;
 $cream: #fffae8;
@@ -38,4 +39,7 @@ $tablet: 768px;
 $dekstop: 1200px;
 
 // Shadow
-$shadow: 3px 5px 10px 0px rgba(0, 0, 0, 0.5);
+$shadow: 4px 4px 0px 0px $dark;
+$shadow-light: 4px 4px 0px 0px $white;
+$shadow-sm: 2px 2px 0px 0px $dark;
+$shadow-xs: 1px 1px 0px 0px $dark;

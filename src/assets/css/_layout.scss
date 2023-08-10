@@ -1,0 +1,244 @@
+.content-layout {
+  background-color: $green;
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .box-content {
+      margin-right: 2rem;
+      padding: 2rem;
+      background-color: $white;
+      border-radius: 2rem;
+      grid-column: 2/13;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  grid-column: 1/2;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 1rem 0 0 1rem;
+
+    .icon {
+      background-color: $cream;
+      padding: 0.5rem;
+      border-radius: 1.5rem;
+      border: 2px solid $dark;
+      box-shadow: $shadow;
+      width: max-content;
+      transition: ease-in-out 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        height: 4rem;
+        width: 4rem;
+      }
+
+      &:hover {
+        background-color: $yellow;
+      }
+    }
+
+    h4 {
+      color: $dark;
+      font-size: $xxs;
+    }
+
+    &.active {
+      background-color: $cream;
+      padding: 0.8rem;
+      .icon {
+        background-color: $yellow;
+      }
+    }
+
+    &.logout {
+      margin-top: 3rem;
+      color: $red;
+      padding: 1rem;
+      transition: ease-in-out 0.2s;
+
+      &:hover {
+        .icon {
+          background-color: $red;
+          color: $pink;
+        }
+      }
+    }
+  }
+}
+
+.heading-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: $dark;
+
+    .user-img {
+      background-color: $cream;
+      padding: 0.5rem;
+      border-radius: 1.5rem;
+      border: 2px solid $dark;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: self-start;
+
+      h3 {
+        font-size: $reguler;
+      }
+
+      p {
+        font-size: $xs;
+        margin-top: -0.5rem;
+      }
+    }
+  }
+  .title {
+    box-shadow: $shadow;
+    border: 2px solid $dark;
+    background-color: $yellow;
+    color: $dark;
+    font-size: $md;
+    padding: 1rem 1.5rem;
+  }
+}
+
+.main-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .overview {
+    background-color: gray;
+    min-height: 40rem;
+    height: 40rem;
+    border-radius: 2rem;
+    border: 2px solid $dark;
+    box-shadow: $shadow;
+  }
+
+  .content-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $dark;
+    font-size: $xs;
+    font-weight: $semi-bold;
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      cursor: pointer;
+      transition: ease-in-out 0.5s;
+
+      &:hover {
+        .icon-img {
+          box-shadow: $shadow-sm;
+
+          &.green {
+            background-color: $green;
+            color: $light-green;
+          }
+
+          &.red {
+            background-color: $red;
+            color: $pink;
+          }
+
+          &.yellow {
+            background-color: $dark;
+            color: $yellow;
+          }
+        }
+      }
+
+      .icon-img {
+        background-color: $white;
+        border: 2px solid $dark;
+        padding: 0.3rem;
+        border-radius: 0.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: $shadow-xs;
+
+        &.green {
+          background-color: $light-green;
+          color: $green;
+        }
+
+        &.red {
+          background-color: $pink;
+          color: $red;
+        }
+
+        &.yellow {
+          background-color: $yellow;
+          color: $dark;
+        }
+      }
+    }
+  }
+
+  .content-description {
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+
+    h2 {
+      font-size: $reguler;
+    }
+
+    p {
+      font-size: $xs;
+    }
+  }
+
+  .content-footer {
+    .cta {
+      display: flex;
+      gap: 1.2rem;
+    }
+  }
+}
