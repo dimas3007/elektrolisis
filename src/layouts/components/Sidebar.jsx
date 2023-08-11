@@ -10,57 +10,78 @@ import logo from "../../assets/img/logo/logo.png";
 import logoWhite from "../../assets/img/logo/logo_putih.png";
 import { IoMdLogOut } from "react-icons/io";
 
+import { Link, useLocation } from "react-router-dom";
+
 const Sidebar = () => {
+  const location = useLocation();
+  let { pathname } = location;
+
   return (
     <div className="sidebar">
-      <div className="item">
-        <div className="icon">
-          <img src={iconPetaKonsep} alt="logo brand" />
+      <Link to={"/peta-konsep"}>
+        <div className={`item ${pathname == "/peta-konsep" && "active"}`}>
+          <div className="icon">
+            <img src={iconPetaKonsep} alt="logo brand" />
+          </div>
+          <h4>Peta Konsep</h4>
         </div>
-        <h4>Peta Konsep</h4>
-      </div>
-      <div className="item active">
-        <div className="icon">
-          <img src={iconPeriodik} alt="logo brand" />
+      </Link>
+      <Link to={"/tabel-periodik"}>
+        <div className={`item ${pathname == "/tabel-periodik" && "active"}`}>
+          <div className="icon">
+            <img src={iconPeriodik} alt="logo brand" />
+          </div>
+          <h4>Tabel Periodik</h4>
         </div>
-        <h4>Tabel Periodik</h4>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <img src={iconMateri} alt="logo brand" />
+      </Link>
+      <Link to={"/materi"}>
+        <div className={`item ${pathname == "/materi" && "active"}`}>
+          <div className="icon">
+            <img src={iconMateri} alt="logo brand" />
+          </div>
+          <h4>Materi</h4>
         </div>
-        <h4>Materi</h4>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <img src={iconExcel} alt="logo brand" />
+      </Link>
+      <Link to={"/excel-download"}>
+        <div className={`item ${pathname == "/excel-download" && "active"}`}>
+          <div className="icon">
+            <img src={iconExcel} alt="logo brand" />
+          </div>
+          <h4>Excel</h4>
         </div>
-        <h4>Excel</h4>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <img src={iconTutorial} alt="logo brand" />
+      </Link>
+      <Link to={"/video-tutorial"}>
+        <div className={`item ${pathname == "/video-tutorial" && "active"}`}>
+          <div className="icon">
+            <img src={iconTutorial} alt="logo brand" />
+          </div>
+          <h4>Tutorial</h4>
         </div>
-        <h4>Tutorial</h4>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <img src={iconLatihan} alt="logo brand" />
+      </Link>
+      <Link to={"/latihan"}>
+        <div className={`item ${pathname == "/latihan" && "active"}`}>
+          <div className="icon">
+            <img src={iconLatihan} alt="logo brand" />
+          </div>
+          <h4>Latihan</h4>
         </div>
-        <h4>Latihan</h4>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <img src={iconTentang} alt="logo brand" />
+      </Link>
+      <Link to={"/angket"}>
+        <div className={`item ${pathname == "/angket" && "active"}`}>
+          <div className="icon">
+            <img src={iconAngket} alt="logo brand" />
+          </div>
+          <h4>Angket</h4>
         </div>
-        <h4>Angket</h4>
-      </div>
-      <div className="item">
-        <div className="icon">
-          <img src={iconAngket} alt="logo brand" />
+      </Link>
+      <Link to={"/tentang"}>
+        <div className={`item ${pathname == "/tentang" && "active"}`}>
+          <div className="icon">
+            <img src={iconTentang} alt="logo brand" />
+          </div>
+          <h4>Tentang</h4>
         </div>
-        <h4>Tentang</h4>
-      </div>
+      </Link>
       <div className="item logout">
         <div className="icon">
           <IoMdLogOut />

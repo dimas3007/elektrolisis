@@ -2,27 +2,26 @@ import iconTentang from "../../assets/img/icon/tentang_kami.png";
 import { BsFillCalendarWeekFill } from "react-icons/bs";
 import { AiFillEye, AiFillHeart, AiFillPlayCircle } from "react-icons/ai";
 import { BiSolidCloudDownload } from "react-icons/bi";
+import HeadingContent from "../../layouts/components/HeadingContent";
+import ExcelFoto from "../../assets/img/content/excel_ss.png";
 
 const ExcelDownload = () => {
   return (
-    <div>
-      <div className="heading-content">
-        <div className="author">
-          <div className="user-img">
-            <img src={iconTentang} alt="user foto" />
-          </div>
-          <div className="user-info">
-            <h3>Putri Rahmasari</h3>
-            <p>Mahasiswi Pendidikan Kimia USK</p>
-          </div>
-        </div>
-        <h1 className="title">
-          <i>Excel</i> Elektrolisis Interaktif
-        </h1>
+    <div className="content-wrapper">
+      <HeadingContent
+        icon={iconTentang}
+        title={
+          <>
+            <i>Excel</i> Elektrolisis
+          </>
+        }
+      />
+
+      <div className="overview">
+        <img src={ExcelFoto} alt="excel screenshot" />
       </div>
 
       <div className="main-content">
-        <div className="overview"></div>
         <div className="content-info">
           <div className="info">
             <div className="icon-img">
@@ -42,12 +41,6 @@ const ExcelDownload = () => {
                 <AiFillHeart />
               </div>
               <p>100 Suka</p>
-            </div>
-            <div className="info">
-              <div className="icon-img yellow">
-                <BiSolidCloudDownload />
-              </div>
-              <p>Unduh Video</p>
             </div>
           </div>
         </div>

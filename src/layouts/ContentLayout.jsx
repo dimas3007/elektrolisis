@@ -1,13 +1,16 @@
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
 
-const ContentLayout = ({ children }) => {
+const ContentLayout = () => {
   return (
     <div className="content-layout">
       <Header />
       <div className="content">
         <Sidebar />
-        <div className="box-content">{children}</div>
+        <div className="box-content">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

@@ -18,6 +18,7 @@ import people3 from "../assets/img/hero/people3.png";
 import lamp from "../assets/img/hero/lamp.png";
 import circle1 from "../assets/img/hero/circle1.png";
 import circle2 from "../assets/img/hero/circle2.png";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const containerRef = useRef(null);
@@ -71,8 +72,10 @@ const LandingPage = () => {
           tentang kimia elektrolisis.
         </p>
         <div className="cta">
-          <button className="btn-primary">Get Started</button>
-          <button className="btn-white">Join Us</button>
+          <a href="#content-wrap">
+            <button className="btn-primary">Mulai Telusuri</button>
+          </a>
+          <button className="btn-white">Gabung</button>
         </div>
 
         {/* Asset IMG */}
@@ -225,7 +228,9 @@ const LandingPage = () => {
               dipelajari!
             </p>
           </div>
-          <button className="btn-primary">See more...</button>
+          <Link to={"/peta-konsep"}>
+            <button className="btn-primary">Lihat selengkapnya...</button>
+          </Link>
         </div>
         <div className="item">
           <div className="icon">
@@ -240,7 +245,9 @@ const LandingPage = () => {
               Halaman ini berisi peta konsep dari tabel periodik unsur kimia!
             </p>
           </div>
-          <button className="btn-primary">See more...</button>
+          <Link to={"/tabel-periodik"}>
+            <button className="btn-primary">Lihat selengkapnya...</button>
+          </Link>
         </div>
         <div className="item">
           <div className="icon">
@@ -256,7 +263,9 @@ const LandingPage = () => {
               dipelajari!
             </p>
           </div>
-          <button className="btn-primary">See more...</button>
+          <Link to={"/materi"}>
+            <button className="btn-primary">Lihat selengkapnya...</button>
+          </Link>
         </div>
         <div className="item">
           <div className="icon">
@@ -275,7 +284,9 @@ const LandingPage = () => {
               elektrolisis
             </p>
           </div>
-          <button className="btn-primary">See more...</button>
+          <Link to={"/excel-download"}>
+            <button className="btn-primary">Lihat selengkapnya...</button>
+          </Link>
         </div>
         <div className="item">
           <div className="icon">
@@ -291,7 +302,9 @@ const LandingPage = () => {
               elektrolisis.
             </p>
           </div>
-          <button className="btn-primary">See more...</button>
+          <Link to={"/video-tutorial"}>
+            <button className="btn-primary">Lihat selengkapnya...</button>
+          </Link>
         </div>
         <div className="item">
           <div className="icon">
@@ -307,7 +320,9 @@ const LandingPage = () => {
               elektrolisis yang sudah dipelajari!
             </p>
           </div>
-          <button className="btn-primary">See more...</button>
+          <Link to={"/latihan"}>
+            <button className="btn-primary">Lihat selengkapnya...</button>
+          </Link>
         </div>
         <div className="item">
           <div className="icon">
@@ -323,7 +338,9 @@ const LandingPage = () => {
               kepuasan pengguna terhadap <i>website</i> ini
             </p>
           </div>
-          <button className="btn-primary">See more...</button>
+          <Link to={"/angket"}>
+            <button className="btn-primary">Lihat selengkapnya...</button>
+          </Link>
         </div>
         <div className="item">
           <div className="icon">
@@ -339,7 +356,9 @@ const LandingPage = () => {
               pembuatan projek ini
             </p>
           </div>
-          <button className="btn-primary">See more...</button>
+          <Link to={"/tentang"}>
+            <button className="btn-primary">Lihat selengkapnya...</button>
+          </Link>
         </div>
       </div>
       <footer>

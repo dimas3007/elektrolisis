@@ -1,15 +1,18 @@
 import React from "react";
 import mainLogo from "../../assets/img/logo/logo_moon.png";
 import iconTentang from "../../assets/img/icon/tentang_kami.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="header-content">
-      <div className="logo-wrapper">
-        <div className="logo">
-          <img src={mainLogo} alt="logo brand" />
+      <Link to="/">
+        <div className="logo-wrapper">
+          <div className="logo">
+            <img src={mainLogo} alt="logo brand" />
+          </div>
         </div>
-      </div>
+      </Link>
       {/* <div className="user-button">
         <button className="btn-secondary">Register</button>
         <button className="btn-primary">Login</button>

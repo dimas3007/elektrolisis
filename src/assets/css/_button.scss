@@ -2,9 +2,18 @@ button {
   display: flex;
   align-items: center;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
 
   svg {
     font-size: 1.8rem;
+  }
+}
+
+a {
+  width: 100%;
+  button {
+    width: 100%;
   }
 }
 
