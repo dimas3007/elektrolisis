@@ -3,7 +3,7 @@ import { BsFillCalendarWeekFill } from "react-icons/bs";
 import { AiFillEye, AiFillHeart, AiFillPlayCircle } from "react-icons/ai";
 import { BiSolidCloudDownload } from "react-icons/bi";
 import HeadingContent from "../../layouts/components/HeadingContent";
-import ExcelFoto from "../../assets/img/content/excel_ss.png";
+import ExcelFoto from "../../assets/img/content/excel_screenshot.png";
 
 const ExcelDownload = () => {
   return (
