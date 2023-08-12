@@ -52,15 +52,16 @@ const ExcelDownload = () => {
             Excel adalah perangkat lunak spreadsheet yang dikembangkan oleh
             Microsoft. Perangkat ini dapat dimanfaatkan penggunaanya dalam
             bidang pendidikan terutama untuk pengembangan media pembelajaran
-            sehingga dibuatlah media pembelajaran <b>“EXCEL ELEKTROLISIS”</b>.
-            Excel elektrolisis berisi penggambaran dari proses sel elektrolisis
-            yaitu larutan elektrolit (zat yang dapat menghantarkan listrik dalam
-            bentuk larutan) ditempatkan di antara dua elektroda, yaitu sebuah
-            katoda (elektroda negatif) dan sebuah anoda (elektroda positif).
-            Ketika arus listrik dialirkan melalui larutan elektrolit, reaksi
-            redoks terjadi di permukaan elektroda. Gambaran reaksi sel
-            elektrolisis menggunakan excel ini akan sangat meningkatkan
-            pemahaman kalian terhadap materi sel elektrolisis.
+            sehingga diciptakan media pembelajaran interaktif{" "}
+            <b>“EXCEL ELEKTROLISIS”</b>. Excel elektrolisis berisi penggambaran
+            dari proses sel elektrolisis yaitu larutan elektrolit (zat yang
+            dapat menghantarkan listrik dalam bentuk larutan) ditempatkan di
+            antara dua elektroda, yaitu sebuah katoda (elektroda negatif) dan
+            sebuah anoda (elektroda positif). Ketika arus listrik dialirkan
+            melalui larutan elektrolit, reaksi redoks terjadi di permukaan
+            elektroda. Gambaran reaksi sel elektrolisis menggunakan excel ini
+            akan sangat meningkatkan pemahaman kalian terhadap materi sel
+            elektrolisis.
           </p>
         </div>
         <div className="content-footer">

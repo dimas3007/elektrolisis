@@ -3,6 +3,7 @@ import { BsFillCalendarWeekFill } from "react-icons/bs";
 import { AiFillEye, AiFillHeart, AiFillPlayCircle } from "react-icons/ai";
 import { BiSolidCloudDownload } from "react-icons/bi";
 import HeadingContent from "../../layouts/components/HeadingContent";
+import { FaRegFaceSmileWink } from "react-icons/fa6";
 
 const VideoTutorial = () => {
   return (
@@ -16,7 +17,7 @@ const VideoTutorial = () => {
         }
       />
 
-      <div className="overview">
+      <div className="overview stack">
         <iframe
           width="560"
           height="315"
@@ -62,11 +63,12 @@ const VideoTutorial = () => {
             Bagaimana Cara Menggunakan <i>Excel</i> Elektrolisis Interaktif?
           </h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, a.
-            Deserunt nihil at debitis, doloribus consectetur odit repellat quasi
-            voluptates mollitia ad in sit quam voluptatem aperiam labore
-            possimus laboriosam iusto nostrum a doloremque consequuntur
-            temporibus similique sequi! Minima id sit qui?
+            Excel elektrolisis berisi penggambaran dari proses sel elektrolisis
+            menggunakan media pembelajaran digital excel. Penjelasan cara
+            penggunaan media interaktif ini akan dijelaskan dengan menggunakan
+            video tutorial di atas. Kalian dapat menggunakan shortcut di bawah
+            untuk langsung menonton topik-topik yang belum dipahami cara
+            penggunaannya <FaRegFaceSmileWink />
           </p>
         </div>
       </div>

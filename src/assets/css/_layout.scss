@@ -146,8 +146,11 @@
   box-shadow: $shadow;
   border-radius: 2rem;
   margin: 2rem;
-  position: sticky;
-  top: 2rem;
+
+  &.stack {
+    position: sticky;
+    top: 2rem;
+  }
 
   iframe,
   img {

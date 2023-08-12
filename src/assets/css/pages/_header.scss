@@ -75,6 +75,11 @@
     box-shadow: $shadow;
     grid-column: 1/2;
     width: max-content;
+    transition: ease-in-out 0.2s;
+
+    &:hover {
+      background-color: $cream;
+    }
 
     img {
       height: 5rem;
