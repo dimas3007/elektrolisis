@@ -49,11 +49,18 @@ const ExcelDownload = () => {
             Apa ya <i>Excel</i> Elektrolisis Interaktif itu?
           </h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, a.
-            Deserunt nihil at debitis, doloribus consectetur odit repellat quasi
-            voluptates mollitia ad in sit quam voluptatem aperiam labore
-            possimus laboriosam iusto nostrum a doloremque consequuntur
-            temporibus similique sequi! Minima id sit qui?
+            Excel adalah perangkat lunak spreadsheet yang dikembangkan oleh
+            Microsoft. Perangkat ini dapat dimanfaatkan penggunaanya dalam
+            bidang pendidikan terutama untuk pengembangan media pembelajaran
+            sehingga dibuatlah media pembelajaran <b>“EXCEL ELEKTROLISIS”</b>.
+            Excel elektrolisis berisi penggambaran dari proses sel elektrolisis
+            yaitu larutan elektrolit (zat yang dapat menghantarkan listrik dalam
+            bentuk larutan) ditempatkan di antara dua elektroda, yaitu sebuah
+            katoda (elektroda negatif) dan sebuah anoda (elektroda positif).
+            Ketika arus listrik dialirkan melalui larutan elektrolit, reaksi
+            redoks terjadi di permukaan elektroda. Gambaran reaksi sel
+            elektrolisis menggunakan excel ini akan sangat meningkatkan
+            pemahaman kalian terhadap materi sel elektrolisis.
           </p>
         </div>
         <div className="content-footer">
