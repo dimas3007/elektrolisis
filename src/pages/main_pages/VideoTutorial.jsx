@@ -21,7 +21,7 @@ const VideoTutorial = () => {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/gxJxK5byoKY"
+          src="https://www.youtube.com/embed/Nc3ZhSlGU_s"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -35,7 +35,7 @@ const VideoTutorial = () => {
             <div className="icon-img">
               <BsFillCalendarWeekFill />
             </div>
-            <p>Senin, 11 November 2023</p>
+            <p>Minggu, 13 Agustus 2023</p>
           </div>
           <div className="right">
             <div className="info">

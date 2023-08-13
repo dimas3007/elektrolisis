@@ -27,7 +27,7 @@ const ExcelDownload = () => {
             <div className="icon-img">
               <BsFillCalendarWeekFill />
             </div>
-            <p>Senin, 11 November 2023</p>
+            <p>Minggu, 13 Agustus 2023</p>
           </div>
           <div className="right">
             <div className="info">
