@@ -266,7 +266,7 @@ li {
 .dynamic-periodic-table {
   display: grid;
   position: absolute;
-  top: $element-width / 1.5;
+  top: 30rem;
   grid-gap: $grid-gap;
   grid-template: repeat(10, $element-width) / repeat(18, $element-width); // Shorthand that represents <grid-template-rows> / <grid-template-columns>
   align-self: center;
