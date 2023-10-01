@@ -9,6 +9,7 @@ import { AiFillEye, AiFillHeart, AiFillPlayCircle } from "react-icons/ai";
 import { BiSolidCloudDownload } from "react-icons/bi";
 import HeadingContent from "../../layouts/components/HeadingContent";
 import { FaRegFaceSmileWink } from "react-icons/fa6";
+import ExcelFoto from "../../assets/img/content/excel_screenshot.png";
 
 const VideoTutorial = () => {
   return (
@@ -21,6 +22,10 @@ const VideoTutorial = () => {
           </>
         }
       />
+
+      <div className="overview">
+        <img src={ExcelFoto} alt="excel screenshot" />
+      </div>
 
       <div className="overview stack">
         <iframe

@@ -287,6 +287,10 @@
       flex-wrap: wrap;
       gap: 2rem;
 
+      &.vertical {
+        flex-direction: column;
+      }
+
       .part-item {
         cursor: pointer;
         border: 1px solid $dark;
@@ -308,6 +312,10 @@
         }
       }
     }
+  }
+
+  .icon-sm {
+    font-size: $xxs !important;
   }
 
   // .content-wrapp-grid {

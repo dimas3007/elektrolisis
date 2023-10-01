@@ -6,7 +6,7 @@ import Latihan from "./pages/main_pages/Latihan";
 import Materi from "./pages/main_pages/Materi";
 import PetaKonsep from "./pages/main_pages/PetaKonsep";
 import Tentang from "./pages/main_pages/Tentang";
-import TabelPeriodik from "./pages/main_pages/TabelPeriodik";
+import TabelPeriodik from "./pages/main_pages/TabelPeriodik/TabelPeriodik";
 import ContentLayout from "./layouts/ContentLayout";
 
 import { Route, Routes } from "react-router-dom";

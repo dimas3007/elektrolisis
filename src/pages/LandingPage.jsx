@@ -269,40 +269,43 @@ const LandingPage = () => {
         </div>
         <div className="item">
           <div className="icon">
-            <img src={iconExcel} alt="" />
+            <img src={iconTutorial} alt="" />
           </div>
           <div className="content">
             <div className="header">
               <h1>04</h1>
             </div>
             <h1 className="title">
-              <i>Excel</i> Elektrolisis
+              Video Tutorial <i>Excel</i> Elektrolisis
             </h1>
-            <p>
-              Halaman ini berisi <i>excel</i> dari materi elektrolisis.{" "}
-              <i>Excel</i> ini merupakan simulasi digital dari percobaan
-              elektrolisis
-            </p>
-          </div>
-          <Link to={"/excel-download"}>
-            <button className="btn-primary">Lihat selengkapnya...</button>
-          </Link>
-        </div>
-        <div className="item">
-          <div className="icon">
-            <img src={iconTutorial} alt="" />
-          </div>
-          <div className="content">
-            <div className="header">
-              <h1>05</h1>
-            </div>
-            <h1 className="title">Video Tutorial</h1>
             <p>
               Halaman ini berisi video tutorial penggunaan <i>excel</i>{" "}
               elektrolisis.
             </p>
           </div>
           <Link to={"/video-tutorial"}>
+            <button className="btn-primary">Lihat selengkapnya...</button>
+          </Link>
+        </div>
+
+        <div className="item">
+          <div className="icon">
+            <img src={iconExcel} alt="" />
+          </div>
+          <div className="content">
+            <div className="header">
+              <h1>05</h1>
+            </div>
+            <h1 className="title">
+              Video Materi <i>Excel</i> Elektrolisis
+            </h1>
+            <p>
+              Halaman ini berisi video materi <i>excel</i> elektrolisis.{" "}
+              <i>Excel</i>
+              ini merupakan simulasi digital dari percobaan elektrolisis.
+            </p>
+          </div>
+          <Link to={"/excel-download"}>
             <button className="btn-primary">Lihat selengkapnya...</button>
           </Link>
         </div>

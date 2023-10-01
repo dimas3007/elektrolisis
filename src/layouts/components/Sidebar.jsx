@@ -42,20 +42,20 @@ const Sidebar = () => {
           <h4>Materi</h4>
         </div>
       </Link>
-      <Link to={"/excel-download"}>
-        <div className={`item ${pathname == "/excel-download" && "active"}`}>
-          <div className="icon">
-            <img src={iconExcel} alt="logo brand" />
-          </div>
-          <h4>Excel</h4>
-        </div>
-      </Link>
       <Link to={"/video-tutorial"}>
         <div className={`item ${pathname == "/video-tutorial" && "active"}`}>
           <div className="icon">
             <img src={iconTutorial} alt="logo brand" />
           </div>
           <h4>Tutorial</h4>
+        </div>
+      </Link>
+      <Link to={"/excel-download"}>
+        <div className={`item ${pathname == "/excel-download" && "active"}`}>
+          <div className="icon">
+            <img src={iconExcel} alt="logo brand" />
+          </div>
+          <h4>Materi Excel</h4>
         </div>
       </Link>
       <Link to={"/latihan"}>

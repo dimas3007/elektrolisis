@@ -1,5 +1,10 @@
 import iconTentang from "../../assets/img/icon/tentang_kami.png";
-import { BsFillCalendarWeekFill } from "react-icons/bs";
+import {
+  BsFillCalendarWeekFill,
+  BsFillPlayFill,
+  BsCollectionPlayFill,
+  BsCollectionPlay,
+} from "react-icons/bs";
 import { AiFillEye, AiFillHeart, AiFillPlayCircle } from "react-icons/ai";
 import { BiSolidCloudDownload } from "react-icons/bi";
 import HeadingContent from "../../layouts/components/HeadingContent";
@@ -17,8 +22,16 @@ const ExcelDownload = () => {
         }
       />
 
-      <div className="overview">
-        <img src={ExcelFoto} alt="excel screenshot" />
+      <div className="overview stack">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/Nc3ZhSlGU_s"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <div className="main-content">
@@ -46,7 +59,7 @@ const ExcelDownload = () => {
         </div>
         <div className="content-description">
           <h2>
-            Apa ya <i>Excel</i> Elektrolisis Interaktif itu?
+            Apa <i>Excel</i> Elektrolisis Interaktif itu?
           </h2>
           <p>
             Excel adalah perangkat lunak spreadsheet yang dikembangkan oleh
@@ -63,6 +76,50 @@ const ExcelDownload = () => {
             akan sangat meningkatkan pemahaman kalian terhadap materi sel
             elektrolisis.
           </p>
+        </div>
+        <div className="content-part">
+          <div className="part-header">
+            <h2>Konten Video</h2>
+            <BsCollectionPlay />
+          </div>
+          <p>
+            klik pada salah satu konten video dibawah ini untuk melihat video
+            materi terkait.
+          </p>
+          <div className="part-wrapper">
+            <div className="part-item">
+              <BsFillPlayFill />
+              <h4>Materi xxxxx1</h4>
+            </div>
+            <div className="part-item">
+              <BsFillPlayFill />
+              <h4>Materi xxxxx2</h4>
+            </div>
+            <div className="part-item">
+              <BsFillPlayFill />
+              <h4>Materi xxxxx3</h4>
+            </div>
+            <div className="part-item">
+              <BsFillPlayFill />
+              <h4>Materi xxxxx4</h4>
+            </div>
+            <div className="part-item">
+              <BsFillPlayFill />
+              <h4>Materi xxxxx5</h4>
+            </div>
+            <div className="part-item">
+              <BsFillPlayFill />
+              <h4>Materi xxxxx6</h4>
+            </div>
+            <div className="part-item">
+              <BsFillPlayFill />
+              <h4>Materi xxxxx7</h4>
+            </div>
+            <div className="part-item">
+              <BsFillPlayFill />
+              <h4>Materi xxxxx8</h4>
+            </div>
+          </div>
         </div>
         <div className="content-footer">
           <div className="cta">
