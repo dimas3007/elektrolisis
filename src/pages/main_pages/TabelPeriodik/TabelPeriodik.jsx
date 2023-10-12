@@ -1,10 +1,244 @@
 import HeadingContent from "../../../layouts/components/HeadingContent";
 
+import React, { useEffect } from "react";
+
+const DELAY = 5;
+const STP = 273;
+
 const TabelPeriodik = () => {
+  let elementList = document.querySelectorAll(".element");
+
+  useEffect(() => {
+    let actinoidBox = document.querySelector(`[data-element-name='Actinoids']`);
+    let lanthanoidBox = document.querySelector(
+      `[data-element-name='Lanthanoids']`
+    );
+    let legendList = document.querySelectorAll(".legend-box");
+    let periodList = document.querySelectorAll(".period__item");
+    let groupList = document.querySelectorAll(".group__item");
+    let temperatureSlider = document.querySelector(
+      ".temperature__inputs__slider"
+    );
+    let resetTemperatureButton = document.querySelector(".reset__temperature");
+    let elementClicked;
+    elementList = document.querySelectorAll(".element");
+
+    const handleBoxMouseEnter = (event) => {
+      let dataActinoids = event.target.getAttribute("data-element-type");
+      let dataToSearch = "type";
+      highlightElement(dataActinoids, dataToSearch);
+    };
+
+    const equalizeElement = () => {
+      let index = 0;
+      Array.from(elementList).forEach((elementItem) => {
+        removeClass("--is-active", elementItem, index);
+        index++;
+      });
+    };
+
+    const setNewTemperature = (currentValue) => {
+      let kelvinOutput = document.querySelector(".temperature__inputs__result"),
+        celsiusOutput = document.querySelector(".celsius"),
+        farenheitOutput = document.querySelector(".farenheit");
+
+      kelvinOutput.innerHTML = `${currentValue} K`;
+      celsiusOutput.innerHTML = `${currentValue - 273}ºC`;
+      farenheitOutput.innerHTML = `${
+        Math.round(((currentValue * 9) / 5 - 460) * 100) / 100
+      }ºF`;
+    };
+
+    actinoidBox.addEventListener("mouseenter", handleBoxMouseEnter);
+    actinoidBox.addEventListener("mouseleave", equalizeElement);
+
+    lanthanoidBox.addEventListener("mouseenter", handleBoxMouseEnter);
+    lanthanoidBox.addEventListener("mouseleave", equalizeElement);
+
+    temperatureSlider.addEventListener("input", (self) => {
+      let currentValue = Number(self.target.value),
+        dataToSearch = ["melting-point", "boiling-point"];
+
+      if (
+        currentValue !== STP &&
+        !resetTemperatureButton.classList.contains("--is-visible")
+      ) {
+        addClass("--is-visible", resetTemperatureButton, 0);
+      } else if (currentValue === STP) {
+        removeClass("--is-visible", resetTemperatureButton, 0);
+      }
+
+      setNewTemperature(currentValue);
+      highlightElement(currentValue, dataToSearch);
+    });
+
+    resetTemperatureButton.addEventListener("click", () => {
+      let dataToSearch = ["melting-point", "boiling-point"];
+
+      temperatureSlider.value = STP;
+
+      setNewTemperature(STP);
+      highlightElement(STP, dataToSearch);
+      removeClass("--is-visible", resetTemperatureButton, 0);
+    });
+
+    Array.from(elementList).forEach((elementItem) => {
+      elementItem.addEventListener("click", () => {
+        if (isLanthanoidOrActinoid(elementItem)) {
+          elementClicked = elementItem;
+          elementName = elementClicked.getAttribute("data-element-name");
+
+          modalAnimation(elementItem);
+          createModalContent(elementName);
+        }
+      });
+    });
+
+    Array.from(legendList).forEach((legendItem) => {
+      legendItem.addEventListener("mouseenter", (self) => {
+        let legendData, dataToSearch;
+
+        if (legendItem.getAttribute("data-element-type")) {
+          legendData = self.target.getAttribute("data-element-type");
+          dataToSearch = "type";
+        } else {
+          legendData = self.target.getAttribute("data-element-state");
+          dataToSearch = "state";
+        }
+
+        highlightElement(legendData, dataToSearch);
+      });
+
+      legendItem.addEventListener("mouseleave", () => {
+        equalizeElement();
+      });
+    });
+
+    Array.from(periodList).forEach((periodItem) => {
+      periodItem.addEventListener("mouseenter", (self) => {
+        let periodNumber = Number(self.target.firstChild.innerHTML),
+          dataToSearch = "period";
+
+        highlightElement(periodNumber, dataToSearch);
+      });
+
+      periodItem.addEventListener("mouseleave", () => {
+        equalizeElement();
+      });
+    });
+
+    Array.from(groupList).forEach((groupItem) => {
+      groupItem.addEventListener("mouseenter", (self) => {
+        let groupNumber = Number(self.target.firstChild.innerHTML),
+          dataToSearch = "group";
+
+        highlightElement(groupNumber, dataToSearch);
+      });
+
+      groupItem.addEventListener("mouseleave", () => {
+        equalizeElement();
+      });
+    });
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY > 0 ? true : false;
+      const scrollX = window.scrollX > 0 ? true : false;
+      const period = document.querySelector(".period__list");
+      const group = document.querySelector(".group__list");
+
+      if (scrollX) {
+        addClass("--is-fixed", period, 0);
+        period.style.left = `${window.scrollX}px`;
+      } else {
+        removeClass("--is-fixed", period, 0);
+        period.style.left = "0";
+      }
+
+      if (scrollY) {
+        addClass("--is-fixed", group, 0);
+      } else {
+        removeClass("--is-fixed", group, 0);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
+  function addClass(className, element, index) {
+    setTimeout(() => {
+      element.classList.add(className);
+    }, index * DELAY);
+  }
+
+  function removeClass(className, element, index) {
+    setTimeout(() => {
+      element.classList.remove(className);
+    }, index * DELAY);
+  }
+
+  const highlightElement = (dataElement, dataToSearch) => {
+    let index = 0;
+
+    Array.from(elementList).forEach((elementItem) => {
+      let dataFromElement = elementItem.getAttribute(
+        `data-element-${dataToSearch}`
+      );
+
+      if (dataToSearch === "group" || dataToSearch === "period") {
+        dataFromElement = Number(dataFromElement);
+      }
+
+      if (dataToSearch.length === 2) {
+        let meltingPoint = Number(
+          elementItem.getAttribute(`data-element-${dataToSearch[0]}`)
+        );
+        let boilingPoint = Number(
+          elementItem.getAttribute(`data-element-${dataToSearch[1]}`)
+        );
+
+        if (!isNaN(meltingPoint) && !isNaN(boilingPoint)) {
+          if (dataElement < meltingPoint) {
+            elementItem.setAttribute("data-element-state", "solid");
+          } else if (dataElement < boilingPoint) {
+            if (isLanthanoidOrActinoid(elementItem)) {
+              elementItem.setAttribute("data-element-state", "liquid");
+            }
+          } else {
+            elementItem.setAttribute("data-element-state", "gas");
+          }
+        } else if (isNaN(boilingPoint)) {
+          let elementState = "unknown";
+          if (dataElement < meltingPoint) {
+            elementState = "solid";
+          }
+          elementItem.setAttribute("data-element-state", elementState);
+        }
+      }
+
+      if (dataElement === dataFromElement) {
+        addClass("--is-active", elementItem, index);
+      }
+
+      index++;
+    });
+  };
+
+  const isLanthanoidOrActinoid = (elementItem) => {
+    if (
+      elementItem.getAttribute("data-element-name") !== "Lanthanoids" &&
+      elementItem.getAttribute("data-element-name") !== "Actinoids"
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   return (
     <div>
       <HeadingContent title="Tabel Periodik" />
-      <div className="periodic-table">
+
+      <main>
         <section className="group-period">
           <ul className="group__list">
             <li className="group__item flex-row-wrap group-1">
@@ -150,7 +384,8 @@ const TabelPeriodik = () => {
                   data-element-type="other-nonmetal"
                 >
                   <span>
-                    Other <br /> nonmetals
+                    Other <br />
+                    nonmetals
                   </span>
                 </div>
                 <div
@@ -460,7 +695,6 @@ const TabelPeriodik = () => {
             data-element-name="Lanthanoids"
             data-element-melting-point="0"
             data-element-boiling-point="7001"
-            data-element-name="Lanthanoids"
           >
             <span className="element__name">57-71</span>
             <span className="element__name">Lantha-noids</span>
@@ -2107,7 +2341,7 @@ const TabelPeriodik = () => {
             </a>
           </dialog>
         </section>
-      </div>
+      </main>
     </div>
   );
 };

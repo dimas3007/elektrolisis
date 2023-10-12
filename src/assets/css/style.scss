@@ -6,6 +6,7 @@
 // Pages
 @import "./pages/landingPage.scss";
 @import "./pages/periodikPage.scss";
+@import "./pages/materiPage.scss";
 
 * {
   box-sizing: border-box;
@@ -47,4 +48,32 @@ textarea {
   padding: 1.8rem 2rem;
   font-family: $josefin;
   font-size: $xs;
+}
+
+.slick-prev {
+  left: 3%;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 3%;
+  z-index: 1;
+}
+
+.slick-prev,
+.slick-next {
+  &::before {
+    color: $yellow;
+    background-color: $dark;
+    border-radius: 50%;
+    opacity: 1;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+}
+
+.d-none {
+  display: none;
+  visibility: none;
+  opacity: 0;
 }

@@ -2,15 +2,19 @@ import iconTentang from "../../assets/img/icon/tentang_kami.png";
 import {
   BsFillCalendarWeekFill,
   BsFillPlayFill,
-  BsCollectionPlayFill,
   BsCollectionPlay,
 } from "react-icons/bs";
 import { AiFillEye, AiFillHeart, AiFillPlayCircle } from "react-icons/ai";
 import { BiSolidCloudDownload } from "react-icons/bi";
 import HeadingContent from "../../layouts/components/HeadingContent";
-import ExcelFoto from "../../assets/img/content/excel_screenshot.png";
 
 const ExcelDownload = () => {
+  const excelFileUrl =
+    "https://docs.google.com/file/d/1rkjRtq80tEjuNwuftHFFGtJHVu6mX_Ti/edit?usp=docslist_api&filetype=msexcel";
+
+  const handleDownload = () => {
+    window.open(excelFileUrl, "_blank");
+  };
   return (
     <div className="content-wrapper">
       <HeadingContent
@@ -123,7 +127,7 @@ const ExcelDownload = () => {
         </div>
         <div className="content-footer">
           <div className="cta">
-            <button className="btn-yellow">
+            <button className="btn-yellow" onClick={handleDownload}>
               <BiSolidCloudDownload />
               Unduh file excel
             </button>

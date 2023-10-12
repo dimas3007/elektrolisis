@@ -1,0 +1,12 @@
+.handout-item {
+  width: 100%;
+
+  img {
+    width: 100%;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}

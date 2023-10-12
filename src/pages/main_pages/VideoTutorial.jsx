@@ -2,16 +2,19 @@ import iconTentang from "../../assets/img/icon/tentang_kami.png";
 import {
   BsFillCalendarWeekFill,
   BsFillPlayFill,
-  BsCollectionPlayFill,
   BsCollectionPlay,
 } from "react-icons/bs";
-import { AiFillEye, AiFillHeart, AiFillPlayCircle } from "react-icons/ai";
+import { AiFillEye, AiFillHeart } from "react-icons/ai";
 import { BiSolidCloudDownload } from "react-icons/bi";
 import HeadingContent from "../../layouts/components/HeadingContent";
 import { FaRegFaceSmileWink } from "react-icons/fa6";
 import ExcelFoto from "../../assets/img/content/excel_screenshot.png";
+import TutorialVideo from "../../assets/video/tutorial.mp4";
 
 const VideoTutorial = () => {
+  const handleMateriButton = (to) => {
+    let video = document.getElementById("tutorial_video");
+  };
   return (
     <div>
       <HeadingContent
@@ -28,15 +31,10 @@ const VideoTutorial = () => {
       </div>
 
       <div className="overview stack">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/Nc3ZhSlGU_s"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-          allowfullscreen
-        ></iframe>
+        <video id="tutorial_video" controls>
+          <source src={TutorialVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <div className="main-content">
