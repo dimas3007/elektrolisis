@@ -9,12 +9,25 @@ import { BiSolidCloudDownload } from "react-icons/bi";
 import HeadingContent from "../../layouts/components/HeadingContent";
 
 const ExcelDownload = () => {
-  const excelFileUrl =
-    "https://docs.google.com/file/d/1rkjRtq80tEjuNwuftHFFGtJHVu6mX_Ti/edit?usp=docslist_api&filetype=msexcel";
-
   const handleDownload = () => {
-    window.open(excelFileUrl, "_blank");
+    const fileName = "src/assets/doc/elektrolisis.xlsx"; // Ganti 'nama_file.xlsx' dengan nama file Excel Anda
+
+    fetch(fileName)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = window.URL.createObjectURL(new Blob([blob]));
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Elektrolisis.xlsx";
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+      })
+      .catch((error) => {
+        console.error("Error downloading file:", error);
+      });
   };
+
   return (
     <div className="content-wrapper">
       <HeadingContent
