@@ -11,10 +11,49 @@ import { FaRegFaceSmileWink } from "react-icons/fa6";
 import ExcelFoto from "../../assets/img/content/excel_screenshot.png";
 import TutorialVideo from "../../assets/video/tutorial.mp4";
 
+const KONTEN_VIDEO = [
+  {
+    name: "Standar Kompetensi",
+    video: 62,
+  },
+  {
+    name: "Kompetensi Dasar",
+    video: 72,
+  },
+  {
+    name: "Indikator",
+    video: 79,
+  },
+  {
+    name: "Tujuan Eksperimen",
+    video: 104,
+  },
+  {
+    name: "Alat dan Bahan",
+    video: 129,
+  },
+  {
+    name: "Video",
+    video: 170,
+  },
+  {
+    name: "Elektrolisis Interaktif",
+    video: -1,
+  },
+  {
+    name: "Stoikiometri",
+    video: -1,
+  },
+];
+
 const VideoTutorial = () => {
   const handleMateriButton = (to) => {
     let video = document.getElementById("tutorial_video");
+
+    video.currentTime = to;
+    video.play();
   };
+
   return (
     <div>
       <HeadingContent
@@ -90,38 +129,16 @@ const VideoTutorial = () => {
               materi terkait.
             </p>
             <div className="part-wrapper">
-              <div className="part-item">
-                <BsFillPlayFill />
-                <h4>Standar Kompetensi</h4>
-              </div>
-              <div className="part-item">
-                <BsFillPlayFill />
-                <h4>Kompetensi Dasar</h4>
-              </div>
-              <div className="part-item">
-                <BsFillPlayFill />
-                <h4>Indikator</h4>
-              </div>
-              <div className="part-item">
-                <BsFillPlayFill />
-                <h4>Tujuan Eksperimen</h4>
-              </div>
-              <div className="part-item">
-                <BsFillPlayFill />
-                <h4>Alat dan Bahan</h4>
-              </div>
-              <div className="part-item">
-                <BsFillPlayFill />
-                <h4>Video</h4>
-              </div>
-              <div className="part-item">
-                <BsFillPlayFill />
-                <h4>Elektrolisis Interaktif</h4>
-              </div>
-              <div className="part-item">
-                <BsFillPlayFill />
-                <h4>Stoikiometri</h4>
-              </div>
+              {KONTEN_VIDEO.map((konten, key) => (
+                <div
+                  className="part-item"
+                  onClick={() => handleMateriButton(konten.video)}
+                  key={key}
+                >
+                  <BsFillPlayFill />
+                  <h4>{konten.name}</h4>
+                </div>
+              ))}
             </div>
           </div>
         </div>
