@@ -10,7 +10,7 @@ import HeadingContent from "../../layouts/components/HeadingContent";
 
 const ExcelDownload = () => {
   const handleDownload = () => {
-    const fileName = "src/assets/doc/elektrolisis.xlsx"; // Ganti 'nama_file.xlsx' dengan nama file Excel Anda
+    const fileName = "/src/assets/doc/elektrolisis.xlsx"; // Ganti 'nama_file.xlsx' dengan nama file Excel Anda
 
     fetch(fileName)
       .then((response) => response.blob())
