@@ -5,7 +5,7 @@ const PetaKonsep = () => {
   return (
     <div>
       <div>
-        <HeadingContent title="Peta Konsep" />
+        <HeadingContent title="Mind Mapping" />
       </div>
 
       <div className="main-content">

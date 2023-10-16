@@ -23,7 +23,7 @@ const Sidebar = () => {
           <div className="icon">
             <img src={iconPetaKonsep} alt="logo brand" />
           </div>
-          <h4>Peta Konsep</h4>
+          <h4>Mind Mapping</h4>
         </div>
       </Link>
       <Link to={"/tabel-periodik"}>

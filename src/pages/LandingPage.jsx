@@ -222,10 +222,12 @@ const LandingPage = () => {
             <div className="header">
               <h1>01</h1>
             </div>
-            <h1 className="title">Peta Konsep</h1>
+            <h1 className="title">
+              <i>Mind Mapping</i>
+            </h1>
             <p>
-              Halaman ini berisi peta konsep dari materi elektrolisis yang akan
-              dipelajari!
+              Halaman ini berisi <i>Mind Mapping</i> dari materi elektrolisis
+              yang akan dipelajari!
             </p>
           </div>
           <Link to={"/peta-konsep"}>
