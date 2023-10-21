@@ -1,0 +1,121 @@
+.modal-unsur-top {
+  grid-column: span 12;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  .modal-unsur-desc {
+    grid-column: 1/8;
+
+    .modal-unsur-label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      h1 {
+        box-shadow: $shadow;
+        border: 2px solid $dark;
+        background-color: $yellow;
+        color: $dark;
+        font-size: $rg;
+        padding: 0.8rem 1.2rem;
+      }
+
+      h5 {
+        padding: 0.5rem 1.5rem;
+        border: 2px solid $yellow;
+        font-size: $rg;
+        color: $yellow;
+      }
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: $xxs !important;
+      text-align: justify;
+    }
+
+    .modal-unsur-footer {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      h3 {
+        font-size: $xxs;
+        color: $yellow;
+        font-weight: $semi-bold;
+      }
+
+      h5 {
+        box-shadow: $shadow;
+        border: 2px solid $dark;
+        background-color: $green;
+        color: $dark;
+        font-size: $xxs;
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .modal-unsur-img {
+    grid-column: 8/13;
+    display: flex;
+    justify-content: center;
+
+    img {
+      background-color: $yellow;
+      max-width: 20rem;
+      width: 100%;
+      height: 22rem;
+      box-shadow: $shadow;
+      border: 2px solid $dark;
+    }
+  }
+}
+
+.modal-unsur-info {
+  margin-top: 4rem;
+
+  .modal-unsur-info-wrap {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.modal-unsur-other {
+  margin-top: 2rem;
+  display: flex;
+
+  .modal-unsur-kelimpahan,
+  .modal-unsur-panas {
+    flex: 1;
+  }
+}
+
+.modal-unsur-info-item {
+  padding: 1.2rem;
+  flex: 1;
+  font-size: $xxxs;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.modal-unsur-info-label {
+  box-shadow: $shadow;
+  border: 2px solid $dark;
+  background-color: $oranye;
+  color: $dark;
+  font-size: $xxs;
+  padding: 0.5rem 4rem;
+  width: max-content;
+}
+
+span[unsur] {
+  color: $purple;
+  font-weight: $semi-bold;
+}
+
+.atom {
+  display: none !important;
+}
