@@ -10,6 +10,8 @@ import handout3 from "../../assets/img/handout/3.png";
 import handout4 from "../../assets/img/handout/4.png";
 import handout5 from "../../assets/img/handout/5.png";
 import handout6 from "../../assets/img/handout/6.png";
+import handout7 from "../../assets/img/handout/7.png";
+import handout8 from "../../assets/img/handout/8.png";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -21,7 +23,17 @@ function SamplePrevArrow(props) {
   return <div className={className} style={{ ...style }} onClick={onClick} />;
 }
 
-const HANDOUTS = [handout1, handout2, handout3, handout4, handout5, handout6];
+const HANDOUTS = [
+  handout1,
+  handout2,
+  handout3,
+  handout4,
+  handout5,
+  handout6,
+  handout7,
+  handout8,
+];
+
 const Materi = () => {
   const settings = {
     dots: true,
