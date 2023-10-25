@@ -6,25 +6,49 @@ pre {
 
 .crossword.correct {
   rect {
-    stroke: rgb(100, 200, 100) !important;
+    stroke: $green !important;
   }
   svg > rect {
-    fill: rgb(100, 200, 100) !important;
+    fill: $green !important;
   }
   text {
-    fill: rgb(100, 200, 100) !important;
+    fill: $green !important;
   }
 }
 
+.grid {
+  padding: 2rem;
+  border: 1px solid $dark;
+  box-shadow: 5px 5px 0px 0px $dark;
+}
+
+.clue {
+  padding: 0 0.8rem;
+}
+
 .clue.correct {
-  &::before {
-    content: "Benar"; /* a.k.a. checkmark: ✓ */
+  &::after {
+    content: " Benar"; /* a.k.a. checkmark: ✓ */
     display: inline-block;
     text-decoration: none;
-    color: rgb(100, 200, 100);
-    margin-right: 0.25em;
+    color: $green;
+    margin-left: 0.25em;
+    font-weight: $semi-bold;
   }
 
   text-decoration: line-through;
-  color: rgb(130, 130, 130);
+  color: $dark;
+}
+
+.clue.incorrect {
+  &::after {
+    content: " Salah"; /* a.k.a. checkmark: ✓ */
+    display: inline-block;
+    text-decoration: none;
+    color: $red;
+    margin-left: 0.25em;
+    font-weight: $semi-bold;
+  }
+
+  background-color: $pink;
 }

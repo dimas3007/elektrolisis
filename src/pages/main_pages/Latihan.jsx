@@ -1,82 +1,99 @@
 import React, { useCallback, useRef, useState } from "react";
 import HeadingContent from "../../layouts/components/HeadingContent";
-import Crossword from "@jaredreisinger/react-crossword";
+import Crossword, { ThemeProvider } from "@jaredreisinger/react-crossword";
 
 const data = {
   across: {
     3: {
-      clue: "Elektroda yang sangat sukar bereaksi",
-      answer: "INERT",
-      row: 2,
-      col: 4,
+      clue: "Terdiri dari anoda dan katoda",
+      answer: "ELEKTRODA",
+      row: 3,
+      col: 11,
     },
-    5: {
-      clue: "Elektroda tempat terjadinya reaksi oksidasi",
+    6: {
+      clue: "Adanya interaksi antara elektroda dan bagian yang terdapat dalam reaksi elektroda",
+      answer: "OVERPOTENSIAL",
+      row: 6,
+      col: 5,
+    },
+    8: {
+      clue: "Tempat terjadinya oksidasi",
       answer: "KATODA",
-      row: 5,
-      col: 4,
-    },
-    7: {
-      clue: "Elektroda tempat terjadinya reaksi reduksi",
-      answer: "ANODA",
-      row: 8,
-      col: 8,
-    },
-    9: {
-      clue: "Sel elektrokimia yang mana energi listrik diubah menjadi energi kimia",
-      answer: "ELEKTROLISIS",
-      row: 10,
-      col: 0,
+      row: 9,
+      col: 12,
     },
     10: {
-      clue: "Hukum elektrolisis",
-      answer: "FARADAY",
-      row: 13,
-      col: 0,
+      clue: "Ion bermuatan negatif",
+      answer: "ANION",
+      row: 11,
+      col: 10,
     },
     11: {
       clue: "Ion bermuatan positif",
       answer: "KATION",
       row: 13,
-      col: 9,
+      col: 7,
+    },
+    12: {
+      clue: "Zat yang mudah menghantarkan energi listrik",
+      answer: "ELEKTROLIT",
+      row: 16,
+      col: 1,
     },
   },
   down: {
     1: {
-      clue: "Terdiri dari anoda dan katoda",
-      answer: "ELEKTRODA",
-      row: 0,
-      col: 13,
+      clue: "Hukum elektrolisis",
+      answer: "FARADAY",
+      row: 1,
+      col: 16,
     },
     2: {
-      clue: "Ion bermuatan negatif",
-      answer: "ANION",
-      row: 1,
-      col: 5,
-    },
-    4: {
-      clue: "Menerima elektron",
-      answer: "OKSIDASI",
-      row: 4,
+      clue: "Sukar bereaksi",
+      answer: "INERT",
+      row: 3,
       col: 8,
     },
-    6: {
-      clue: "Zat yang dapat menghantarkan listrik",
-      answer: "ELEKTROLIT",
-      row: 8,
-      col: 2,
+    4: {
+      clue: "Tempat terjadinya reduksi",
+      answer: "ANODA",
+      row: 3,
+      col: 19,
     },
-    8: {
-      clue: "Melepas elektron",
+    5: {
+      clue: "Menerima elektron",
       answer: "REDUKSI",
-      row: 8,
-      col: 11,
+      row: 5,
+      col: 12,
+    },
+    7: {
+      clue: "Melepas elektron",
+      answer: "OKSIDASI",
+      row: 6,
+      col: 10,
+    },
+    9: {
+      clue: "Sel elektrokimia yang mana energi listrik menjadi energi kimia",
+      answer: "ELEKTROLISIS",
+      row: 10,
+      col: 7,
     },
   },
 };
 
 const Latihan = () => {
   const crossword = useRef();
+
+  const theme = {
+    allowNonSquare: true,
+    gridBackground: "#fffae8",
+    cellBackground: "#ffffff",
+    cellBorder: "#344972",
+    textColor: "#344972",
+    numberColor: "#344972",
+    focusBackground: "#97b3ec",
+    highlightBackground: "#bbd2ff",
+  };
 
   const [messages, setMessages] = useState([]);
 
@@ -86,7 +103,7 @@ const Latihan = () => {
 
   const onCorrect = useCallback(
     (direction, number, answer) => {
-      alert("onCorrect");
+      // alert("onCorrect");
       addMessage(`onCorrect: "${direction}", "${number}", "${answer}"`);
     },
     [addMessage]
@@ -109,7 +126,7 @@ const Latihan = () => {
   // onCrosswordCorrect is called with a truthy/falsy value.
   const onCrosswordCorrect = useCallback(
     (isCorrect) => {
-      alert("nitin");
+      // alert("nitin");
       addMessage(`onCrosswordCorrect: ${JSON.stringify(isCorrect)}`);
     },
     [addMessage]
@@ -135,18 +152,19 @@ const Latihan = () => {
       <HeadingContent title="Latihan" />
 
       <div className="main-content">
-        <Crossword
-          data={data}
-          ref={crossword}
-          onCorrect={onCorrect}
-          onLoadedCorrect={onLoadedCorrect}
-          onCrosswordCorrect={onCrosswordCorrect}
-          onCellChange={onCellChange}
-          acrossLabel="Mendatar"
-          downLabel="Menurun"
-        />
-
-        <pre>{messages}</pre>
+        <ThemeProvider theme={theme}>
+          <Crossword
+            data={data}
+            ref={crossword}
+            onCorrect={onCorrect}
+            onLoadedCorrect={onLoadedCorrect}
+            onCrosswordCorrect={onCrosswordCorrect}
+            onCellChange={onCellChange}
+            acrossLabel="Mendatar"
+            downLabel="Menurun"
+          />
+        </ThemeProvider>
+        {/* <pre>{messages}</pre> */}
       </div>
     </div>
   );

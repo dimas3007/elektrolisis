@@ -308,11 +308,11 @@
 
       .part-item {
         cursor: pointer;
-        border: 1px solid $dark;
         padding: 1.2rem;
         display: flex;
         align-items: center;
         gap: 1.2rem;
+        border: 1px solid $dark;
         box-shadow: 5px 5px 0px 0px $dark;
         background-color: $cream;
         transition: ease-in-out 0.2s;
