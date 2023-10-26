@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useState } from "react";
-import HeadingContent from "../../layouts/components/HeadingContent";
+import HeadingContent from "../../../layouts/components/HeadingContent";
 import Crossword, { ThemeProvider } from "@jaredreisinger/react-crossword";
 
 const data = {
@@ -81,7 +81,7 @@ const data = {
   },
 };
 
-const Latihan = () => {
+const TekaTekiSilang = () => {
   const crossword = useRef();
 
   const theme = {
@@ -149,7 +149,7 @@ const Latihan = () => {
 
   return (
     <div>
-      <HeadingContent title="Latihan" />
+      <HeadingContent title="Latihan Teka Teki Silang" />
 
       <div className="main-content">
         <ThemeProvider theme={theme}>
@@ -170,4 +170,4 @@ const Latihan = () => {
   );
 };
 
-export default Latihan;
+export default TekaTekiSilang;
