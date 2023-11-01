@@ -47,6 +47,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      color: $dark;
+
+      &.logout {
+        color: $red;
+      }
 
       img {
         height: 4rem;

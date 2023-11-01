@@ -9,6 +9,7 @@ import iconTentang from "../assets/img/icon/tentang_kami.png";
 import iconTutorial from "../assets/img/icon/tutorial.png";
 import logo from "../assets/img/logo/logo.png";
 import logoWhite from "../assets/img/logo/logo_putih.png";
+import { IoIosHelpCircle } from "react-icons/io";
 
 // hero img
 import tool from "../assets/img/hero/tool.png";
@@ -20,7 +21,7 @@ import circle1 from "../assets/img/hero/circle1.png";
 import circle2 from "../assets/img/hero/circle2.png";
 import { Link } from "react-router-dom";
 
-const LandingPage = () => {
+const LandingPage = ({ openModal }) => {
   const containerRef = useRef(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -58,6 +59,9 @@ const LandingPage = () => {
         <div className="action">
           <button className="btn-secondary">Login</button>
           <button className="btn-primary">Register Now</button>
+          <button className="btn-yellow" onClick={openModal}>
+            <IoIosHelpCircle />
+          </button>
         </div>
       </header>
       <div className="hero" ref={containerRef}>

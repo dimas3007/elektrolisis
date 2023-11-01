@@ -119,3 +119,68 @@ span[unsur] {
 .atom {
   display: none !important;
 }
+
+.ReactModalPortal {
+  position: fixed;
+  z-index: 999999;
+}
+
+.ReactModal__Content {
+  border: 1px solid $dark !important;
+  box-shadow: 5px 5px 0px 0px $dark;
+  inset: auto !important;
+  margin: 10rem;
+  overflow: hidden !important;
+}
+
+.ReactModal__Overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $dark;
+  margin-bottom: 5rem;
+  border-bottom: 2px solid $gray;
+  padding-bottom: 1.5rem;
+
+  h4 {
+    font-size: $sm;
+  }
+
+  .modal-close {
+    color: $dark;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.modal-content {
+  color: $dark;
+  padding: 4rem;
+  overflow-y: scroll;
+  max-height: 70rem;
+
+  ul {
+    font-size: $sm;
+    list-style-type: decimal;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+.modal-footer {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

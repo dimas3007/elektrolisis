@@ -6,13 +6,11 @@ import iconPetaKonsep from "../../assets/img/icon/peta_konsep.png";
 import iconPeriodik from "../../assets/img/icon/tabel_periodik.png";
 import iconTentang from "../../assets/img/icon/tentang_kami.png";
 import iconTutorial from "../../assets/img/icon/tutorial.png";
-import logo from "../../assets/img/logo/logo.png";
-import logoWhite from "../../assets/img/logo/logo_putih.png";
-import { IoMdLogOut } from "react-icons/io";
+import { IoMdLogOut, IoIosHelpCircle } from "react-icons/io";
 
 import { Link, useLocation } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ openModal }) => {
   const location = useLocation();
   let { pathname } = location;
 
@@ -82,8 +80,14 @@ const Sidebar = () => {
           <h4>Tentang</h4>
         </div>
       </Link>
-      <div className="item logout">
+      <div className="item help" onClick={openModal}>
         <div className="icon">
+          <IoIosHelpCircle />
+        </div>
+        <h4>Petunjuk</h4>
+      </div>
+      <div className="item logout">
+        <div className="icon logout">
           <IoMdLogOut />
         </div>
         <h4>Logout</h4>

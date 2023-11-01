@@ -2,12 +2,12 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import { Outlet } from "react-router-dom";
 
-const ContentLayout = () => {
+const ContentLayout = ({ openModal }) => {
   return (
     <div className="content-layout">
       <Header />
       <div className="content">
-        <Sidebar />
+        <Sidebar openModal={openModal} />
         <div className="box-content">
           <Outlet />
         </div>
