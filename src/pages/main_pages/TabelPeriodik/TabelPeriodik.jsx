@@ -25,10 +25,10 @@ const TabelPeriodik = () => {
     let legendList = document.querySelectorAll(".legend-box");
     let periodList = document.querySelectorAll(".period__item");
     let groupList = document.querySelectorAll(".group__item");
-    let temperatureSlider = document.querySelector(
-      ".temperature__inputs__slider"
-    );
-    let resetTemperatureButton = document.querySelector(".reset__temperature");
+    // let temperatureSlider = document.querySelector(
+    //   ".temperature__inputs__slider"
+    // );
+    // let resetTemperatureButton = document.querySelector(".reset__temperature");
     let elementClicked;
     elementList = document.querySelectorAll(".element");
 
@@ -46,17 +46,17 @@ const TabelPeriodik = () => {
       });
     };
 
-    const setNewTemperature = (currentValue) => {
-      let kelvinOutput = document.querySelector(".temperature__inputs__result"),
-        celsiusOutput = document.querySelector(".celsius"),
-        farenheitOutput = document.querySelector(".farenheit");
+    // const setNewTemperature = (currentValue) => {
+    //   let kelvinOutput = document.querySelector(".temperature__inputs__result"),
+    //     celsiusOutput = document.querySelector(".celsius"),
+    //     farenheitOutput = document.querySelector(".farenheit");
 
-      kelvinOutput.innerHTML = `${currentValue} K`;
-      celsiusOutput.innerHTML = `${currentValue - 273}ºC`;
-      farenheitOutput.innerHTML = `${
-        Math.round(((currentValue * 9) / 5 - 460) * 100) / 100
-      }ºF`;
-    };
+    //   kelvinOutput.innerHTML = `${currentValue} K`;
+    //   celsiusOutput.innerHTML = `${currentValue - 273}ºC`;
+    //   farenheitOutput.innerHTML = `${
+    //     Math.round(((currentValue * 9) / 5 - 460) * 100) / 100
+    //   }ºF`;
+    // };
 
     actinoidBox.addEventListener("mouseenter", handleBoxMouseEnter);
     actinoidBox.addEventListener("mouseleave", equalizeElement);
@@ -64,33 +64,33 @@ const TabelPeriodik = () => {
     lanthanoidBox.addEventListener("mouseenter", handleBoxMouseEnter);
     lanthanoidBox.addEventListener("mouseleave", equalizeElement);
 
-    temperatureSlider.addEventListener("input", (self) => {
-      console.log(Number(self.target.value));
-      let currentValue = Number(self.target.value),
-        dataToSearch = ["melting-point", "boiling-point"];
+    // temperatureSlider.addEventListener("input", (self) => {
+    //   console.log(Number(self.target.value));
+    //   let currentValue = Number(self.target.value),
+    //     dataToSearch = ["melting-point", "boiling-point"];
 
-      if (
-        currentValue !== STP &&
-        !resetTemperatureButton.classList.contains("--is-visible")
-      ) {
-        addClass("--is-visible", resetTemperatureButton, 0);
-      } else if (currentValue === STP) {
-        removeClass("--is-visible", resetTemperatureButton, 0);
-      }
+    //   if (
+    //     currentValue !== STP &&
+    //     !resetTemperatureButton.classList.contains("--is-visible")
+    //   ) {
+    //     addClass("--is-visible", resetTemperatureButton, 0);
+    //   } else if (currentValue === STP) {
+    //     removeClass("--is-visible", resetTemperatureButton, 0);
+    //   }
 
-      setNewTemperature(currentValue);
-      highlightElement(currentValue, dataToSearch);
-    });
+    //   setNewTemperature(currentValue);
+    //   highlightElement(currentValue, dataToSearch);
+    // });
 
-    resetTemperatureButton.addEventListener("click", () => {
-      let dataToSearch = ["melting-point", "boiling-point"];
+    // resetTemperatureButton.addEventListener("click", () => {
+    //   let dataToSearch = ["melting-point", "boiling-point"];
 
-      temperatureSlider.value = STP;
+    //   temperatureSlider.value = STP;
 
-      setNewTemperature(STP);
-      highlightElement(STP, dataToSearch);
-      removeClass("--is-visible", resetTemperatureButton, 0);
-    });
+    //   setNewTemperature(STP);
+    //   highlightElement(STP, dataToSearch);
+    //   removeClass("--is-visible", resetTemperatureButton, 0);
+    // });
 
     Array.from(elementList).forEach((elementItem) => {
       elementItem.addEventListener("click", () => {
@@ -629,7 +629,7 @@ const TabelPeriodik = () => {
               </div>
             </article>
           </section>
-          <section className="temperature flex-row-nowrap">
+          {/* <section className="temperature flex-row-nowrap">
             <div className="temperature__inputs flex-row-nowrap">
               <input
                 className="temperature__inputs__slider"
@@ -648,7 +648,7 @@ const TabelPeriodik = () => {
             <button className="reset__temperature flex-row-wrap">
               <span>Back to STP</span>
             </button>
-          </section>
+          </section> */}
 
           {dataPeriodik.map((unsur, key) => (
             <div
@@ -677,7 +677,7 @@ const TabelPeriodik = () => {
         </section>
 
         <section className="modal flex-row-wrap">
-          <dialog className="modal__dialog" open>
+          <div className="modal__dialog" open>
             <article className="modal__content">
               <div className="modal__content__properties">
                 <div className="modal-unsur-top">
@@ -820,7 +820,7 @@ const TabelPeriodik = () => {
                 <path d="M0 0h24v24h-24z" fill="none" />
               </svg>
             </a>
-          </dialog>
+          </div>
         </section>
       </main>
     </div>

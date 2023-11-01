@@ -379,6 +379,7 @@ li {
         transition: all 0.2s ease;
         &:hover {
           transform: scale($scale);
+          background-color: $dark;
         }
         span {
           float: left; // Emulates an auto width
@@ -404,6 +405,7 @@ li {
           }
           &:hover {
             transform: scale($scale);
+            background-color: $dark;
           }
         }
         .lanthanoid {
@@ -475,6 +477,7 @@ li {
         }
         &:hover {
           transform: scale($scale);
+          background-color: $dark;
         }
       }
       &__other-nonmetal {
@@ -513,6 +516,7 @@ li {
       }
       &:hover {
         transform: scale($scale);
+        background-color: $dark;
       }
     }
     &__unknown {
@@ -529,6 +533,7 @@ li {
       }
       &:hover {
         transform: scale($scale);
+        background-color: $dark;
       }
     }
   }
@@ -554,6 +559,7 @@ li {
       }
       &:hover {
         transform: scale($scale);
+        background-color: $dark;
       }
     }
     &__gas {
@@ -1268,9 +1274,12 @@ li {
     max-width: 850px;
     width: 100%;
     height: 80%;
-    padding: 1.2rem;
+    padding: 2rem;
     border: none;
     background: $cream;
+    overflow-y: auto;
+    box-shadow: $shadow;
+    border: 2px solid $dark;
   }
   &__content {
     position: absolute;
@@ -1278,7 +1287,7 @@ li {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 1.5rem;
+    padding: 2rem;
     opacity: 0;
     transition: all 0.25s $cubic-bezier;
 
@@ -1340,13 +1349,9 @@ li {
       transition: all 0.7s $cubic-bezier;
     }
     &::before {
-      box-shadow: $shadow;
-      border: 2px solid $dark;
       transform-origin: 0 100%;
     }
     &::after {
-      box-shadow: $shadow;
-      border: 2px solid $dark;
       transform-origin: 100% 0%;
     }
     &__properties {
