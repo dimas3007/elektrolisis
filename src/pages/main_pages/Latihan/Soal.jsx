@@ -88,57 +88,61 @@ const Soal = () => {
 
       <div className="main-content">
         {showResult ? (
-          <div className="result">
-            <h2>
-              Terima kasih telah melakukan latihan soal, <br /> berikut hasil
-              akhir yang kamu raih <FaRegFaceSmileWink />
-            </h2>
-            <h1>
-              {score == 0
-                ? "000"
-                : ((100 / questions.length) * score).toFixed(1)}
-            </h1>
-            <div>
-              <p className="soal-benar">
-                Jumlah jawaban benar: <span>{score}</span>
-              </p>
-              <p className="soal-salah">
-                Jumlah jawaban salah: <span>{questions.length - score}</span>
-              </p>
-            </div>
-            <div className="rincian-result">
-              {questions.map((question, index) => (
-                <div key={index} className="rincian-item">
-                  <div>
-                    <p>
-                      {index + 1}. {question.question}
-                    </p>
-                    <p>
-                      Jawaban Anda:{" "}
-                      <span className="result-answer">
-                        {selectedOptions[index]}
-                      </span>
-                    </p>
+          <>
+            <div className="result">
+              <h2>
+                Terima kasih telah melakukan latihan soal, <br /> berikut hasil
+                akhir yang kamu raih <FaRegFaceSmileWink />
+              </h2>
+              <h1>
+                {score == 0
+                  ? "000"
+                  : ((100 / questions.length) * score).toFixed(1)}
+              </h1>
+              <div>
+                <p className="soal-benar">
+                  Jumlah jawaban benar: <span>{score}</span>
+                </p>
+                <p className="soal-salah">
+                  Jumlah jawaban salah: <span>{questions.length - score}</span>
+                </p>
+              </div>
+              <div className="rincian-result">
+                {questions.map((question, index) => (
+                  <div key={index} className="rincian-item">
+                    <div>
+                      <p>
+                        {index + 1}. {question.question}
+                      </p>
+                      <p>
+                        Jawaban Anda:{" "}
+                        <span className="result-answer">
+                          {selectedOptions[index]}
+                        </span>
+                      </p>
+                    </div>
+                    <span
+                      className={`result-status ${
+                        selectedOptions[index] ===
+                        questions[index].correctAnswer
+                          ? "correct"
+                          : "wrong"
+                      }`}
+                    >
+                      {selectedOptions[index] === questions[index].correctAnswer
+                        ? "Benar"
+                        : "Salah"}
+                    </span>
                   </div>
-                  <span
-                    className={`result-status ${
-                      selectedOptions[index] === questions[index].correctAnswer
-                        ? "correct"
-                        : "wrong"
-                    }`}
-                  >
-                    {selectedOptions[index] === questions[index].correctAnswer
-                      ? "Benar"
-                      : "Salah"}
-                  </span>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
 
-            <button onClick={restartQuiz} className="btn-green">
-              Ulangi latihan soal
-            </button>
-          </div>
+              <button onClick={restartQuiz} className="btn-green">
+                Ulangi latihan soal
+              </button>
+            </div>
+            <Comment />
+          </>
         ) : (
           <>
             <div className="question-wrap">
@@ -207,7 +211,6 @@ const Soal = () => {
           </button>
         </div>
       </Modal>
-      <Comment />
     </div>
   );
 };

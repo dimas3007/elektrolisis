@@ -21,7 +21,7 @@ const Sidebar = ({ openModal }) => {
           <div className="icon">
             <img src={iconPetaKonsep} alt="logo brand" />
           </div>
-          <h4>Mind Mapping</h4>
+          <h4>Mind Map</h4>
         </div>
       </Link>
       <Link to={"/tabel-periodik"}>
