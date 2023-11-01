@@ -1,6 +1,7 @@
 import React, { useCallback, useRef, useState } from "react";
 import HeadingContent from "../../../layouts/components/HeadingContent";
 import Crossword, { ThemeProvider } from "@jaredreisinger/react-crossword";
+import Comment from "../../../layouts/components/Comment";
 
 const data = {
   across: {
@@ -165,6 +166,7 @@ const TekaTekiSilang = () => {
           />
         </ThemeProvider>
         {/* <pre>{messages}</pre> */}
+        <Comment />
       </div>
     </div>
   );

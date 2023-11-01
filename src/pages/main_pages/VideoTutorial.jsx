@@ -11,6 +11,8 @@ import { FaRegFaceSmileWink } from "react-icons/fa6";
 import ExcelFoto from "../../assets/img/content/excel_screenshot.png";
 import TutorialVideo from "../../assets/video/tutorial.mp4";
 
+import Comment from "../../layouts/components/Comment";
+
 const KONTEN_VIDEO = [
   {
     name: "Standar Kompetensi",
@@ -142,6 +144,7 @@ const VideoTutorial = () => {
             </div>
           </div>
         </div>
+        <Comment />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import HeadingContent from "../../../layouts/components/HeadingContent";
 import Modal from "react-modal";
 import { FaTimes } from "react-icons/fa";
 import { FaRegFaceSmileWink } from "react-icons/fa6";
+import Comment from "../../../layouts/components/Comment";
 
 const questions = [
   {
@@ -206,6 +207,7 @@ const Soal = () => {
           </button>
         </div>
       </Modal>
+      <Comment />
     </div>
   );
 };

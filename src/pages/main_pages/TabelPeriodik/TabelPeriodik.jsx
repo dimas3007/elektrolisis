@@ -2,6 +2,7 @@ import HeadingContent from "../../../layouts/components/HeadingContent";
 import React, { useEffect, useState } from "react";
 import tablePeriodikData from "../../../data/table-periodik.json";
 import "../../../data/table-periodik-img.js";
+import Comment from "../../../layouts/components/Comment";
 const DELAY = 5;
 const STP = 273;
 
@@ -823,6 +824,7 @@ const TabelPeriodik = () => {
           </div>
         </section>
       </main>
+      <Comment />
     </div>
   );
 };

@@ -12,6 +12,7 @@ import handout5 from "../../assets/img/handout/5.png";
 import handout6 from "../../assets/img/handout/6.png";
 import handout7 from "../../assets/img/handout/7.png";
 import handout8 from "../../assets/img/handout/8.png";
+import Comment from "../../layouts/components/Comment";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -94,6 +95,8 @@ const Materi = () => {
             </div>
           </div>
         </div>
+
+        <Comment />
       </div>
     </div>
   );

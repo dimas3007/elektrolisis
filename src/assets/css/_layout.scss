@@ -152,6 +152,7 @@
   box-shadow: $shadow;
   border-radius: 2rem;
   margin: 2rem;
+  z-index: 10;
 
   video {
     width: 100%;
@@ -291,13 +292,6 @@
       font-size: $xs;
     }
 
-    .part-header {
-      margin-top: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
     .part-wrapper {
       padding: 2rem 0;
       display: flex;
@@ -351,5 +345,17 @@
       display: flex;
       gap: 1.2rem;
     }
+  }
+}
+
+.part-header {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  h2 {
+    color: $dark;
+    font-size: $sm;
   }
 }

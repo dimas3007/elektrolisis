@@ -7,6 +7,7 @@ import {
 import { AiFillEye, AiFillHeart, AiFillPlayCircle } from "react-icons/ai";
 import { BiSolidCloudDownload } from "react-icons/bi";
 import HeadingContent from "../../layouts/components/HeadingContent";
+import Comment from "../../layouts/components/Comment";
 
 const ExcelDownload = () => {
   const handleDownload = () => {
@@ -150,6 +151,8 @@ const ExcelDownload = () => {
             </button>
           </div>
         </div>
+
+        <Comment />
       </div>
     </div>
   );
