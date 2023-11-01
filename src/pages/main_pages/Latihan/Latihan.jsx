@@ -1,7 +1,7 @@
 import React from "react";
 import HeadingContent from "../../../layouts/components/HeadingContent";
-import LatihanImg1 from "../../../assets/img/icon/latihan (1).PNG";
-import LatihanImg2 from "../../../assets/img/icon/latihan (2).PNG";
+import LatihanImg1 from "../../../assets/img/icon/latihan (1).png";
+import LatihanImg2 from "../../../assets/img/icon/latihan (2).png";
 import { Link } from "react-router-dom";
 
 const Latihan = () => {

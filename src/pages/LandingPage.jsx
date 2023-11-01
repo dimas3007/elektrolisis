@@ -57,8 +57,8 @@ const LandingPage = ({ openModal }) => {
           <img src={logo} alt="" />
         </div>
         <div className="action">
-          <button className="btn-secondary">Login</button>
-          <button className="btn-primary">Register Now</button>
+          <button className="btn-secondary">Masuk</button>
+          <button className="btn-primary">Daftar sekarang</button>
           <button className="btn-yellow" onClick={openModal}>
             <IoIosHelpCircle />
           </button>
