@@ -7,9 +7,7 @@ import iconPetaKonsep from "../assets/img/icon/peta_konsep.png";
 import iconPeriodik from "../assets/img/icon/tabel_periodik.png";
 import iconTentang from "../assets/img/icon/tentang_kami.png";
 import iconTutorial from "../assets/img/icon/tutorial.png";
-import logo from "../assets/img/logo/logo.png";
 import logoWhite from "../assets/img/logo/logo_putih.png";
-import { IoIosHelpCircle } from "react-icons/io";
 
 // hero img
 import tool from "../assets/img/hero/tool.png";
@@ -52,18 +50,6 @@ const LandingPage = ({ openModal }) => {
 
   return (
     <>
-      <header className="header-top">
-        <div className="brand">
-          <img src={logo} alt="" />
-        </div>
-        <div className="action">
-          <button className="btn-secondary">Masuk</button>
-          <button className="btn-primary">Daftar sekarang</button>
-          <button className="btn-yellow" onClick={openModal}>
-            <IoIosHelpCircle />
-          </button>
-        </div>
-      </header>
       <div className="hero" ref={containerRef}>
         <h1 className="label yellow">APA SIH</h1>
         <h1 className="label red">ELEKTROLISIS</h1>

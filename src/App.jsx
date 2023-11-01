@@ -7,6 +7,7 @@ import PetaKonsep from "./pages/main_pages/PetaKonsep";
 import Tentang from "./pages/main_pages/Tentang";
 import TabelPeriodik from "./pages/main_pages/TabelPeriodik/TabelPeriodik";
 import ContentLayout from "./layouts/ContentLayout";
+import LandingLayout from "./layouts/LandingLayout";
 import Angket from "./pages/main_pages/Angket/Angket";
 import AngketContent from "./pages/main_pages/Angket/AngketContent";
 import TekaTekiSilang from "./pages/main_pages/Latihan/TekaTekiSilang";
@@ -16,6 +17,7 @@ import { FaTimes } from "react-icons/fa";
 
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
+import Login from "./pages/main_pages/Login";
 
 function App() {
   const [modalIsOpen, setIsOpen] = useState(true);
@@ -31,7 +33,14 @@ function App() {
   return (
     <>
       <Routes>
-        <Route index path="/" element={<LandingPage openModal={openModal} />} />
+        <Route element={<LandingLayout openModal={openModal} />}>
+          <Route
+            index
+            path="/"
+            element={<LandingPage openModal={openModal} />}
+          />
+          <Route path="/masuk" element={<Login />} />
+        </Route>
         <Route element={<ContentLayout openModal={openModal} />}>
           <Route path="/peta-konsep" element={<PetaKonsep />} />
           <Route path="/tabel-periodik" element={<TabelPeriodik />} />
