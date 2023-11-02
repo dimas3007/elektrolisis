@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../config/firebase";
+import { auth, signInWithGooglePopup } from "../../config/firebase";
+import { googleIcon } from "../../data/img";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -23,6 +24,11 @@ const Register = () => {
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
       });
+  };
+
+  const logGoogleUser = async () => {
+    const response = await signInWithGooglePopup();
+    console.log(response);
   };
 
   return (
@@ -64,6 +70,9 @@ const Register = () => {
               Daftar
             </button>
             <p>atau</p>
+            <button className="btn-white" onClick={logGoogleUser}>
+              <img src={googleIcon} alt="" /> Masuk dengan Google
+            </button>
             <Link to={"/masuk"}>
               <button className="btn-white">Masuk</button>
             </Link>

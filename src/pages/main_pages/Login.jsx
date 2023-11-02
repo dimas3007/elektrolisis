@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, signInWithGooglePopup } from "../../config/firebase";
+import { googleIcon } from "../../data/img";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -67,8 +68,8 @@ const Login = () => {
               Masuk
             </button>
             <p>atau</p>
-            <button className="btn-green" onClick={logGoogleUser}>
-              Masuk dengan Google
+            <button className="btn-white" onClick={logGoogleUser}>
+              <img src={googleIcon} alt="" /> Masuk dengan Google
             </button>
             <Link to={"/daftar"}>
               <button className="btn-white">Daftar</button>
