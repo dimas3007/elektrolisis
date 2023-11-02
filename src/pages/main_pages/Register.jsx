@@ -46,7 +46,6 @@ const Register = () => {
               placeholder="ex. ucode@gmail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
             />
           </div>
           <div className="form-input">
@@ -56,7 +55,6 @@ const Register = () => {
               placeholder="ex. lebih dari 8 karakter"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required
             />
           </div>
           <div className="form-input checkbox">

@@ -45,7 +45,6 @@ const Login = () => {
               type="text"
               placeholder="ex. ucode@gmail.com"
               onChange={(e) => setEmail(e.target.value)}
-              required
             />
           </div>
           <div className="form-input">
@@ -53,7 +52,6 @@ const Login = () => {
             <input
               type="password"
               placeholder="ex. lebih dari 8 karakter"
-              required
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
