@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../config/firebase";
+import { auth, signInWithGooglePopup } from "../../config/firebase";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -23,6 +23,11 @@ const Login = () => {
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
       });
+  };
+
+  const logGoogleUser = async () => {
+    const response = await signInWithGooglePopup();
+    console.log(response);
   };
 
   return (
@@ -62,6 +67,9 @@ const Login = () => {
               Masuk
             </button>
             <p>atau</p>
+            <button className="btn-green" onClick={logGoogleUser}>
+              Masuk dengan Google
+            </button>
             <Link to={"/daftar"}>
               <button className="btn-white">Daftar</button>
             </Link>

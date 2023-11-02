@@ -8,11 +8,28 @@ import iconTentang from "../../assets/img/icon/tentang_kami.png";
 import iconTutorial from "../../assets/img/icon/tutorial.png";
 import { IoMdLogOut, IoIosHelpCircle } from "react-icons/io";
 
-import { Link, useLocation } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../../config/firebase";
+
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Sidebar = ({ openModal }) => {
   const location = useLocation();
+  const navigate = useNavigate();
+
   let { pathname } = location;
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        navigate("/");
+        console.log("Signed out successfully");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
 
   return (
     <div className="sidebar">
@@ -86,7 +103,7 @@ const Sidebar = ({ openModal }) => {
         </div>
         <h4>Petunjuk</h4>
       </div>
-      <div className="item logout">
+      <div className="item logout" onClick={handleLogout}>
         <div className="icon logout">
           <IoMdLogOut />
         </div>
