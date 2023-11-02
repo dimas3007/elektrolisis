@@ -15,7 +15,7 @@ const HeaderLanding = ({ openModal }) => {
         <Link to={"/masuk"}>
           <button className="btn-secondary">Masuk</button>
         </Link>
-        <Link to={"/masuk"}>
+        <Link to={"/daftar"}>
           <button className="btn-primary">Daftar sekarang</button>
         </Link>
         <button className="btn-yellow" onClick={openModal}>

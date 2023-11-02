@@ -12,12 +12,14 @@ import Angket from "./pages/main_pages/Angket/Angket";
 import AngketContent from "./pages/main_pages/Angket/AngketContent";
 import TekaTekiSilang from "./pages/main_pages/Latihan/TekaTekiSilang";
 import Soal from "./pages/main_pages/Latihan/Soal";
+import Login from "./pages/main_pages/Login";
+import Register from "./pages/main_pages/Register";
+
 import Modal from "react-modal";
 import { FaTimes } from "react-icons/fa";
 
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
-import Login from "./pages/main_pages/Login";
 
 function App() {
   const [modalIsOpen, setIsOpen] = useState(true);
@@ -40,6 +42,7 @@ function App() {
             element={<LandingPage openModal={openModal} />}
           />
           <Route path="/masuk" element={<Login />} />
+          <Route path="/daftar" element={<Register />} />
         </Route>
         <Route element={<ContentLayout openModal={openModal} />}>
           <Route path="/peta-konsep" element={<PetaKonsep />} />
