@@ -73,14 +73,12 @@ function App() {
             <li>
               Jika Anda belum memiliki akun, Anda dapat membuat akun terlebih
               dahulu. Untuk membuat akun, Anda dapat mengklik tombol{" "}
-              <b>Daftar</b>
-              yang tersedia di halaman <i>website</i>.
+              <b>Daftar</b> yang tersedia di halaman <i>website</i>.
             </li>
             <li>
               Jika Anda telah memiliki akun, Anda dapat mengklik tombol{" "}
-              <b>Masuk</b>
-              dengan memasukkan alamat <i> email </i> dan kata sandi yang sudah
-              Anda daftarkan.
+              <b>Masuk</b> dengan memasukkan alamat <i> email </i> dan kata
+              sandi yang sudah Anda daftarkan.
             </li>
             <li>
               Setelah masuk, Anda akan melihat halaman beranda <i> website </i>.
@@ -95,17 +93,17 @@ function App() {
               video, dan audio.
             </li>
             <li>
-              Jika Anda ingin mengunduh materi elektrolisis pada halaman
+              Jika Anda ingin mengunduh materi elektrolisis pada halaman{" "}
               <b>Materi</b>, Anda dapat mengklik tombol <b>Unduh Materi</b> yang
               berada di bagian bawah tampilan materi yang ingin diunduh.
             </li>
             <li>
               Jika Anda ingin mengunduh media <i> Excel </i> Elektrolisis
               Interaktif pada halaman <b>Tutorial</b> dan <b>Materi Excel</b>,
-              Anda dapat mengklik tombol
-              <b>Unduh Excel</b> yang berada di bagian bawah tampilan halaman
-              tersebut. Spesifikasi <i>Microsoft Excel</i> minimal tahun 2010
-              untuk dapat berfungsi dengan baik.
+              Anda dapat mengklik tombol <b>Unduh Excel</b> yang berada di
+              bagian bawah tampilan halaman tersebut. Spesifikasi{" "}
+              <i>Microsoft Excel</i> minimal tahun 2010 untuk dapat berfungsi
+              dengan baik.
             </li>
             <li>
               Jika Anda ingin mengunduh video pada halaman <b>Tutorial</b> dan
