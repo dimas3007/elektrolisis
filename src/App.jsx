@@ -106,7 +106,7 @@ function App() {
               dengan baik.
             </li>
             <li>
-              Jika Anda ingin mengunduh video pada halaman <b>Tutorial</b> dan
+              Jika Anda ingin mengunduh video pada halaman <b>Tutorial</b> dan{" "}
               <b>Materi Excel</b>, Anda dapat mengklik tombol <b>Unduh Video</b>{" "}
               yang berada di bagian bawah tampilan video tersebut.
             </li>
