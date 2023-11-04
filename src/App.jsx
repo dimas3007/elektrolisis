@@ -72,19 +72,21 @@ function App() {
             </li>
             <li>
               Jika Anda belum memiliki akun, Anda dapat membuat akun terlebih
-              dahulu. Untuk membuat akun, Anda dapat mengklik tombol “Daftar”
-              yang tersedia di halaman website.
+              dahulu. Untuk membuat akun, Anda dapat mengklik tombol{" "}
+              <b>Daftar</b>
+              yang tersedia di halaman <i>website</i>.
             </li>
             <li>
-              Jika Anda telah memiliki akun, Anda dapat mengklik tombol “Masuk”
-              dengan memasukkan alamat email dan kata sandi yang sudah Anda
-              daftarkan.
+              Jika Anda telah memiliki akun, Anda dapat mengklik tombol{" "}
+              <b>Masuk</b>
+              dengan memasukkan alamat <i> email </i> dan kata sandi yang sudah
+              Anda daftarkan.
             </li>
             <li>
-              Setelah masuk, Anda akan melihat halaman beranda website. Di
-              halaman beranda, Anda dapat melihat berbagai topik yang tersedia.
-              Untuk memilih topik yang ingin dibaca, Anda dapat mengklik tautan
-              topik tersebut.
+              Setelah masuk, Anda akan melihat halaman beranda <i> website </i>.
+              Di halaman beranda, Anda dapat melihat berbagai topik yang
+              tersedia. Untuk memilih topik yang ingin dibaca, Anda dapat
+              mengklik tautan topik tersebut.
             </li>
             <li>
               Setelah mengklik tautan topik, Anda akan melihat halaman topik
@@ -94,43 +96,44 @@ function App() {
             </li>
             <li>
               Jika Anda ingin mengunduh materi elektrolisis pada halaman
-              “Materi”, Anda dapat mengklik tombol “Unduh Materi” yang berada di
-              bagian bawah tampilan materi yang ingin diunduh.
+              <b>Materi</b>, Anda dapat mengklik tombol <b>Unduh Materi</b> yang
+              berada di bagian bawah tampilan materi yang ingin diunduh.
             </li>
             <li>
-              Jika Anda ingin mengunduh media Excel Elektrolisis Interaktif pada
-              halaman “Tutorial” dan “Materi Excel”, Anda dapat mengklik tombol
-              “Unduh Excel” yang berada di bagian bawah tampilan halaman
-              tersebut. Spesifikasi Microsoft Excel minimal tahun 2010 untuk
-              dapat berfungsi dengan baik.
+              Jika Anda ingin mengunduh media <i> Excel </i> Elektrolisis
+              Interaktif pada halaman <b>Tutorial</b> dan <b>Materi Excel</b>,
+              Anda dapat mengklik tombol
+              <b>Unduh Excel</b> yang berada di bagian bawah tampilan halaman
+              tersebut. Spesifikasi <i>Microsoft Excel</i> minimal tahun 2010
+              untuk dapat berfungsi dengan baik.
             </li>
             <li>
-              Jika Anda ingin mengunduh video pada halaman “Tutorial” dan
-              “Materi Excel”, Anda dapat mengklik tombol “Unduh Video” yang
-              berada di bagian bawah tampilan video tersebut.
+              Jika Anda ingin mengunduh video pada halaman <b>Tutorial</b> dan
+              <b>Materi Excel</b>, Anda dapat mengklik tombol <b>Unduh Video</b>{" "}
+              yang berada di bagian bawah tampilan video tersebut.
             </li>
             <li>
               Setelah membaca materi pembelajaran, Anda dapat menyelesaikan tes
-              atau latihan yang tersedia di halaman “Latihan”. Di dalam halaman
-              tersebut, terdapat latihan pilihan ganda dan TTS (Teka-Teki
-              Silang). Anda dapat memilih salah satu dari kedua latihan
-              tersebut. Tes atau latihan ini dapat membantu Anda untuk mengukur
-              pemahaman Anda terhadap materi pembelajaran.
+              atau latihan yang tersedia di halaman <b>Latihan</b>. Di dalam
+              halaman tersebut, terdapat latihan pilihan ganda dan TTS
+              (Teka-Teki Silang). Anda dapat memilih salah satu dari kedua
+              latihan tersebut. Tes atau latihan ini dapat membantu Anda untuk
+              mengukur pemahaman Anda terhadap materi pembelajaran.
             </li>
             <li>
               Jika Anda memiliki pertanyaan atau ingin berbagi pendapat, Anda
               dapat memberikan komentar pada halaman bawah dari halaman yang
-              dibuka pada bagian “Beri Komentar”.
+              dibuka pada bagian <b>Beri Komentar</b>.
             </li>
             <li>
               Jika Anda ingin membagikan materi pembelajaran di media sosial,
-              Anda dapat mengklik tombol “Bagikan” yang berada di bagian bawah
-              halaman.
+              Anda dapat mengklik tombol <b>Bagikan</b> yang berada di bagian
+              bawah halaman.
             </li>
             <li>
               Untuk menilai media pembelajaran yang tersedia, Anda dapat memilih
-              halaman “Angket” dan mengisi angket berdasarkan pendapat Anda
-              serta kritik dan saran terhadap media website.
+              halaman <b>Angket</b> dan mengisi angket berdasarkan pendapat Anda
+              serta kritik dan saran terhadap media <i>website</i>.
             </li>
           </ul>
         </div>
