@@ -1,0 +1,51 @@
+.notification {
+  padding: 2rem 4rem;
+  position: absolute;
+  border: 2px solid $dark;
+  box-shadow: $shadow;
+  z-index: 999;
+  transition: ease-in-out 0.5s;
+  top: 2rem;
+  right: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10rem);
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0rem);
+  }
+
+  p {
+    color: $dark;
+    font-weight: $medium;
+    font-size: $sm;
+  }
+
+  &.success {
+    background-color: $light-green;
+  }
+
+  &.error {
+    background-color: $pink;
+  }
+
+  .close {
+    position: absolute;
+    color: $dark;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+    font-size: $xs;
+    transition: ease-in-out 0.2s;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &:hover {
+    background-color: $light-pink;
+  }
+}

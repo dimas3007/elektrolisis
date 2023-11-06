@@ -3,9 +3,18 @@ import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, signInWithGooglePopup } from "../../config/firebase";
 import { googleIcon } from "../../data/img";
+import Input from "../../layouts/components/Form/Input";
+import Notification from "../../layouts/components/Notification";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  // notification
+  const [isOpen, setIsOpen] = useState(false);
+  const [notification, setNotification] = useState({
+    message: "Login gagal, email atau password salah",
+    type: "error",
+  });
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,66 +25,99 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        navigate("/");
+        navigate("/", {
+          notification: { message: "Login berhasil", type: "success" },
+        });
         console.log(user);
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        if (
+          error.code == "auth/invalid-email" ||
+          "auth/invalid-login-credentials" ||
+          "auth/user-not-found"
+        ) {
+          setIsOpen(true);
+          setTimeout(() => {
+            setIsOpen(false);
+          }, 3000);
+        }
+        console.log(error.code);
       });
   };
 
-  const logGoogleUser = async () => {
-    const response = await signInWithGooglePopup();
-    console.log(response);
+  const handleNotifClose = () => {
+    setIsOpen(false);
+  };
+
+  const logGoogleUser = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await signInWithGooglePopup();
+      console.log(response);
+      navigate("/", {
+        notification: { message: "Login berhasil", type: "success" },
+      });
+    } catch (error) {
+      console.error("Gagal autentikasi dengan Google", error);
+      setIsOpen(true);
+      setTimeout(() => {
+        setIsOpen(false);
+      }, 3000);
+    }
   };
 
   return (
-    <div className="login-container">
-      <div className="login-wrapper">
-        <div className="login-header">
-          <h1>Masuk</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <form className="login-content">
-          <div className="form-input">
-            <label htmlFor="Email">Email</label>
-            <input
-              type="text"
+    <>
+      <Notification
+        message={notification.message}
+        type={notification.type}
+        isOpen={isOpen}
+        handleClose={handleNotifClose}
+      />
+      <div className="login-container">
+        <div className="login-wrapper">
+          <div className="login-header">
+            <h1>Masuk</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <form className="login-content">
+            <Input
               placeholder="ex. ucode@gmail.com"
-              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              label={"Email"}
+              setValue={(e) => setEmail(e.target.value)}
             />
-          </div>
-          <div className="form-input">
-            <label htmlFor="Password">Password</label>
-            <input
-              type="password"
+            <Input
               placeholder="ex. lebih dari 8 karakter"
-              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              label={"Password"}
+              type="password"
+              setValue={(e) => setPassword(e.target.value)}
             />
-          </div>
-          <div className="form-input checkbox">
-            <input type="checkbox" name="" id="" />
-            <label htmlFor="Password">
-              dengan ini saya menyetujui ketentuan pada website ini
-            </label>
-          </div>
-          <div className="form-action">
-            <button className="btn-green" onClick={onLogin}>
-              Masuk
-            </button>
-            <p>atau</p>
-            <button className="btn-white" onClick={logGoogleUser}>
-              <img src={googleIcon} alt="" /> Masuk dengan Google
-            </button>
-            <Link to={"/daftar"}>
-              <button className="btn-white">Daftar</button>
-            </Link>
-          </div>
-        </form>
+            <div className="form-input checkbox">
+              <input type="checkbox" name="" id="" />
+              <label htmlFor="">
+                dengan ini saya menyetujui ketentuan pada website ini
+              </label>
+            </div>
+            <div className="form-action">
+              <button className="btn-green" onClick={onLogin}>
+                Masuk
+              </button>
+              <p>atau</p>
+              <button className="btn-white" onClick={logGoogleUser}>
+                <img src={googleIcon} alt="" /> Masuk dengan Google
+              </button>
+              <Link to={"/daftar"}>
+                <button className="btn-white">Daftar</button>
+              </Link>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

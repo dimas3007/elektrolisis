@@ -4,6 +4,7 @@
 @import "_layout";
 @import "_modal";
 @import "_comment";
+@import "_notification";
 
 // Pages
 @import "./pages/landingPage.scss";
@@ -80,4 +81,12 @@ textarea {
   display: none;
   visibility: none;
   opacity: 0;
+}
+
+.input {
+  width: 100%;
+
+  input {
+    width: 100%;
+  }
 }
