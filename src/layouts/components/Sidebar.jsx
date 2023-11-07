@@ -13,21 +13,25 @@ import { auth } from "../../config/firebase";
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
+import { useDispatch } from "react-redux";
+import { deleteUser } from "../../actions";
+
 const Sidebar = ({ openModal }) => {
   const location = useLocation();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   let { pathname } = location;
 
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        // Sign-out successful.
+        dispatch(deleteUser());
         navigate("/");
         console.log("Signed out successfully");
       })
       .catch((error) => {
-        // An error happened.
+        dispatch(deleteUser());
       });
   };
 

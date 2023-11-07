@@ -6,8 +6,12 @@ import { googleIcon } from "../../data/img";
 import Input from "../../layouts/components/Form/Input";
 import Notification from "../../layouts/components/Notification";
 
+import { useDispatch } from "react-redux";
+import { addUser, deleteUser } from "../../actions";
+
 const Login = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   // notification
   const [isOpen, setIsOpen] = useState(false);
@@ -23,14 +27,15 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in
         const user = userCredential.user;
-        navigate("/", {
-          notification: { message: "Login berhasil", type: "success" },
-        });
+        dispatch(addUser(user));
         console.log(user);
+        // navigate("/", {
+        //   notification: { message: "Login berhasil", type: "success" },
+        // });
       })
       .catch((error) => {
+        dispatch(deleteUser());
         const errorMessage = error.message;
         if (
           error.code == "auth/invalid-email" ||
@@ -56,10 +61,12 @@ const Login = () => {
     try {
       const response = await signInWithGooglePopup();
       console.log(response);
-      navigate("/", {
-        notification: { message: "Login berhasil", type: "success" },
-      });
+      dispatch(addUser(response));
+      // navigate("/", {
+      //   notification: { message: "Login berhasil", type: "success" },
+      // });
     } catch (error) {
+      dispatch(deleteUser());
       console.error("Gagal autentikasi dengan Google", error);
       setIsOpen(true);
       setTimeout(() => {

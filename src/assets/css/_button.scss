@@ -93,6 +93,14 @@ a {
     box-shadow: 5px 5px 0px 0px $dark;
     transform: translateY(0.2rem);
   }
+
+  &.logout {
+    color: $dark;
+
+    &:hover {
+      color: $pink;
+    }
+  }
 }
 
 .btn-yellow {

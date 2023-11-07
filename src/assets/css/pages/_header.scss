@@ -61,7 +61,8 @@
     cursor: pointer;
   }
 
-  .user-info-wrapper {
+  .user-info-wrapper,
+  .user-button {
     display: flex;
     justify-self: end;
     grid-column: 2/13;
