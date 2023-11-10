@@ -11,7 +11,7 @@ const PetaKonsep = () => {
 
       <div className="main-content">
         <img src={petaKonsep} alt="" />
-        <Comment />
+        <Comment page="mind-map" />
       </div>
     </div>
   );

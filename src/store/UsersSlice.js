@@ -5,7 +5,11 @@ export const usersSlice = createSlice({
   initialState: {
     usersArray: [],
   },
-  reducers: {},
+  reducers: {
+    addUser: (state, action) => {
+      state.value.usersArray = action.payload;
+    },
+  },
   extraReducers: {},
 });
 

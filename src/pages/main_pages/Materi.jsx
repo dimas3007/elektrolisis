@@ -96,7 +96,7 @@ const Materi = () => {
           </div>
         </div>
 
-        <Comment />
+        <Comment page="materi" />
       </div>
     </div>
   );

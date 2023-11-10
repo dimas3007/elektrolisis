@@ -7,7 +7,6 @@ import Input from "../../layouts/components/Form/Input";
 import Notification from "../../layouts/components/Notification";
 
 import { useDispatch } from "react-redux";
-import { addUser, deleteUser } from "../../actions";
 
 const Login = () => {
   const navigate = useNavigate();

@@ -141,7 +141,7 @@ const Soal = () => {
                 Ulangi latihan soal
               </button>
             </div>
-            <Comment />
+            <Comment page="latihan" />
           </>
         ) : (
           <>

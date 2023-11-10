@@ -824,7 +824,7 @@ const TabelPeriodik = () => {
           </div>
         </section>
       </main>
-      <Comment />
+      <Comment page="tabel-periodik" />
     </div>
   );
 };

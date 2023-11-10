@@ -152,7 +152,7 @@ const ExcelDownload = () => {
           </div>
         </div>
 
-        <Comment />
+        <Comment page="excel-download" />
       </div>
     </div>
   );

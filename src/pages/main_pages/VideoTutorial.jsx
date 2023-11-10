@@ -144,7 +144,7 @@ const VideoTutorial = () => {
             </div>
           </div>
         </div>
-        <Comment />
+        <Comment page="video-tutorial" />
       </div>
     </div>
   );

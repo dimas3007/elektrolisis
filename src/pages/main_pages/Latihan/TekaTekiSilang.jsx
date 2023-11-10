@@ -166,7 +166,7 @@ const TekaTekiSilang = () => {
           />
         </ThemeProvider>
         {/* <pre>{messages}</pre> */}
-        <Comment />
+        <Comment page="tts" />
       </div>
     </div>
   );

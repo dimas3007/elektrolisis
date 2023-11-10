@@ -4,9 +4,9 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import userReducer from "./reducers/userReducer";
 
-const store = createStore(
+const stores = createStore(
   userReducer,
   composeWithDevTools(applyMiddleware(thunk))
 );
 
-export default store;
+export default stores;

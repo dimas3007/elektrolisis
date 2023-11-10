@@ -24,12 +24,18 @@ export const addCommentToFirestore = createAsyncThunk(
 // fetch comments
 export const fetchComments = createAsyncThunk(
   "comments/fetchComments",
-  async () => {
+  async (page) => {
     const querySnapshot = await getDocs(collection(db, "Comments"));
-    const comments = querySnapshot.docs.map((doc) => ({
+    console.log("querySnapshot", querySnapshot);
+    let comments = querySnapshot.docs.map((doc) => ({
       id: doc.id,
       comment: doc.data(),
     }));
+
+    comments = comments.filter((comment) => {
+      return comment.comment.page == page;
+    });
+
     return comments;
   }
 );
@@ -68,7 +74,7 @@ export const updateComment = createAsyncThunk(
     for (var snap of comments.docs) {
       if (snap.id === editedComment.id) {
         const commentRef = doc(db, "Comments", snap.id);
-        await updateDoc(commentRef, editedComment.book);
+        await updateDoc(commentRef, editedComment.name);
       }
     }
     return editedComment;
@@ -78,7 +84,7 @@ export const updateComment = createAsyncThunk(
 export const commentsSlice = createSlice({
   name: "Comments",
   initialState: {
-    usersArray: [],
+    commentsArray: [],
   },
   reducers: {},
   extraReducers: (builder) => {
