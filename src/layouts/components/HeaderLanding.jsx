@@ -8,13 +8,12 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../config/firebase";
 
 import { useSelector, useDispatch } from "react-redux";
-import { deleteUser } from "../../actions";
 
 const HeaderLanding = ({ openModal }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const users = useSelector((state) => state.users);
+  const users = useSelector((state) => state.users.usersArray);
 
   const handleLogout = () => {
     signOut(auth)
@@ -24,7 +23,7 @@ const HeaderLanding = ({ openModal }) => {
         console.log("Signed out successfully");
       })
       .catch((error) => {
-        dispatch(deleteUser());
+        // dispatch(deleteUser());
       });
   };
 
@@ -36,14 +35,14 @@ const HeaderLanding = ({ openModal }) => {
         </Link>
       </div>
       <div className="action">
-        {users.length ? (
+        {Object.entries(users)?.length ? (
           <>
             <div className="author header">
               <div className="user-img">
                 <img src={iconTentang} alt="user foto" />
               </div>
               <div className="user-info">
-                <h3>{users[0].email}</h3>
+                <h3>{users.email}</h3>
               </div>
             </div>
             <button className="btn-red logout" onClick={handleLogout}>

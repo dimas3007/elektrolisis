@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Header = () => {
-  const users = useSelector((state) => state.users);
+  const users = useSelector((state) => state.users.usersArray);
 
   return (
     <header className="header-content">
@@ -17,14 +17,14 @@ const Header = () => {
           </div>
         </div>
       </Link>
-      {users.length ? (
+      {Object.entries(users)?.length ? (
         <div className="user-info-wrapper">
           <div className="user-info">
             <div className="user-img">
               <img src={iconTentang} alt="user foto" />
             </div>
             <div className="user-info">
-              <h3>{users[0].email}</h3>
+              <h3>{users.email}</h3>
             </div>
           </div>
         </div>

@@ -5,8 +5,9 @@ import { auth, signInWithGooglePopup } from "../../config/firebase";
 import { googleIcon } from "../../data/img";
 import Input from "../../layouts/components/Form/Input";
 import Notification from "../../layouts/components/Notification";
+import { addUser } from "../../store/UsersSlice";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -28,13 +29,12 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         dispatch(addUser(user));
-        console.log(user);
-        // navigate("/", {
-        //   notification: { message: "Login berhasil", type: "success" },
-        // });
+        navigate("/", {
+          notification: { message: "Login berhasil", type: "success" },
+        });
       })
       .catch((error) => {
-        dispatch(deleteUser());
+        // dispatch(deleteUser());
         const errorMessage = error.message;
         if (
           error.code == "auth/invalid-email" ||
@@ -46,7 +46,7 @@ const Login = () => {
             setIsOpen(false);
           }, 3000);
         }
-        console.log(error.code);
+        console.log(error);
       });
   };
 

@@ -7,9 +7,11 @@ import {
 } from "../../store/CommentsSlice";
 
 const Comment = ({ page = "mind-map" }) => {
+  const users = useSelector((state) => state.users.usersArray);
+
   let data = useSelector((state) => state.comments.commentsArray);
   let [comment, setComment] = useState({
-    user: "titin@gmail.com",
+    user: users.email,
     page: page,
     comment: "",
   });
@@ -24,7 +26,6 @@ const Comment = ({ page = "mind-map" }) => {
   const handleComment = () => {
     dispatch(addCommentToFirestore(comment));
     setComment({ ...comment, comment: "" });
-    console.log(comment);
   };
 
   return (
