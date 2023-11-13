@@ -5,7 +5,7 @@ import { auth, signInWithGooglePopup } from "../../config/firebase";
 import { googleIcon } from "../../data/img";
 import Input from "../../layouts/components/Form/Input";
 import Notification from "../../layouts/components/Notification";
-import { addUser } from "../../store/UsersSlice";
+import { addUser, deleteUser } from "../../store/UsersSlice";
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -34,7 +34,7 @@ const Login = () => {
         });
       })
       .catch((error) => {
-        // dispatch(deleteUser());
+        dispatch(deleteUser());
         const errorMessage = error.message;
         if (
           error.code == "auth/invalid-email" ||

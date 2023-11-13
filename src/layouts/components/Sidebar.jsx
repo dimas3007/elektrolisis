@@ -14,7 +14,7 @@ import { auth } from "../../config/firebase";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
-import { deleteUser } from "../../actions";
+import { deleteUser } from "../../store/UsersSlice";
 
 const Sidebar = ({ openModal }) => {
   const location = useLocation();

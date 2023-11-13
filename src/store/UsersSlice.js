@@ -18,9 +18,12 @@ export const usersSlice = createSlice({
 
       state.usersArray = user;
     },
+    deleteUser: (state, action) => {
+      state.usersArray = {};
+    },
   },
   extraReducers: {},
 });
 
-export const { addUser } = usersSlice.actions;
+export const { addUser, deleteUser } = usersSlice.actions;
 export default usersSlice.reducer;

@@ -25,7 +25,7 @@ const Comment = ({ page = "mind-map" }) => {
 
   const handleComment = () => {
     dispatch(addCommentToFirestore(comment));
-    setComment({ ...comment, comment: "" });
+    setComment({ comment: "" });
   };
 
   return (
@@ -35,12 +35,12 @@ const Comment = ({ page = "mind-map" }) => {
       </div>
       <div class="comment-container">
         <textarea
+          id="comment"
           class="comment-textarea"
           placeholder="Tulis komentar Anda di sini..."
           onChange={(e) => setComment({ ...comment, comment: e.target.value })}
-        >
-          {comment.comment}
-        </textarea>
+          value={comment.comment}
+        ></textarea>
         <button class="comment-send-button btn-green" onClick={handleComment}>
           <IoMdSend />
         </button>

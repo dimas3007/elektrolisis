@@ -6,6 +6,7 @@ import iconTentang from "../../assets/img/icon/tentang_kami.png";
 
 import { signOut } from "firebase/auth";
 import { auth } from "../../config/firebase";
+import { deleteUser } from "../../store/UsersSlice";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -23,7 +24,7 @@ const HeaderLanding = ({ openModal }) => {
         console.log("Signed out successfully");
       })
       .catch((error) => {
-        // dispatch(deleteUser());
+        dispatch(deleteUser());
       });
   };
 
