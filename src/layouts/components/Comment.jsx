@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IoMdSend } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
+import { formatTimestamp } from "../../helper/helper";
 import {
   addCommentToFirestore,
   fetchComments,
@@ -11,6 +12,7 @@ const Comment = ({ page = "mind-map" }) => {
 
   let data = useSelector((state) => state.comments.commentsArray);
   let [comment, setComment] = useState({
+    user_id: users.uid,
     user: users.email,
     page: page,
     comment: "",
@@ -50,7 +52,7 @@ const Comment = ({ page = "mind-map" }) => {
           <div className="comment-item" key={comment.comment.id}>
             <div className="comment-header">
               <h2>{comment.comment.user}</h2>
-              {/* <span>11 November 2023, 09:08</span> */}
+              <span>{formatTimestamp(comment.comment.created_at)}</span>
             </div>
             <p>{comment.comment.comment}</p>
           </div>

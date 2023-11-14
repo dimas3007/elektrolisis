@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HeadingContent from "../../../layouts/components/HeadingContent";
 import Modal from "react-modal";
 import { FaTimes } from "react-icons/fa";
 import { FaRegFaceSmileWink } from "react-icons/fa6";
+import { useDispatch, useSelector } from "react-redux";
 import Comment from "../../../layouts/components/Comment";
+import {
+  addExerciseToFirestore,
+  fetchExercises,
+} from "../../../store/ExcercisesSlice";
 
 const questions = [
   {
@@ -26,6 +31,12 @@ const questions = [
 const alphabets = "abcdefghijklmnopqrstuvwxyz".split("");
 
 const Soal = () => {
+  const dispatch = useDispatch();
+
+  const users = useSelector((state) => state.users.usersArray);
+
+  let data = useSelector((state) => state.exercises.exercisesArray);
+  console.log("DATA NILAI", data);
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -54,6 +65,16 @@ const Soal = () => {
       setIsOpen(false);
       setShowResult(true);
       setScore(calculateScore());
+
+      const score = {
+        user_id: users.uid,
+        user: users.email,
+        score:
+          calculateScore() == 0
+            ? "000"
+            : ((100 / questions.length) * score).toFixed(1),
+      };
+      dispatch(addExerciseToFirestore(score));
     }
   };
 
@@ -81,6 +102,10 @@ const Soal = () => {
   function closeModal() {
     setIsOpen(false);
   }
+
+  useEffect(() => {
+    dispatch(fetchExercises(users.uid));
+  }, [dispatch]);
 
   return (
     <div>

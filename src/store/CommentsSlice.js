@@ -5,6 +5,7 @@ import {
   deleteDoc,
   getDocs,
   updateDoc,
+  serverTimestamp,
 } from "firebase/firestore";
 import { db } from "../config/firebase";
 
@@ -12,6 +13,11 @@ import { db } from "../config/firebase";
 export const addCommentToFirestore = createAsyncThunk(
   "comments/addCommentToFirestore",
   async (comment) => {
+    comment = {
+      ...comment,
+      created_at: serverTimestamp(),
+    };
+
     const addCommentRef = await addDoc(collection(db, "Comments"), comment);
     const newComment = {
       id: addCommentRef.id,
