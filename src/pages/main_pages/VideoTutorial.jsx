@@ -11,7 +11,27 @@ import { FaRegFaceSmileWink } from "react-icons/fa6";
 import ExcelFoto from "../../assets/img/content/excel_screenshot.png";
 import TutorialVideo from "../../assets/video/tutorial.mp4";
 
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addViewToFirestore,
+  fetchViews,
+  getCurrentUserView,
+} from "../../store/ViewsSlice";
+import {
+  addDownloadToFirestore,
+  fetchDownloads,
+  getCurrentUserDownload,
+} from "../../store/DownloadsSlice";
+import {
+  addLikeToFirestore,
+  fetchLikes,
+  getCurrentUserLike,
+} from "../../store/LikesSlice";
+
 import Comment from "../../layouts/components/Comment";
+import { useEffect, useState } from "react";
+
+import { downloadVideo } from "../../helper/helper";
 
 const KONTEN_VIDEO = [
   {
@@ -49,11 +69,51 @@ const KONTEN_VIDEO = [
 ];
 
 const VideoTutorial = () => {
+  const [page, setPage] = useState("video-tutorial");
+  const [data, setData] = useState({});
+
+  const users = useSelector((state) => state.users.usersArray);
+  const liked = useSelector((state) => state.likes.likesUser);
+
+  let totalViews = useSelector((state) => state.views.viewsArray);
+  let totalDownloads = useSelector((state) => state.downloads.downloadsArray);
+  let totalLikes = useSelector((state) => state.likes.likesArray);
+
   const handleMateriButton = (to) => {
     let video = document.getElementById("tutorial_video");
 
     video.currentTime = to;
     video.play();
+  };
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const newData = {
+      page,
+      user: users.email,
+      user_id: users.uid,
+    };
+
+    setData(newData);
+    dispatch(getCurrentUserLike(newData));
+    dispatch(addViewToFirestore(data));
+
+    dispatch(fetchViews(page));
+    dispatch(fetchDownloads(page));
+    dispatch(fetchLikes(page));
+  }, [dispatch]);
+
+  const handleLike = () => {
+    dispatch(addLikeToFirestore(data));
+    dispatch(fetchLikes(page));
+    dispatch(getCurrentUserLike(data));
+  };
+
+  const handleDownload = () => {
+    downloadVideo(TutorialVideo);
+    dispatch(addDownloadToFirestore(data));
+    dispatch(fetchDownloads(page));
   };
 
   return (
@@ -91,19 +151,19 @@ const VideoTutorial = () => {
               <div className="icon-img green">
                 <AiFillEye />
               </div>
-              <p>100 Dilihat</p>
+              <p>{totalViews.length} Dilihat</p>
             </div>
-            <div className="info">
-              <div className="icon-img red">
+            <div className="info" onClick={handleLike}>
+              <div className={`icon-img red ${liked.length ? "active" : ""}`}>
                 <AiFillHeart />
               </div>
-              <p>100 Suka</p>
+              <p>{totalLikes.length} Suka</p>
             </div>
-            <div className="info">
+            <div className="info" onClick={handleDownload}>
               <div className="icon-img yellow">
                 <BiSolidCloudDownload />
               </div>
-              <p>Unduh Video</p>
+              <p>Unduh Video - {totalDownloads.length} pengunduh</p>
             </div>
           </div>
         </div>
@@ -144,7 +204,7 @@ const VideoTutorial = () => {
             </div>
           </div>
         </div>
-        <Comment page="video-tutorial" />
+        <Comment page={page} />
       </div>
     </div>
   );

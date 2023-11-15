@@ -230,11 +230,6 @@
         .icon-img {
           box-shadow: $shadow-sm;
 
-          &.green {
-            background-color: $green;
-            color: $light-green;
-          }
-
           &.red {
             background-color: $red;
             color: $pink;
@@ -265,11 +260,21 @@
         &.red {
           background-color: $pink;
           color: $red;
+
+          &.active {
+            background-color: $red;
+            color: $pink;
+          }
         }
 
         &.yellow {
           background-color: $yellow;
           color: $dark;
+
+          &.active {
+            background-color: $dark;
+            color: $yellow;
+          }
         }
       }
     }

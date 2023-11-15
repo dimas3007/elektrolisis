@@ -8,8 +8,55 @@ import { AiFillEye, AiFillHeart, AiFillPlayCircle } from "react-icons/ai";
 import { BiSolidCloudDownload } from "react-icons/bi";
 import HeadingContent from "../../layouts/components/HeadingContent";
 import Comment from "../../layouts/components/Comment";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addLikeToFirestore,
+  fetchLikes,
+  getCurrentUserLike,
+} from "../../store/LikesSlice";
+import { addViewToFirestore, fetchViews } from "../../store/ViewsSlice";
+import {
+  addDownloadToFirestore,
+  fetchDownloads,
+} from "../../store/DownloadsSlice";
+import { useEffect } from "react";
 
 const ExcelDownload = () => {
+  const [page, setPage] = useState("excel-download");
+  const [data, setData] = useState({});
+
+  const users = useSelector((state) => state.users.usersArray);
+  const liked = useSelector((state) => state.likes.likesUser);
+
+  let totalViews = useSelector((state) => state.views.viewsArray);
+  let totalDownloads = useSelector((state) => state.downloads.downloadsArray);
+  let totalLikes = useSelector((state) => state.likes.likesArray);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const newData = {
+      page,
+      user: users.email,
+      user_id: users.uid,
+    };
+
+    setData(newData);
+    dispatch(getCurrentUserLike(data));
+    dispatch(addViewToFirestore(data));
+
+    dispatch(fetchViews(page));
+    dispatch(fetchDownloads(page));
+    dispatch(fetchLikes(page));
+  }, [dispatch]);
+
+  const handleLike = () => {
+    dispatch(addLikeToFirestore(data));
+    dispatch(fetchLikes(page));
+    dispatch(getCurrentUserLike(data));
+  };
+
   const handleDownload = () => {
     const fileName = "/src/assets/doc/elektrolisis.xlsx"; // Ganti 'nama_file.xlsx' dengan nama file Excel Anda
 
@@ -27,6 +74,9 @@ const ExcelDownload = () => {
       .catch((error) => {
         console.error("Error downloading file:", error);
       });
+
+    dispatch(addDownloadToFirestore(data));
+    dispatch(fetchDownloads(page));
   };
 
   return (
@@ -65,13 +115,13 @@ const ExcelDownload = () => {
               <div className="icon-img green">
                 <AiFillEye />
               </div>
-              <p>100 Dilihat</p>
+              <p>{totalViews.length} Dilihat</p>
             </div>
-            <div className="info">
-              <div className="icon-img red">
+            <div className="info" onClick={handleLike}>
+              <div className={`icon-img red ${liked.length ? "active" : ""}`}>
                 <AiFillHeart />
               </div>
-              <p>100 Suka</p>
+              <p>{totalLikes.length} Suka</p>
             </div>
           </div>
         </div>
@@ -152,7 +202,7 @@ const ExcelDownload = () => {
           </div>
         </div>
 
-        <Comment page="excel-download" />
+        <Comment page={page} />
       </div>
     </div>
   );
