@@ -443,61 +443,61 @@ const TabelPeriodik = () => {
         <section className="group-period">
           <ul className="group__list">
             <li className="group__item flex-row-wrap group-1">
-              <span>1</span>
+              <span>IA</span>
             </li>
             <li className="group__item flex-row-wrap group-2">
-              <span>2</span>
+              <span>IIA</span>
             </li>
             <li className="group__item flex-row-wrap group-3">
-              <span>3</span>
+              <span>IIIB</span>
             </li>
             <li className="group__item flex-row-wrap group-4">
-              <span>4</span>
+              <span>IVB</span>
             </li>
             <li className="group__item flex-row-wrap group-5">
-              <span>5</span>
+              <span>VB</span>
             </li>
             <li className="group__item flex-row-wrap group-6">
-              <span>6</span>
+              <span>VIB</span>
             </li>
             <li className="group__item flex-row-wrap group-7">
-              <span>7</span>
+              <span>VIIB</span>
             </li>
             <li className="group__item flex-row-wrap group-8">
-              <span>8</span>
+              <span>VIIIB</span>
             </li>
             <li className="group__item flex-row-wrap group-9">
-              <span>9</span>
+              <span>VIIIB</span>
             </li>
             <li className="group__item flex-row-wrap group-10">
-              <span>10</span>
+              <span>VIIIB</span>
             </li>
             <li className="group__item flex-row-wrap group-11">
-              <span>11</span>
+              <span>IB</span>
             </li>
             <li className="group__item flex-row-wrap group-12">
-              <span>12</span>
+              <span>IIB</span>
             </li>
             <li className="group__item flex-row-wrap group-13">
-              <span>13</span>
+              <span>IIIA</span>
             </li>
             <li className="group__item flex-row-wrap group-14">
-              <span>14</span>
+              <span>IVA</span>
             </li>
             <li className="group__item flex-row-wrap group-15">
-              <span>15</span>
+              <span>VA</span>
               <span>Pnictogens</span>
             </li>
             <li className="group__item flex-row-wrap group-16">
-              <span>16</span>
+              <span>VIA</span>
               <span>Chalcogens</span>
             </li>
             <li className="group__item flex-row-wrap group-17">
-              <span>17</span>
+              <span>VIIA</span>
               <span>Halogens</span>
             </li>
             <li className="group__item flex-row-wrap group-18">
-              <span>18</span>
+              <span>VIIIA</span>
             </li>
           </ul>
           <ul className="period__list">

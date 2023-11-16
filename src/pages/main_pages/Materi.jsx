@@ -1,6 +1,6 @@
 import React from "react";
 import HeadingContent from "../../layouts/components/HeadingContent";
-import { BsFillCircleFill } from "react-icons/bs";
+import { BsFillCalendarWeekFill, BsFillCircleFill } from "react-icons/bs";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,6 +13,8 @@ import handout6 from "../../assets/img/handout/6.png";
 import handout7 from "../../assets/img/handout/7.png";
 import handout8 from "../../assets/img/handout/8.png";
 import Comment from "../../layouts/components/Comment";
+import { AiFillEye, AiFillHeart } from "react-icons/ai";
+import { BiSolidCloudDownload } from "react-icons/bi";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -47,11 +49,59 @@ const Materi = () => {
     prevArrow: <SamplePrevArrow />,
   };
 
+  const handleDownload = () => {
+    // Tentukan path file ZIP yang akan diunduh
+    const zipFilePath = "/handout.zip";
+
+    // Create a URL for the ZIP file
+    const downloadUrl = window.location.origin + zipFilePath;
+
+    // Create an <a> element to trigger the download
+    const link = document.createElement("a");
+    link.href = downloadUrl;
+    link.download = "handout.zip";
+
+    // Append the <a> element to the document and click it programmatically
+    document.body.appendChild(link);
+    link.click();
+
+    // Remove the <a> element from the document after it's done
+    document.body.removeChild(link);
+  };
+
   return (
     <div>
       <HeadingContent title="Materi" />
 
       <div className="main-content">
+        <div className="content-info">
+          <div className="info">
+            <div className="icon-img">
+              <BsFillCalendarWeekFill />
+            </div>
+            <p>Minggu, 13 Agustus 2023</p>
+          </div>
+          <div className="right">
+            <div className="info">
+              <div className="icon-img green">
+                <AiFillEye />
+              </div>
+              <p>11 Dilihat</p>
+            </div>
+            <div className="info">
+              <div className={`icon-img red`}>
+                <AiFillHeart />
+              </div>
+              <p>20 Suka</p>
+            </div>
+            <div className="info" onClick={handleDownload}>
+              <div className="icon-img yellow">
+                <BiSolidCloudDownload />
+              </div>
+              <p>Unduh Video - 11 pengunduh</p>
+            </div>
+          </div>
+        </div>
         <div className="handout">
           <Slider {...settings}>
             {HANDOUTS.map((handout, key) => (
