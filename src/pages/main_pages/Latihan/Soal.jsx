@@ -9,29 +9,14 @@ import {
   addExerciseToFirestore,
   fetchExercises,
 } from "../../../store/ExcercisesSlice";
-
-const questions = [
-  {
-    question: "Apa ibu kota Indonesia?",
-    options: ["Jakarta", "Surabaya", "Bandung", "Yogyakarta"],
-    correctAnswer: "Jakarta",
-  },
-  {
-    question: "Berapa jumlah provinsi di Indonesia?",
-    options: ["32", "33", "34", "35"],
-    correctAnswer: "34",
-  },
-  {
-    question: "Apa warna bendera Indonesia?",
-    options: ["Merah-Putih", "Merah-Hijau", "Biru-Putih", "Kuning-Merah"],
-    correctAnswer: "Merah-Putih",
-  },
-];
+import soalData from "../../../data/soal-latihan.json";
 
 const alphabets = "abcdefghijklmnopqrstuvwxyz".split("");
 
 const Soal = () => {
   const dispatch = useDispatch();
+
+  const [questions, setQuestions] = useState(soalData.soalData);
 
   const users = useSelector((state) => state.users.usersArray);
 
@@ -177,6 +162,20 @@ const Soal = () => {
               <div className="question">
                 {/* <img src="#" alt="" /> */}
                 <p>{questions[currentQuestion].question}</p>
+                <div>
+                  {questions[currentQuestion].sub.length
+                    ? questions[currentQuestion].sub.map((sub, index) => (
+                        <p>
+                          {index + 1}. {sub}
+                        </p>
+                      ))
+                    : ""}
+                </div>
+                {questions[currentQuestion].question_addon.length ? (
+                  <p>{questions[currentQuestion].question_addon}</p>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
             <div className="multiple-choice">

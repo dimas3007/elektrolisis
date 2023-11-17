@@ -140,9 +140,11 @@ pre {
 
   .question {
     grid-column: 2/13;
-
+    display: flex;
     color: $dark;
     font-weight: $semi-bold;
+    flex-direction: column;
+    gap: 1.2rem;
   }
 }
 

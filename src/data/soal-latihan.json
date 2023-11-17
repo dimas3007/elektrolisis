@@ -1,0 +1,143 @@
+{
+  "soalData": [
+    {
+      "question": "Pada elektrolisis cairan MgCl2, pada katode dan anode berturut dibebaskan...",
+      "options": [
+        "H2 dan Cl2 ",
+        "H2 dan O2",
+        "Mg dan Cl2",
+        "Mg dan H2",
+        "Mg dan O2"
+      ],
+      "sub": [],
+      "correctAnswer": "Mg dan Cl2"
+    },
+    {
+      "question": "Perhatikan proses elektrolisis berikut",
+      "sub": [
+        "Elektrolisis larutan NaCl dengan elektroda C.",
+        "Elektrolisis larutan AgNO3 dengan elektroda Pt.",
+        "elektrolisis leburan KI dengan elektroda Pb.",
+        "elektrolisis larutan K2SO4 dengan elektroda C."
+      ],
+      "question_addon": "Pasangan yang menghasilkan gas O2 di anoda ditunjukkan oleh nomor...",
+      "options": ["1 Dan 2", "1 dan 3", "1 dan 4", "2 dan 3", "2 dan 4"],
+      "correctAnswer": "2 dan 4"
+    },
+    {
+      "question": "Dalam sejumlah arus listrik yang sama ke dalam larutan NiSO4 dan CuCl2 membentuk endapan nikel sebanyak 5,9 gram. Maka massa endapan tembaga yang terbentuk adalah...",
+      "sub": [],
+      "question_addon": "",
+      "options": ["31,8 g", "59,0 g", "63,5 g", "118 g", "127 g"],
+      "correctAnswer": "63,5 g"
+    },
+    {
+      "question": "Pada proses elektrolisis lelehan NaCl dengan elektroda karbon digunakan Arus sebesar 10 ampere selama 1 menit, massa logam natrium yang diperoleh adalah",
+      "sub": [],
+      "question_addon": "",
+      "options": ["0,07 g", "0,12 g", "0,14 g", "0,25 g", "0,36 g"],
+      "correctAnswer": "0,14 g"
+    },
+    {
+      "question": ". Larutan nikel II sulfat di elektrolisis dengan arus searah besar 1,93 ampere. Jika pada katoda diendapkan logam nikel sebesar 0,58 gram waktu yang diperlukan untuk proses tersebut adalah",
+      "sub": [],
+      "question_addon": "",
+      "options": [
+        "200 detik",
+        "500 detik",
+        "1000 detik",
+        "1930 detik",
+        "9650 detik "
+      ],
+      "correctAnswer": "1000 detik"
+    },
+    {
+      "question": "Kedalam 2 sel elektrolisis yang mengandung larutan ZnSO4 dan larutan CuSO4 yang dihubungkan secara seri dialirkan arus listrik ternyata diendapkan 1 gram seng. Banyak tembaga yang mengendap adalah...",
+      "sub": [],
+      "question_addon": "",
+      "options": ["0,27 g", "0,48 g", "0,76 g", "0,86 g", "0,97 g"],
+      "correctAnswer": "0,97 g"
+    },
+    {
+      "question": "Di bawah ini yang bukan merupakan faktor yang berpengaruh pada jumlah mol logam yang terdeposit selama proses elektrolisis adalah...",
+      "sub": [],
+      "question_addon": "",
+      "options": [
+        "Arus yang digunakan",
+        "Jangka waktu elektrolisis",
+        "Muatan ion",
+        "Massa molar",
+        "Muatan arus listrik"
+      ],
+      "correctAnswer": "Muatan arus listrik"
+    },
+    {
+      "question": "Suatu larutan mengandung NiCl2 dan SnBr2 dengan konsentrasi yang sama. Berdasarkan data reduksi standar berikut",
+      "sub": [
+        "Ni2+ (aq) + 2e → Ni (s)",
+        "Sn2+ (aq) + 2e → Sn (s)",
+        "Cl2 (aq) + 2e → 2Cl-",
+        "Br2 (aq) + 2e → 2Br-",
+        "E0 = -0,236 V",
+        "E0 = -0,141 V",
+        "E0 = +1,360 V ",
+        "E0 = +1,077 V"
+      ],
+      "question_addon": "Jika larutan tersebut dielektrolisis menggunakan baterai 9 volt dan elektroda grafit yang pertama kali terbentuk pada setiap elektroda adalah...",
+      "options": [
+        "Ni (s) di katoda Cl2 (g) di anoda",
+        "Ni (s) di katoda Br2 (g) di anoda",
+        "Sn(s) di katoda Br2 (g) di anoda",
+        "Sn (s) di katoda Cl2 (g) di anoda",
+        "Sn (s) di katoda Ni(s) di anoda"
+      ],
+      "correctAnswer": "Sn(s) di katoda Br2 (g) di anoda"
+    },
+    {
+      "question": "Pada elektrolisis air dihasilkan 1,008 gram gas H2 di katoda. Massa gas oksigen yang terbentuk di anoda adalah...",
+      "sub": [],
+      "question_addon": "",
+      "options": ["2 g", "8 g", "10 g", "16 g", "32 g"],
+      "correctAnswer": "8 g"
+    },
+    {
+      "question": "Pada elektrolisis lelehan MgCl2 dengan elektrode grafit di katode akan dihasilkan?",
+      "sub": [],
+      "question_addon": "",
+      "options": [
+        "Gas klorin",
+        "Gas Hidrogen",
+        "Larutan Mg(OH)2",
+        "Logam Mg",
+        "Gas oksigen"
+      ],
+      "correctAnswer": "Gas Hidrogen"
+    },
+    {
+      "question": "Pada elektrolisis larutan CuSO4 dengan elektrode Pt, dialirkan arus listrik 2 A selama 965 detik, maka banyaknya logam tembaga yang dihasilkan ... gram",
+      "sub": [],
+      "question_addon": "",
+      "options": [
+        "0,317 gram",
+        "0,635 gram",
+        "0,952 gram",
+        "3,17 gram",
+        "6,35 gram"
+      ],
+      "correctAnswer": "0,635 gram"
+    },
+    {
+      "question": "Elektrolisis 200 mL CuSO4 1 M, jika ingin mengendapkan semua tembaga menggunakan arus sebesar 10 A maka waktu yang diperlukan adalah...",
+      "sub": [],
+      "question_addon": "",
+      "options": [
+        "193 detik",
+        "360 detik",
+        "1930 detik",
+        "3860 detik",
+        "9650 detik"
+      ],
+      "correctAnswer": ""
+    }
+  ]
+}
