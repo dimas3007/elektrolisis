@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import HeadingContent from "../../../layouts/components/HeadingContent";
 import { useParams } from "react-router-dom";
 import angketData from "../../../data/angket.json";
+import Back from "../../../layouts/components/Back";
 
 const AngketContent = () => {
   let { angket } = useParams();
@@ -28,6 +29,7 @@ const AngketContent = () => {
       <HeadingContent title="Angket" />
 
       <div className="main-content">
+        <Back url={"/angket"} page={"Angket"} />
         <div className="content-description">
           <h2>
             {" "}

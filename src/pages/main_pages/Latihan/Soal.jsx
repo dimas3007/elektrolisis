@@ -10,6 +10,7 @@ import {
   fetchExercises,
 } from "../../../store/ExcercisesSlice";
 import soalData from "../../../data/soal-latihan.json";
+import Back from "../../../layouts/components/Back";
 
 const alphabets = "abcdefghijklmnopqrstuvwxyz".split("");
 
@@ -21,7 +22,6 @@ const Soal = () => {
   const users = useSelector((state) => state.users.usersArray);
 
   let data = useSelector((state) => state.exercises.exercisesArray);
-  console.log("DATA NILAI", data);
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -97,6 +97,7 @@ const Soal = () => {
       <HeadingContent title="Latihan Soal" />
 
       <div className="main-content">
+        <Back url={"/latihan"} page={"Latihan"} />
         {showResult ? (
           <>
             <div className="result">
@@ -171,7 +172,7 @@ const Soal = () => {
                       ))
                     : ""}
                 </div>
-                {questions[currentQuestion].question_addon.length ? (
+                {questions[currentQuestion]?.question_addon?.length ? (
                   <p>{questions[currentQuestion].question_addon}</p>
                 ) : (
                   ""

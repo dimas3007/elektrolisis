@@ -2,6 +2,7 @@ import React, { useCallback, useRef, useState } from "react";
 import HeadingContent from "../../../layouts/components/HeadingContent";
 import Crossword, { ThemeProvider } from "@jaredreisinger/react-crossword";
 import Comment from "../../../layouts/components/Comment";
+import Back from "../../../layouts/components/Back";
 
 const data = {
   across: {
@@ -153,6 +154,7 @@ const TekaTekiSilang = () => {
       <HeadingContent title="Latihan Teka Teki Silang" />
 
       <div className="main-content">
+        <Back url={"/latihan"} page={"Latihan"} />
         <ThemeProvider theme={theme}>
           <Crossword
             data={data}
