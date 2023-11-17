@@ -12,15 +12,10 @@ import ExcelFoto from "../../assets/img/content/excel_screenshot.png";
 import TutorialVideo from "../../assets/video/tutorial.mp4";
 
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addViewToFirestore,
-  fetchViews,
-  getCurrentUserView,
-} from "../../store/ViewsSlice";
+import { addViewToFirestore, fetchViews } from "../../store/ViewsSlice";
 import {
   addDownloadToFirestore,
   fetchDownloads,
-  getCurrentUserDownload,
 } from "../../store/DownloadsSlice";
 import {
   addLikeToFirestore,

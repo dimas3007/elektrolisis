@@ -14,6 +14,7 @@ import TekaTekiSilang from "./pages/main_pages/Latihan/TekaTekiSilang";
 import Soal from "./pages/main_pages/Latihan/Soal";
 import Login from "./pages/main_pages/Login";
 import Register from "./pages/main_pages/Register";
+import HasilLatihan from "./pages/main_pages/Admin/HasilLatihan";
 
 import Modal from "react-modal";
 import { FaTimes } from "react-icons/fa";
@@ -56,6 +57,7 @@ function App() {
           <Route path="/angket" element={<Angket />} />
           <Route path="/angket/content/:angket" element={<AngketContent />} />
           <Route path="/tentang" element={<Tentang />} />
+          <Route path="/admin/hasil-latihan" element={<HasilLatihan />} />
         </Route>
       </Routes>
       <Modal isOpen={modalIsOpen}>

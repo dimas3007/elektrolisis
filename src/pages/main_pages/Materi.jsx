@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import HeadingContent from "../../layouts/components/HeadingContent";
 import { BsFillCalendarWeekFill, BsFillCircleFill } from "react-icons/bs";
 import Slider from "react-slick";
@@ -15,6 +15,19 @@ import handout8 from "../../assets/img/handout/8.png";
 import Comment from "../../layouts/components/Comment";
 import { AiFillEye, AiFillHeart } from "react-icons/ai";
 import { BiSolidCloudDownload } from "react-icons/bi";
+
+import { useDispatch, useSelector } from "react-redux";
+
+import { addViewToFirestore, fetchViews } from "../../store/ViewsSlice";
+import {
+  addDownloadToFirestore,
+  fetchDownloads,
+} from "../../store/DownloadsSlice";
+import {
+  addLikeToFirestore,
+  fetchLikes,
+  getCurrentUserLike,
+} from "../../store/LikesSlice";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -38,6 +51,19 @@ const HANDOUTS = [
 ];
 
 const Materi = () => {
+  const dispatch = useDispatch();
+
+  const [page, setPage] = useState("materi");
+
+  const [data, setData] = useState({});
+
+  const users = useSelector((state) => state.users.usersArray);
+  const liked = useSelector((state) => state.likes.likesUser);
+
+  let totalViews = useSelector((state) => state.views.viewsArray);
+  let totalDownloads = useSelector((state) => state.downloads.downloadsArray);
+  let totalLikes = useSelector((state) => state.likes.likesArray);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -67,6 +93,31 @@ const Materi = () => {
 
     // Remove the <a> element from the document after it's done
     document.body.removeChild(link);
+
+    dispatch(addDownloadToFirestore(data));
+    dispatch(fetchDownloads(page));
+  };
+
+  useEffect(() => {
+    const newData = {
+      page,
+      user: users.email,
+      user_id: users.uid,
+    };
+
+    setData(newData);
+    dispatch(getCurrentUserLike(newData));
+    dispatch(addViewToFirestore(data));
+
+    dispatch(fetchViews(page));
+    dispatch(fetchDownloads(page));
+    dispatch(fetchLikes(page));
+  }, [dispatch]);
+
+  const handleLike = () => {
+    dispatch(addLikeToFirestore(data));
+    dispatch(fetchLikes(page));
+    dispatch(getCurrentUserLike(data));
   };
 
   return (
@@ -86,19 +137,19 @@ const Materi = () => {
               <div className="icon-img green">
                 <AiFillEye />
               </div>
-              <p>11 Dilihat</p>
+              <p>{totalViews.length} Dilihat</p>
             </div>
-            <div className="info">
-              <div className={`icon-img red`}>
+            <div className="info" onClick={handleLike}>
+              <div className={`icon-img red ${liked.length ? "active" : ""}`}>
                 <AiFillHeart />
               </div>
-              <p>20 Suka</p>
+              <p>{totalLikes.length} Suka</p>
             </div>
             <div className="info" onClick={handleDownload}>
               <div className="icon-img yellow">
                 <BiSolidCloudDownload />
               </div>
-              <p>Unduh Video - 11 pengunduh</p>
+              <p>Unduh Materi - {totalDownloads.length} pengunduh</p>
             </div>
           </div>
         </div>
@@ -146,7 +197,7 @@ const Materi = () => {
           </div>
         </div>
 
-        <Comment page="materi" />
+        <Comment page={page} />
       </div>
     </div>
   );

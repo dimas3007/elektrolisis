@@ -2,9 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import {
   addDoc,
   collection,
-  deleteDoc,
   getDocs,
-  updateDoc,
+  orderBy,
   serverTimestamp,
 } from "firebase/firestore";
 import { db } from "../config/firebase";
@@ -31,19 +30,16 @@ export const addExerciseToFirestore = createAsyncThunk(
 // fetch Exercise
 export const fetchExercises = createAsyncThunk(
   "exercises/fetchExercises",
-  async (user_id) => {
+  async () => {
     const querySnapshot = await getDocs(
       collection(db, "Exercises"),
       orderBy("created_at")
     );
+    console.log("ADA", querySnapshot);
     let exercises = querySnapshot.docs.map((doc) => ({
       id: doc.id,
       exercise: doc.data(),
     }));
-
-    exercises = exercises.filter((exercise) => {
-      return exercise.exercise.user_id == user_id;
-    });
 
     return exercises;
   }

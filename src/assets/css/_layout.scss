@@ -376,3 +376,21 @@
     font-size: $sm;
   }
 }
+
+table {
+  font-size: $sm;
+  border: 2px solid $dark;
+  box-shadow: $shadow;
+  thead {
+    background-color: $yellow;
+    color: $dark;
+    font-weight: $semi-bold;
+  }
+
+  tr {
+    td {
+      padding: 1rem;
+      border: 2px solid $dark;
+    }
+  }
+}
