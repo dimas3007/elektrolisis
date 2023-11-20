@@ -1,11 +1,18 @@
-.tentang-item {
-  padding: 4rem;
+.tentang {
   display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  color: $dark;
+  gap: 2rem;
 
-  p {
-    font-size: $xs;
+  .tentang-item {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    color: $dark;
+    flex: 1;
+
+    p {
+      font-size: $xs;
+      text-align: justify;
+    }
   }
 }
