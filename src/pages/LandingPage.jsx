@@ -360,9 +360,12 @@ const LandingPage = ({ openModal }) => {
         <img src={logoWhite} alt="" />
         <p className="copyright">Copyright © 2023 ucode.id</p>
         <ul className="sitemap">
-          <li>Privacy Policy</li>
-          <li>Copyright</li>
-          <li>About Us</li>
+          <li>
+            <Link to={"/tentang"}>Privacy Policy</Link>
+          </li>
+          <li>
+            <Link to={"/tentang"}>Tentang Kami</Link>
+          </li>
         </ul>
       </footer>
     </>

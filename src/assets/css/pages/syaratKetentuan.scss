@@ -1,0 +1,25 @@
+.syarat-ketentuan {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 0 12rem;
+  font-size: $sm;
+  color: $dark;
+
+  ul {
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    ul {
+      margin-left: 4rem;
+      list-style-type: decimal;
+    }
+
+    li {
+      .title {
+        font-weight: bold;
+      }
+    }
+  }
+}
