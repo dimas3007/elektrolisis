@@ -32,21 +32,61 @@
     }
   }
 
-  // h1 {
-  //   padding: 1.2rem;
-  //   border-radius: 1.5rem;
-  //   background-color: $yellow;
-  //   border: 2px solid $dark;
-  //   text-transform: uppercase;
-  //   font-size: $sm;
-  //   cursor: pointer;
-  //   font-weight: $bold;
-  // }
-
   a {
     font-size: $sm;
     font-weight: $bold;
     color: $dark;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    .brand {
+      padding: 0.5rem 0;
+      img {
+        height: 2rem;
+      }
+    }
+
+    .author {
+      .user-img {
+        img {
+          height: 2rem !important;
+          width: 2rem !important;
+        }
+      }
+
+      .user-info {
+        h3 {
+          font-size: $sm !important;
+        }
+
+        p {
+          font-size: $xxs !important;
+        }
+      }
+
+      &.header {
+        h3 {
+          font-size: $xxs !important;
+        }
+
+        p {
+          font-size: $xxxs !important ;
+        }
+      }
+
+      .btn-red {
+        font-size: $xxs !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    .brand {
+      padding: 0.5rem 0;
+      img {
+        height: 2rem;
+      }
+    }
   }
 }
 

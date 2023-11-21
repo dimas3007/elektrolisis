@@ -145,6 +145,55 @@
       }
     }
   }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    h1 {
+      font-size: $rg;
+    }
+
+    img {
+      &.people {
+        height: 20%;
+      }
+
+      &.tool {
+        height: 10%;
+      }
+
+      &.lamp {
+        height: 5%;
+      }
+      height: 4%;
+    }
+
+    p {
+      font-size: $xxs;
+    }
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    h1 {
+      font-size: $xs;
+    }
+
+    img {
+      &.people {
+        height: 10%;
+      }
+
+      &.tool {
+        height: 6%;
+      }
+
+      &.lamp {
+        height: 3%;
+      }
+    }
+
+    p {
+      font-size: $xxxs;
+    }
+  }
 }
 
 .content-wrap {
@@ -205,6 +254,89 @@
       p {
         font-weight: $thin;
         font-size: $sm;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    gap: 4rem;
+    padding: 2rem;
+
+    .item {
+      gap: 1rem;
+      flex-basis: calc(45% - 10px);
+
+      .icon {
+        height: 5rem;
+        width: 5rem;
+
+        img {
+          height: 3rem;
+        }
+      }
+
+      .content {
+        padding: 2rem;
+        border-radius: 2rem;
+
+        .header {
+          margin-bottom: 1rem;
+        }
+
+        .title {
+          font-size: $sm;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: $xs;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    gap: 4rem;
+    padding: 2rem;
+    margin-top: 4rem;
+
+    .item {
+      gap: 1rem;
+      flex-basis: calc(45% - 10px);
+
+      h1 {
+        font-size: $rg;
+      }
+
+      .icon {
+        height: 5rem;
+        width: 5rem;
+
+        img {
+          height: 3rem;
+        }
+      }
+
+      .content {
+        padding: 2rem;
+        border-radius: 2rem;
+
+        .header {
+          margin-bottom: 1rem;
+        }
+
+        .title {
+          font-size: $sm;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: $xxxs;
+        }
+      }
+
+      .btn-primary {
+        font-size: $xxxs !important;
       }
     }
   }
