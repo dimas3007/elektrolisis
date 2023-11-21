@@ -111,7 +111,7 @@ const VideoTutorial = () => {
   };
 
   const handleDownloadExcel = () => {
-    const fileName = "/src/assets/doc/elektrolisis.xlsx"; // Ganti 'nama_file.xlsx' dengan nama file Excel Anda
+    const fileName = "/assets/doc/elektrolisis.xlsx"; // Ganti 'nama_file.xlsx' dengan nama file Excel Anda
 
     fetch(fileName)
       .then((response) => response.blob())
