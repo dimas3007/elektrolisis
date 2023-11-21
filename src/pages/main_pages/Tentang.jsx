@@ -4,7 +4,7 @@ import HeadingContent from "../../layouts/components/HeadingContent";
 const Tentang = () => {
   return (
     <div>
-      <HeadingContent title="Tentang" />
+      <HeadingContent title="Tentang" showAuthor={false} />
 
       <div className="main-content">
         <div className="tentang">

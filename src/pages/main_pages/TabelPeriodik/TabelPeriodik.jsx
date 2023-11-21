@@ -437,7 +437,7 @@ const TabelPeriodik = () => {
 
   return (
     <div>
-      <HeadingContent title="Tabel Periodik" />
+      <HeadingContent title="Tabel Periodik" showAuthor={false} />
 
       <main>
         <section className="group-period">
