@@ -37,7 +37,7 @@ const HasilLatihan = () => {
                 <td>{item.exercise.user_id}</td>
                 <td>{item.exercise.user}</td>
                 <td>{item.exercise.score}</td>
-                <td>{formatTimestamp(item.exercise.created_at)}</td>
+                <td>{/* {formatTimestamp(item.exercise.created_at)} */}</td>
               </tr>
             ))}
           </tbody>

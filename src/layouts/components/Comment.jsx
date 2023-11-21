@@ -52,7 +52,7 @@ const Comment = ({ page = "mind-map" }) => {
           <div className="comment-item" key={comment.comment.id}>
             <div className="comment-header">
               <h2>{comment.comment.user}</h2>
-              <span>{formatTimestamp(comment.comment.created_at)}</span>
+              <span>{/* {formatTimestamp(comment.comment.created_at)} */}</span>
             </div>
             <p>{comment.comment.comment}</p>
           </div>
