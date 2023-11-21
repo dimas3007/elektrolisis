@@ -75,7 +75,7 @@ const ExcelDownload = () => {
         const url = window.URL.createObjectURL(new Blob([blob]));
         const a = document.createElement("a");
         a.href = url;
-        a.download = "Elektrolisis.xlsx";
+        a.download = "ELEKTROLISIS_26_10_2023.xlsx";
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);
