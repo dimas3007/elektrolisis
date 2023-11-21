@@ -30,6 +30,16 @@
       // margin-left: -3rem;
       // padding: 2rem;
     }
+
+    .logo-mini {
+      display: none;
+      visibility: hidden;
+    }
+
+    .logo-full {
+      display: block;
+      visibility: visible;
+    }
   }
 
   a {
@@ -40,9 +50,24 @@
 
   @media screen and (min-width: $tablet) and (max-width: $desktop) {
     .brand {
-      padding: 0.5rem 0;
+      background-color: transparent;
+      padding: 0;
+      border: 0px;
+      border-radius: none;
+      box-shadow: none;
+
       img {
-        height: 2rem;
+        height: 4rem;
+      }
+
+      .logo-full {
+        display: none;
+        visibility: hidden;
+      }
+
+      .logo-mini {
+        display: block;
+        visibility: visible;
       }
     }
 
@@ -82,9 +107,56 @@
 
   @media screen and (min-width: $mobile) and (max-width: $tablet) {
     .brand {
-      padding: 0.5rem 0;
+      background-color: transparent;
+      padding: 0;
+      border: 0px;
+      border-radius: none;
+      box-shadow: none;
       img {
-        height: 2rem;
+        height: 4rem;
+      }
+
+      .logo-full {
+        display: none;
+        visibility: hidden;
+      }
+
+      .logo-mini {
+        display: block;
+        visibility: visible;
+      }
+    }
+
+    .author {
+      .user-img {
+        img {
+          height: 2rem !important;
+          width: 2rem !important;
+        }
+      }
+
+      .user-info {
+        h3 {
+          font-size: $sm !important;
+        }
+
+        p {
+          font-size: $xxs !important;
+        }
+      }
+
+      &.header {
+        h3 {
+          font-size: $xxs !important;
+        }
+
+        p {
+          font-size: $xxxs !important ;
+        }
+      }
+
+      .btn-red {
+        font-size: $xxs !important;
       }
     }
   }

@@ -29,9 +29,15 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         dispatch(addUser(user));
-        navigate("/", {
-          notification: { message: "Login berhasil", type: "success" },
-        });
+        if ((user.email = "admin123@gmail.com")) {
+          navigate("/admin/hasil-latihan", {
+            notification: { message: "Login berhasil", type: "success" },
+          });
+        } else {
+          navigate("/", {
+            notification: { message: "Login berhasil", type: "success" },
+          });
+        }
       })
       .catch((error) => {
         dispatch(deleteUser());
@@ -59,14 +65,13 @@ const Login = () => {
 
     try {
       const response = await signInWithGooglePopup();
-      console.log(response);
-      dispatch(addUser(response));
-      // navigate("/", {
-      //   notification: { message: "Login berhasil", type: "success" },
-      // });
+      const user = response.user;
+      dispatch(addUser(user));
+      navigate("/", {
+        notification: { message: "Login berhasil", type: "success" },
+      });
     } catch (error) {
       dispatch(deleteUser());
-      console.error("Gagal autentikasi dengan Google", error);
       setIsOpen(true);
       setTimeout(() => {
         setIsOpen(false);

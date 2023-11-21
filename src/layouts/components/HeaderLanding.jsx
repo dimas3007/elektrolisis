@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { IoIosHelpCircle, IoMdLogOut } from "react-icons/io";
 import logo from "../../assets/img/logo/logo.png";
+import logoMini from "../../assets/img/logo/logo_mini.png";
 import iconTentang from "../../assets/img/icon/tentang_kami.png";
 
 import { signOut } from "firebase/auth";
@@ -32,7 +33,8 @@ const HeaderLanding = ({ openModal }) => {
     <header className="header-top">
       <div className="brand">
         <Link to={"/"}>
-          <img src={logo} alt="" />
+          <img src={logo} alt="" className="logo-full" />
+          <img src={logoMini} alt="" className="logo-mini" />
         </Link>
       </div>
       <div className="action">
