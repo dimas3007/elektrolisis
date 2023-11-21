@@ -18,21 +18,22 @@ const Tentang = () => {
               Negeri Model Banda Aceh. Sekolah Menengah Atas diselesaikan di SMA
               Negeri 3 Banda Aceh pada tahun 2020. Tahun 2020 menempuh bangku
               perkuliahan Jurusan Pendidikan Kimia FKIP Universitas Syiah Kuala
-              hingga sekarang. Website ini merupakan salah satu media penelitian
-              yang dikembangkan untuk melengkapi tugas-tugas dan memenuhi
-              syarat-syarat guna memperoleh gelar Sarjana Pendidikan dengan
-              judul skripsi yaitu Pengembangan Media Pembelajaran Excel
-              Elektrolisis Interaktif Berbasis Website.
+              hingga sekarang. <i>Website</i> ini merupakan salah satu media
+              penelitian yang dikembangkan untuk melengkapi tugas-tugas dan
+              memenuhi syarat-syarat guna memperoleh gelar Sarjana Pendidikan
+              dengan judul skripsi yaitu Pengembangan Media Pembelajaran{" "}
+              <i>Excel</i>
+              Elektrolisis Interaktif Berbasis <i>Website</i>.
             </p>
           </div>
           <div className="tentang-item">
             <h2>UCODE.ID</h2>
             <p>
-              <b>ucode.id</b>, merupakan sebuah tim untuk web development,
-              software engineering, dan desain UI/UX. Dengan lebih dari empat
-              tahun pengalaman dalam industri ini, kami adalah para praktisi
-              berpengalaman yang siap membantu Anda mencapai tujuan teknologi
-              Anda.
+              <b>ucode.id</b>, merupakan sebuah tim untuk <i>web development</i>
+              , <i>software engineering</i>, dan desain <i>UI/UX</i>. Dengan
+              lebih dari empat tahun pengalaman dalam industri ini, kami adalah
+              para praktisi berpengalaman yang siap membantu Anda mencapai
+              tujuan teknologi Anda.
             </p>
             <p>
               Kami memiliki komitmen yang kuat terhadap profesionalisme dan
