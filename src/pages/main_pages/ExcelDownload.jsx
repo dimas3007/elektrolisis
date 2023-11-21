@@ -67,7 +67,7 @@ const ExcelDownload = () => {
   };
 
   const handleDownload = () => {
-    const fileName = "/assets/doc/elektrolisis.xlsx"; // Ganti 'nama_file.xlsx' dengan nama file Excel Anda
+    const fileName = "/elektrolisis.xlsx";
 
     fetch(fileName)
       .then((response) => response.blob())
