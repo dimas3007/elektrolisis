@@ -53,6 +53,7 @@ const HANDOUTS = [
 const Materi = () => {
   const dispatch = useDispatch();
 
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [page, setPage] = useState("materi");
 
   const [data, setData] = useState({});
@@ -73,29 +74,22 @@ const Materi = () => {
     lazyLoad: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    afterChange: (index) => {
+      setCurrentSlide(index);
+    },
   };
 
   const handleDownload = () => {
-    // Tentukan path file ZIP yang akan diunduh
-    const zipFilePath = "/handout.zip";
-
-    // Create a URL for the ZIP file
-    const downloadUrl = window.location.origin + zipFilePath;
-
-    // Create an <a> element to trigger the download
+    const imageUrl = HANDOUTS[currentSlide]; // Replace with your image URL
     const link = document.createElement("a");
-    link.href = downloadUrl;
-    link.download = "handout.zip";
-
-    // Append the <a> element to the document and click it programmatically
-    document.body.appendChild(link);
+    link.href = imageUrl;
+    link.download = `handout-${currentSlide + 1}.jpg`; // Specify the name for the downloaded file
     link.click();
-
-    // Remove the <a> element from the document after it's done
-    document.body.removeChild(link);
 
     dispatch(addDownloadToFirestore(data));
     dispatch(fetchDownloads(page));
+
+    console.log("HAHA", currentSlide);
   };
 
   useEffect(() => {

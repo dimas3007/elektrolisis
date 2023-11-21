@@ -4,12 +4,13 @@ import {
   BsFillPlayFill,
   BsCollectionPlay,
 } from "react-icons/bs";
-import { AiFillEye, AiFillHeart } from "react-icons/ai";
+import { AiFillEye, AiFillHeart, AiFillPlayCircle } from "react-icons/ai";
 import { BiSolidCloudDownload } from "react-icons/bi";
 import HeadingContent from "../../layouts/components/HeadingContent";
 import { FaRegFaceSmileWink } from "react-icons/fa6";
 import ExcelFoto from "../../assets/img/content/excel_screenshot.png";
 import TutorialVideo from "../../assets/video/tutorial.mp4";
+import { downloadVideo } from "../../helper/helper";
 
 import { useDispatch, useSelector } from "react-redux";
 import { addViewToFirestore, fetchViews } from "../../store/ViewsSlice";
@@ -25,8 +26,6 @@ import {
 
 import Comment from "../../layouts/components/Comment";
 import { useEffect, useState } from "react";
-
-import { downloadVideo } from "../../helper/helper";
 
 const KONTEN_VIDEO = [
   {
@@ -107,6 +106,28 @@ const VideoTutorial = () => {
 
   const handleDownload = () => {
     downloadVideo(TutorialVideo);
+    dispatch(addDownloadToFirestore(data));
+    dispatch(fetchDownloads(page));
+  };
+
+  const handleDownloadExcel = () => {
+    const fileName = "/src/assets/doc/elektrolisis.xlsx"; // Ganti 'nama_file.xlsx' dengan nama file Excel Anda
+
+    fetch(fileName)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = window.URL.createObjectURL(new Blob([blob]));
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Elektrolisis.xlsx";
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+      })
+      .catch((error) => {
+        console.error("Error downloading file:", error);
+      });
+
     dispatch(addDownloadToFirestore(data));
     dispatch(fetchDownloads(page));
   };
@@ -199,6 +220,15 @@ const VideoTutorial = () => {
             </div>
           </div>
         </div>
+        <div className="content-footer">
+          <div className="cta">
+            <button className="btn-yellow" onClick={handleDownloadExcel}>
+              <BiSolidCloudDownload />
+              Unduh file excel
+            </button>
+          </div>
+        </div>
+
         <Comment page={page} />
       </div>
     </div>

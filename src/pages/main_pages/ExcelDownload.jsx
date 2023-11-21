@@ -22,6 +22,9 @@ import {
 } from "../../store/DownloadsSlice";
 import { useEffect } from "react";
 
+import TutorialVideo from "../../assets/video/tutorial.mp4";
+import { downloadVideo } from "../../helper/helper";
+
 const ExcelDownload = () => {
   const [page, setPage] = useState("excel-download");
   const [data, setData] = useState({});
@@ -55,6 +58,12 @@ const ExcelDownload = () => {
     dispatch(addLikeToFirestore(data));
     dispatch(fetchLikes(page));
     dispatch(getCurrentUserLike(data));
+  };
+
+  const handleDownloadVideo = () => {
+    downloadVideo(TutorialVideo);
+    dispatch(addDownloadToFirestore(data));
+    dispatch(fetchDownloads(page));
   };
 
   const handleDownload = () => {
@@ -122,6 +131,12 @@ const ExcelDownload = () => {
                 <AiFillHeart />
               </div>
               <p>{totalLikes.length} Suka</p>
+            </div>
+            <div className="info" onClick={handleDownloadVideo}>
+              <div className="icon-img yellow">
+                <BiSolidCloudDownload />
+              </div>
+              <p>Unduh Video - {totalDownloads.length} pengunduh</p>
             </div>
           </div>
         </div>
@@ -194,10 +209,6 @@ const ExcelDownload = () => {
             <button className="btn-yellow" onClick={handleDownload}>
               <BiSolidCloudDownload />
               Unduh file excel
-            </button>
-            <button className="btn-primary">
-              <AiFillPlayCircle />
-              Lihat video tutorial
             </button>
           </div>
         </div>

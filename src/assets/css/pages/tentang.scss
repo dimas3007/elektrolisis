@@ -3,12 +3,15 @@
   gap: 2rem;
 
   .tentang-item {
-    padding: 2rem;
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
     color: $dark;
     flex: 1;
+    background-color: $cream;
+    border: 2px solid $dark;
+    box-shadow: $shadow;
 
     p {
       font-size: $xs;
