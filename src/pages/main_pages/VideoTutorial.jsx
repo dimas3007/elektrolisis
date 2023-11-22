@@ -30,35 +30,35 @@ import { useEffect, useState } from "react";
 const KONTEN_VIDEO = [
   {
     name: "Standar Kompetensi",
-    video: 62,
+    video: 70,
   },
   {
     name: "Kompetensi Dasar",
-    video: 72,
+    video: 105,
   },
   {
     name: "Indikator",
-    video: 79,
+    video: 113,
   },
   {
     name: "Tujuan Eksperimen",
-    video: 104,
+    video: 133,
   },
   {
     name: "Alat dan Bahan",
-    video: 129,
+    video: 154,
   },
   {
     name: "Video",
-    video: 170,
+    video: 175,
   },
   {
     name: "Elektrolisis Interaktif",
-    video: -1,
+    video: 203,
   },
   {
     name: "Stoikiometri",
-    video: -1,
+    video: 231,
   },
 ];
 

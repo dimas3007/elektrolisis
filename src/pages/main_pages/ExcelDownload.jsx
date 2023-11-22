@@ -22,6 +22,41 @@ import {
 } from "../../store/DownloadsSlice";
 import { useEffect } from "react";
 
+const KONTEN_VIDEO = [
+  {
+    name: "Standar Kompetensi",
+    video: 70,
+  },
+  {
+    name: "Kompetensi Dasar",
+    video: 105,
+  },
+  {
+    name: "Indikator",
+    video: 113,
+  },
+  {
+    name: "Tujuan Eksperimen",
+    video: 133,
+  },
+  {
+    name: "Alat dan Bahan",
+    video: 154,
+  },
+  {
+    name: "Video",
+    video: 175,
+  },
+  {
+    name: "Elektrolisis Interaktif",
+    video: 203,
+  },
+  {
+    name: "Stoikiometri",
+    video: 231,
+  },
+];
+
 import TutorialVideo from "../../assets/video/tutorial.mp4";
 import { downloadVideo } from "../../helper/helper";
 
@@ -64,6 +99,13 @@ const ExcelDownload = () => {
     downloadVideo(TutorialVideo);
     dispatch(addDownloadToFirestore(data));
     dispatch(fetchDownloads(page));
+  };
+
+  const handleMateriButton = (to) => {
+    let video = document.getElementById("tutorial_video");
+
+    video.currentTime = to;
+    video.play();
   };
 
   const handleDownload = () => {
@@ -165,38 +207,16 @@ const ExcelDownload = () => {
             materi terkait.
           </p>
           <div className="part-wrapper">
-            <div className="part-item">
-              <BsFillPlayFill />
-              <h4>Materi xxxxx1</h4>
-            </div>
-            <div className="part-item">
-              <BsFillPlayFill />
-              <h4>Materi xxxxx2</h4>
-            </div>
-            <div className="part-item">
-              <BsFillPlayFill />
-              <h4>Materi xxxxx3</h4>
-            </div>
-            <div className="part-item">
-              <BsFillPlayFill />
-              <h4>Materi xxxxx4</h4>
-            </div>
-            <div className="part-item">
-              <BsFillPlayFill />
-              <h4>Materi xxxxx5</h4>
-            </div>
-            <div className="part-item">
-              <BsFillPlayFill />
-              <h4>Materi xxxxx6</h4>
-            </div>
-            <div className="part-item">
-              <BsFillPlayFill />
-              <h4>Materi xxxxx7</h4>
-            </div>
-            <div className="part-item">
-              <BsFillPlayFill />
-              <h4>Materi xxxxx8</h4>
-            </div>
+            {KONTEN_VIDEO.map((konten, key) => (
+              <div
+                className="part-item"
+                onClick={() => handleMateriButton(konten.video)}
+                key={key}
+              >
+                <BsFillPlayFill />
+                <h4>{konten.name}</h4>
+              </div>
+            ))}
           </div>
         </div>
         <div className="content-footer">
