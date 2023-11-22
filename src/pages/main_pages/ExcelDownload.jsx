@@ -100,15 +100,10 @@ const ExcelDownload = () => {
       />
 
       <div className="overview stack">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/Nc3ZhSlGU_s"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-          allowfullscreen
-        ></iframe>
+        <video id="tutorial_video" controls>
+          <source src={TutorialVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <div className="main-content">
