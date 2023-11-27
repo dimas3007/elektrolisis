@@ -1,0 +1,39 @@
+.dashboard-wrap {
+  display: flex;
+  gap: 2rem;
+
+  .dashboard-item {
+    padding: 2rem 4rem;
+    background-color: $cream;
+    border: 2px solid $dark;
+    box-shadow: $shadow;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    .icon {
+      background-color: $yellow;
+      border-radius: 50rem;
+      padding: 1rem;
+      color: $dark;
+      font-weight: $bold;
+      border: 2px solid $dark;
+      box-shadow: $shadow;
+    }
+
+    .info {
+      span {
+        color: $dark;
+        font-weight: $semi-bold;
+        font-size: $sm;
+      }
+
+      h1 {
+        color: $dark;
+        font-weight: $bold;
+        font-size: $xxl;
+        text-shadow: 2px 2px $yellow;
+      }
+    }
+  }
+}

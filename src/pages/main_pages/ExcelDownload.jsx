@@ -24,40 +24,64 @@ import { useEffect } from "react";
 
 const KONTEN_VIDEO = [
   {
-    name: "Standar Kompetensi",
-    video: 70,
+    name: "Pengertian Sel Elektrolisis",
+    video: 32,
   },
   {
-    name: "Kompetensi Dasar",
-    video: 105,
+    name: "Excel Elektrolisis Interaktif",
+    video: 56,
   },
   {
-    name: "Indikator",
-    video: 113,
+    name: "Pengertian Anoda",
+    video: 84,
   },
   {
-    name: "Tujuan Eksperimen",
-    video: 133,
+    name: "Pengertian Katoda",
+    video: 94,
   },
   {
-    name: "Alat dan Bahan",
-    video: 154,
+    name: "Reaksi Pada Katoda",
+    video: 156,
   },
   {
-    name: "Video",
-    video: 175,
+    name: "Reaksi Pada Anoda",
+    video: 180,
   },
   {
-    name: "Elektrolisis Interaktif",
-    video: 203,
+    name: "Materi Sel Elektrolisis",
+    video: 221,
   },
   {
     name: "Stoikiometri",
-    video: 231,
+    video: 238,
+  },
+  {
+    name: "Massa dan Volume",
+    video: 295,
+  },
+  {
+    name: "Waktu Maksimum",
+    video: 336,
+  },
+  {
+    name: "Quantitas",
+    video: 357,
+  },
+  {
+    name: "Laju Reaksi, Konsentrasi dan pH",
+    video: 367,
+  },
+  {
+    name: "Mengganti Sampel",
+    video: 383,
+  },
+  {
+    name: "Lelehan",
+    video: 396,
   },
 ];
 
-import TutorialVideo from "../../assets/video/tutorial.mp4";
+import TutorialVideo from "../../assets/video/materi.mp4";
 import { downloadVideo } from "../../helper/helper";
 
 const ExcelDownload = () => {

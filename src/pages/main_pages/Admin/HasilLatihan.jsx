@@ -13,8 +13,6 @@ const HasilLatihan = () => {
     dispatch(fetchExercises());
   }, [dispatch]);
 
-  console.log("HAHA", exercises);
-
   return (
     <div>
       <HeadingContent title="Admin - Hasil Latihan" />

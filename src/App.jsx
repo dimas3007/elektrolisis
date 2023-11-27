@@ -6,8 +6,7 @@ import Materi from "./pages/main_pages/Materi";
 import PetaKonsep from "./pages/main_pages/PetaKonsep";
 import Tentang from "./pages/main_pages/Tentang";
 import TabelPeriodik from "./pages/main_pages/TabelPeriodik/TabelPeriodik";
-import ContentLayout from "./layouts/ContentLayout";
-import LandingLayout from "./layouts/LandingLayout";
+
 import Angket from "./pages/main_pages/Angket/Angket";
 import AngketContent from "./pages/main_pages/Angket/AngketContent";
 import TekaTekiSilang from "./pages/main_pages/Latihan/TekaTekiSilang";
@@ -22,6 +21,13 @@ import { FaTimes } from "react-icons/fa";
 
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
+
+import ContentLayout from "./layouts/ContentLayout";
+import LandingLayout from "./layouts/LandingLayout";
+import AdminLayout from "./layouts/AdminLayout";
+
+import ManageUsers from "./pages/main_pages/Admin/ManageUsers";
+import Dashboard from "./pages/main_pages/Admin/Dashboard";
 
 function App() {
   const [modalIsOpen, setIsOpen] = useState(true);
@@ -58,8 +64,12 @@ function App() {
           <Route path="/angket" element={<Angket />} />
           <Route path="/angket/content/:angket" element={<AngketContent />} />
           <Route path="/tentang" element={<Tentang />} />
-          <Route path="/admin/hasil-latihan" element={<HasilLatihan />} />
           <Route path="/syarat-ketentuan" element={<PrivacyPolicy />} />
+        </Route>
+        <Route element={<AdminLayout openModal={openModal} />}>
+          <Route path="/admin/hasil-latihan" element={<HasilLatihan />} />
+          <Route path="/admin/manage-user" element={<ManageUsers />} />
+          <Route path="/admin" element={<Dashboard />} />
         </Route>
       </Routes>
       <Modal isOpen={modalIsOpen}>

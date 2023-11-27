@@ -1,4 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import app from "../config/firebase";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+// fetch Users
+export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
+  const users = await app.auth().listUsers();
+  return users;
+});
 
 export const usersSlice = createSlice({
   name: "Users",
