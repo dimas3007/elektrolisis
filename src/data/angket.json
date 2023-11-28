@@ -8,17 +8,22 @@
     {
       "link": "penilaian-kelayakan-media-website",
       "name": "Angket Penilaian Kelayakan Media <i>Website</i>",
-      "google_form": "https://docs.google.com/forms/d/e/1FAIpQLSd60yBf7zpVjM92DSvuEoQAC3puxLpmdZg4fBZvV3IK0-71pQ/viewform?embedded=true"
+      "google_form": "https://docs.google.com/forms/d/e/1FAIpQLSct-yYcFxk6Q7BdnYHcRJFXZN_LoplsHGFeMpnBnSzdOJZH8w/viewform?embedded=true"
     },
     {
       "link": "angket-system-usability-scale",
       "name": "Angket <i>System Usability Scale</i> (SUS)",
-      "google_form": "https://docs.google.com/forms/d/e/1FAIpQLSdHuwPf3T7-6SwjJdK49PM86QdIh1g_sFTKRML9gGuIwUVqNw/viewform?embedded=true"
+      "google_form": "https://docs.google.com/forms/d/e/1FAIpQLSeKYV8PBg4m1kgZbxYw9SaVkdrPwDgQ0ANvgZfS-y1DH-X_aA/viewform?embedded=true"
     },
     {
       "link": "angket-tanggapan-mahasiswa",
       "name": "Angket Tanggapan Mahasiswa",
-      "google_form": "https://docs.google.com/forms/d/e/1FAIpQLSe8VD-aVxRXS7g0bKD1bo_cH2rjKTSzeLltxGXux3Fo2GDh5w/viewform?embedded=true"
+      "google_form": "https://docs.google.com/forms/d/e/1FAIpQLScdZ4gmNWQADprsBAqmh_P1fWnGLODZDts_lwlknG4wIixbyw/viewform?embedded=true"
+    },
+    {
+      "link": "penilaian-kelayakan-materi-website",
+      "name": "Angket Penilaian Kelayakan Materi <i>Website</i>",
+      "google_form": "https://docs.google.com/forms/d/e/1FAIpQLSd60yBf7zpVjM92DSvuEoQAC3puxLpmdZg4fBZvV3IK0-71pQ/viewform?embedded=true"
     }
   ]
 }
