@@ -88,8 +88,6 @@ const Materi = () => {
 
     dispatch(addDownloadToFirestore(data));
     dispatch(fetchDownloads(page));
-
-    console.log("HAHA", currentSlide);
   };
 
   useEffect(() => {

@@ -1,8 +1,10 @@
 .handout-item {
   width: 100%;
+  display: flex !important;
+  justify-content: center;
+  margin-left: 1.8rem;
 
   img {
-    width: 100%;
     cursor: grab;
 
     &:active {

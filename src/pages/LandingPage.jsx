@@ -205,9 +205,9 @@ const LandingPage = ({ openModal }) => {
       </div>
       <div className="content-wrap" id="content-wrap">
         <div className="item">
-          <div className="icon">
+          <Link to={"/peta-konsep"} className="icon">
             <img src={iconPetaKonsep} alt="" />
-          </div>
+          </Link>
           <div className="content">
             <div className="header">
               <h1>01</h1>
@@ -225,9 +225,9 @@ const LandingPage = ({ openModal }) => {
           </Link>
         </div>
         <div className="item">
-          <div className="icon">
+          <Link to={"/tabel-periodik"} className="icon">
             <img src={iconPeriodik} alt="" />
-          </div>
+          </Link>
           <div className="content">
             <div className="header">
               <h1>02</h1>
@@ -242,9 +242,9 @@ const LandingPage = ({ openModal }) => {
           </Link>
         </div>
         <div className="item">
-          <div className="icon">
+          <Link to={"/materi"} className="icon">
             <img src={iconMateri} alt="" />
-          </div>
+          </Link>
           <div className="content">
             <div className="header">
               <h1>03</h1>
@@ -260,9 +260,9 @@ const LandingPage = ({ openModal }) => {
           </Link>
         </div>
         <div className="item">
-          <div className="icon">
+          <Link to={"/video-tutorial"} className="icon">
             <img src={iconTutorial} alt="" />
-          </div>
+          </Link>
           <div className="content">
             <div className="header">
               <h1>04</h1>
@@ -281,9 +281,9 @@ const LandingPage = ({ openModal }) => {
         </div>
 
         <div className="item">
-          <div className="icon">
+          <Link to={"/excel-download"} className="icon">
             <img src={iconExcel} alt="" />
-          </div>
+          </Link>
           <div className="content">
             <div className="header">
               <h1>05</h1>
@@ -302,9 +302,9 @@ const LandingPage = ({ openModal }) => {
           </Link>
         </div>
         <div className="item">
-          <div className="icon">
+          <Link to={"/latihan"} className="icon">
             <img src={iconLatihan} alt="" />
-          </div>
+          </Link>
           <div className="content">
             <div className="header">
               <h1>06</h1>
@@ -320,9 +320,9 @@ const LandingPage = ({ openModal }) => {
           </Link>
         </div>
         <div className="item">
-          <div className="icon">
+          <Link to={"/angket"} className="icon">
             <img src={iconAngket} alt="" />
-          </div>
+          </Link>
           <div className="content">
             <div className="header">
               <h1>07</h1>
@@ -338,9 +338,9 @@ const LandingPage = ({ openModal }) => {
           </Link>
         </div>
         <div className="item">
-          <div className="icon">
+          <Link to={"/tentang"} className="icon">
             <img src={iconTentang} alt="" />
-          </div>
+          </Link>
           <div className="content">
             <div className="header">
               <h1>08</h1>
