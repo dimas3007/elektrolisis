@@ -63,11 +63,11 @@
       "sub": [],
       "question_addon": "",
       "options": [
+        "Muatan arus listrik",
         "Arus yang digunakan",
         "Jangka waktu elektrolisis",
         "Muatan ion",
-        "Massa molar",
-        "Muatan arus listrik"
+        "Massa molar"
       ],
       "correctAnswer": "Muatan arus listrik"
     },
