@@ -59,17 +59,23 @@ textarea {
 }
 
 .slick-prev {
-  left: 3%;
+  left: 2%;
   z-index: 1;
 }
 
 .slick-next {
-  right: 3%;
+  right: 2%;
   z-index: 1;
 }
 
 .slick-prev,
 .slick-next {
+  font-size: $xs;
+  color: $dark;
+
+  h6 {
+    margin-top: 1.6rem;
+  }
   &::before {
     color: $yellow;
     background-color: $dark;

@@ -31,12 +31,20 @@ import {
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
-  return <div className={className} style={{ ...style }} onClick={onClick} />;
+  return (
+    <div className={className} style={{ ...style }} onClick={onClick}>
+      <h6>Selanjutnya</h6>
+    </div>
+  );
 }
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
-  return <div className={className} style={{ ...style }} onClick={onClick} />;
+  return (
+    <div className={className} style={{ ...style }} onClick={onClick}>
+      <h6>Sebelumnya</h6>
+    </div>
+  );
 }
 
 const HANDOUTS = [
