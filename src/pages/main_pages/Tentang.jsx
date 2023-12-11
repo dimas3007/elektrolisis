@@ -55,6 +55,10 @@ const Tentang = () => {
               beragam proyek, yang mencerminkan kompetensi dan dedikasi kami
               dalam memberikan solusi yang sesuai dengan kebutuhan klien.
             </p>
+            <p>
+              Instagram:{" "}
+              <a href="https://www.instagram.com/ucode.id/">ucode.id</a>
+            </p>
           </div>
         </div>
       </div>
