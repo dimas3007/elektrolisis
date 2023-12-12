@@ -124,6 +124,7 @@ const Soal = () => {
                   <div key={index} className="rincian-item">
                     <div>
                       <p
+                        className="rincian-question"
                         dangerouslySetInnerHTML={{
                           __html: index + 1 + ". " + question.question,
                         }}
