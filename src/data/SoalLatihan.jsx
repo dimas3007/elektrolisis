@@ -4,7 +4,7 @@ const SoalLatihan = {
   soalData: [
     {
       question:
-        "Pada elektrolisis lelehan MgCl<sub>2</sub> menggunakan elektroda grafit, pada katoda dan anoda berturut-turut dibebaskan...",
+        "Jika terjadi elektrolisis dari lelehan MgCl<sub>2</sub> menggunakan elektroda grafit, maka pada katoda dan anoda berturut-turut dibebaskan...",
       options: [
         "H<sub>2</sub> dan Cl<sub>2</sub>",
         "H<sub>2</sub> dan O<sub>2</sub>",
