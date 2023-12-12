@@ -36,14 +36,14 @@ const SoalLatihan = {
       sub: [],
       question_addon: "",
       options: [
-        "1= Ag, 2= Ag<sup>+</sup>, 3= AlPO<sub>4</sub> (<i>aq</i>), 4= H<sub>2</sub>, 5= Cu",
+        "1= Ag, 2= H<sub>2</sub>, 3= AlPO<sub>4</sub> (<i>aq</i>), 4= Cu<sup>2</sup><sup>+</sup>, 5= Cu",
         "1= Ag, 2= H<sub>2</sub>, 3= AlPO<sub>4</sub> (<i>aq</i>), 4= H<sub>2</sub>, 5= Cu",
         "1= Cu, 2= Cu<sup>2</sup><sup>+</sup>, 3= AlPO<sub>4</sub> (<i>l</i>), 4= Ag<sup>+</sup>, 5= Ag",
         "1= Cu, 2= Cu<sup>2</sup><sup>+</sup>, 3= AlPO<sub>4</sub> (<i>l</i>), 4= Ag<sup>+</sup>, 5= H<sub>2</sub>",
         "1= Cu, 2= H<sub>2</sub>, 3= AlPO<sub>4</sub> (<i>aq</i>), 4= Ag<sup>+</sup>, 5= Ag",
       ],
       correctAnswer:
-        "1= Ag, 2= Ag<sup>+</sup>, 3= AlPO<sub>4</sub> (<i>aq</i>), 4= H<sub>2</sub>, 5= Cu",
+        "1= Ag, 2= H<sub>2</sub>, 3= AlPO<sub>4</sub> (<i>aq</i>), 4= Cu<sup>2</sup><sup>+</sup>, 5= Cu",
       img: soal3Img,
     },
     {
