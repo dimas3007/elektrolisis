@@ -145,6 +145,23 @@ pre {
     font-weight: $semi-bold;
     flex-direction: column;
     gap: 1.2rem;
+
+    img {
+      max-width: 350px;
+    }
+
+    .sub-question {
+      display: grid;
+      grid-template-columns: repeat(38, 1fr);
+
+      span {
+        grid-column: 1/1;
+      }
+
+      p {
+        grid-column: 2/38;
+      }
+    }
   }
 }
 
@@ -157,6 +174,7 @@ pre {
   flex-direction: column;
 
   .choice-item {
+    width: 50%;
     flex: 40%;
     border: 2px solid $dark;
     box-shadow: $shadow;
@@ -289,6 +307,10 @@ pre {
     width: 100%;
     min-width: 70rem;
     position: relative;
+
+    .sub-quest-result {
+      padding-left: 1.8rem;
+    }
   }
 
   .result-status {

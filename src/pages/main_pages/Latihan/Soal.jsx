@@ -9,15 +9,15 @@ import {
   addExerciseToFirestore,
   fetchExercises,
 } from "../../../store/ExcercisesSlice";
-import soalData from "../../../data/soal-latihan.json";
 import Back from "../../../layouts/components/Back";
+import SoalLatihan from "../../../data/SoalLatihan";
 
 const alphabets = "abcdefghijklmnopqrstuvwxyz".split("");
 
 const Soal = () => {
   const dispatch = useDispatch();
 
-  const [questions, setQuestions] = useState(soalData.soalData);
+  const [questions, setQuestions] = useState(SoalLatihan.soalData);
 
   const users = useSelector((state) => state.users.usersArray);
 
@@ -32,6 +32,7 @@ const Soal = () => {
   );
 
   const handleOptionClick = (selectedOption) => {
+    console.log(selectedOption);
     const updatedSelectedOptions = [...selectedOptions];
     updatedSelectedOptions[currentQuestion] = selectedOption;
     setSelectedOptions(updatedSelectedOptions);
@@ -122,14 +123,39 @@ const Soal = () => {
                 {questions.map((question, index) => (
                   <div key={index} className="rincian-item">
                     <div>
-                      <p>
-                        {index + 1}. {question.question}
-                      </p>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: index + 1 + ". " + question.question,
+                        }}
+                      />
+                      {question.sub
+                        ? question.sub.map((sub, item) => (
+                            <p
+                              className="sub-quest-result"
+                              dangerouslySetInnerHTML={{
+                                __html: item + 1 + ". " + sub,
+                              }}
+                            />
+                          ))
+                        : ""}
+                      {question.question_addon ? (
+                        <p
+                          className="sub-quest-result"
+                          dangerouslySetInnerHTML={{
+                            __html: question.question_addon,
+                          }}
+                        />
+                      ) : (
+                        ""
+                      )}
                       <p>
                         Jawaban Anda:{" "}
-                        <span className="result-answer">
-                          {selectedOptions[index]}
-                        </span>
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: selectedOptions[index],
+                          }}
+                          className="result-answer"
+                        />
                       </p>
                     </div>
                     <span
@@ -161,19 +187,41 @@ const Soal = () => {
                 <h3>{currentQuestion + 1}</h3>
               </div>
               <div className="question">
-                {/* <img src="#" alt="" /> */}
-                <p>{questions[currentQuestion].question}</p>
+                {questions[currentQuestion].img ? (
+                  <img src={questions[currentQuestion].img} alt="" />
+                ) : (
+                  ""
+                )}
+
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: questions[currentQuestion].question,
+                  }}
+                />
                 <div>
                   {questions[currentQuestion].sub.length
                     ? questions[currentQuestion].sub.map((sub, index) => (
-                        <p>
-                          {index + 1}. {sub}
-                        </p>
+                        <div className="sub-question">
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: index + 1 + ".",
+                            }}
+                          />
+                          <p
+                            dangerouslySetInnerHTML={{
+                              __html: sub,
+                            }}
+                          />
+                        </div>
                       ))
                     : ""}
                 </div>
                 {questions[currentQuestion]?.question_addon?.length ? (
-                  <p>{questions[currentQuestion].question_addon}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: questions[currentQuestion].question_addon,
+                    }}
+                  />
                 ) : (
                   ""
                 )}
@@ -189,7 +237,11 @@ const Soal = () => {
                   onClick={() => handleOptionClick(option)}
                 >
                   <span>{alphabets[index]}.</span>
-                  <p>{option}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: option,
+                    }}
+                  />
                 </div>
               ))}
             </div>

@@ -1,0 +1,169 @@
+import soal3Img from "../assets/img/latihan/soal-3.png";
+
+const SoalLatihan = {
+  soalData: [
+    {
+      question:
+        "Pada elektrolisis lelehan MgCl<sub>2</sub>, pada katoda dan anoda berturut-turut dibebaskan...",
+      options: [
+        "H<sub>2</sub> dan Cl<sub>2</sub>",
+        "H<sub>2</sub> dan O<sub>2</sub>",
+        "Mg dan Cl<sub>2</sub>",
+        "Mg dan H<sub>2</sub>",
+        "Mg dan O<sub>2</sub>",
+      ],
+      sub: [],
+      correctAnswer: "Mg dan Cl<sub>2</sub>",
+      img: "",
+    },
+    {
+      question: "Perhatikan proses elektrolisis berikut",
+      sub: [
+        "Elektrolisis larutan NaCl dengan elektroda C.",
+        "Elektrolisis larutan AgNO<sub>3</sub> dengan elektroda Pt.",
+        "Elektrolisis leburan KI dengan elektroda Pb.",
+        "Elektrolisis larutan K2SO<sub>4</sub> dengan elektroda C.",
+      ],
+      question_addon:
+        "Pasangan yang menghasilkan gas O<sub>2</sub> di anoda ditunjukkan oleh nomor...",
+      options: ["1 dan 2", "1 dan 3", "2 dan 3", "2 dan 4", "3 dan 4"],
+      correctAnswer: "2 dan 4",
+      img: "",
+    },
+    {
+      question:
+        "Jika larutan AlPO<sub>4</sub> direaksikan menggunakan tembaga pada anoda dan perak pada katoda, maka keterangan yang sesuai dengan angka pada gambar di atas adalah...",
+      sub: [],
+      question_addon: "",
+      options: [
+        "1= Ag, 2= Ag<sup>+</sup>, 3= AlPO<sub>4</sub> (<i>aq</i>), 4= H<sub>2</sub>, 5= Cu",
+        "1= Ag, 2= H<sub>2</sub>, 3= AlPO<sub>4</sub> (<i>aq</i>), 4= H<sub>2</sub>, 5= Cu",
+        "1= Cu, 2= Cu<sup>2</sup><sup>+</sup>, 3= AlPO<sub>4</sub> (<i>l</i>), 4= Ag<sup>+</sup>, 5= Ag",
+        "1= Cu, 2= Cu<sup>2</sup><sup>+</sup>, 3= AlPO<sub>4</sub> (<i>l</i>), 4= Ag<sup>+</sup>, 5= H<sub>2</sub>",
+        "1= Cu, 2= H<sub>2</sub>, 3= AlPO<sub>4</sub> (<i>aq</i>), 4= Ag<sup>+</sup>, 5= Ag",
+      ],
+      correctAnswer:
+        "1= Ag, 2= Ag<sup>+</sup>, 3= AlPO<sub>4</sub> (<i>aq</i>), 4= H<sub>2</sub>, 5= Cu",
+      img: soal3Img,
+    },
+    {
+      question:
+        "Pada proses elektrolisis lelehan NaCl dengan elektroda karbon digunakan arus sebesar 10 A selama 1 menit, massa logam natrium yang diperoleh adalah...",
+      sub: [],
+      question_addon: "",
+      options: ["0,07 g", "0,12 g", "0,14 g", "0,25 g", "0,36 g"],
+      correctAnswer: "0,14 g",
+      img: "",
+    },
+    {
+      question:
+        "Larutan nikel (II) sulfat dielektrolisis dengan arus sebesar 1,93 A. Maka jumlah %quantitas yang bereaksi selama 1000 detik adalah...",
+      sub: [],
+      question_addon: "",
+      options: ["1%", "1,5%", "2%", "2,5%", "3%"],
+      correctAnswer: "1%",
+      img: "",
+    },
+    {
+      question:
+        "Jika 400 mL larutan Pb(OH)<sub>2</sub> direaksikan selama 10 detik menggunakan arus sebesar 20 A, maka konsentrasi Pb<sup>2</sup><sup>+</sup> bersisa adalah sebesar ... M",
+      sub: [],
+      question_addon: "",
+      options: ["0,611 M", "0,741 M", "0,870 M", "0,974 M", "0,997 M"],
+      correctAnswer: "0,997 M",
+      img: "",
+    },
+    {
+      question:
+        "Sebanyak 2 L larutan HI direaksikan dengan kuat arus 2,95 A dan suhu yang digunakan adalah 500K selama 1 jam, maka konsentrasi yang dihasilkan sebesar 0,945 M. Konsentrasi yang dihasilkan merupakan konsentrasi dari ion...",
+      sub: [],
+      question_addon: "",
+      options: [
+        "I<sup>-</sup>",
+        "H<sup>+</sup>",
+        "H<sub>2</sub>",
+        "HI",
+        "I<sub>2</sub>",
+      ],
+      correctAnswer: "H<sup>+</sup>",
+      img: "",
+    },
+    {
+      question:
+        "Sebanyak 5 Kg ZnO dielektrolisis menggunakan anoda dan katoda tembaga dengan kuat arus 10 A selama 2 jam dan dalam keadaan STP, maka jumlah massa yang terbentuk yang benar adalah...",
+      sub: [],
+      question_addon: "",
+      options: [
+        "Massa Zn= 12,20 g",
+        "Massa O<sub>2</sub>= 16,26 g",
+        "Massa Zn= 24,39 g",
+        "Massa O<sub>2</sub>= 26,43 g",
+        "Massa Zn= 27,10 g",
+      ],
+      correctAnswer: "Massa Zn= 24,39 g",
+      img: "",
+    },
+    {
+      question:
+        "Pada elektrolisis air digunakan arus sebesar 5 A selama 120 menit dan dalam keadaan STP, maka jumlah volume pada anoda dan katoda yang dihasilkan secara berturut-turut adalah...",
+      sub: [],
+      question_addon: "",
+      options: [
+        "1,10 L dan 2,08 L",
+        "1,53 L dan 2,72 L",
+        "2,09 L dan 4,18 L",
+        "2,91 L dan 4,76 L",
+        "3,14 L dan 5,23 L",
+      ],
+      correctAnswer: "2,09 L dan 4,18 L",
+      img: "",
+    },
+    {
+      question:
+        "Pada elektrolisis lelehan Al2O<sub>3</sub> dengan elektroda tembaga, produk yang dihasilkan di katoda adalah...",
+      sub: [],
+      question_addon: "",
+      options: [
+        "O<sub>2</sub> (<i>g</i>)",
+        "Al (<i>s</i>)",
+        "Al2O<sub>3</sub> (<i>aq</i>)",
+        "Al (<i>l</i>)",
+        "O (<i>l</i>)",
+      ],
+      correctAnswer: "Al (<i>s</i>)",
+      img: "",
+    },
+    {
+      question:
+        "Pada elektrolisis larutan CuSO<sub>4</sub> dengan elektrode Pt, dialirkan arus listrik 2 A selama 965 detik, maka banyaknya logam tembaga yang dihasilkan ... gram",
+      sub: [],
+      question_addon: "",
+      options: [
+        "0,317 gram",
+        "0,421 gram",
+        "0,635 gram",
+        "0,784 gram",
+        "0,952 gram",
+      ],
+      correctAnswer: "0,635 gram",
+      img: "",
+    },
+    {
+      question:
+        "Elektrolisis 700 mL CrCl<sub>3</sub> 2 M menggunakan arus sebesar 10 A, maka waktu yang diperlukan hingga elektrolit habis bereaksi adalah...",
+      sub: [],
+      question_addon: "",
+      options: [
+        "30250 detik",
+        "35735 detik",
+        "38450 detik",
+        "40530 detik",
+        "47350 detik",
+      ],
+      correctAnswer: "40530 detik",
+      img: "",
+    },
+  ],
+};
+
+export default SoalLatihan;
