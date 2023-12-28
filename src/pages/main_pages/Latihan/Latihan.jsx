@@ -17,7 +17,7 @@ const Latihan = () => {
             </div>
             <h1>Teka Teki Silang</h1>
           </Link>
-          <Link to={"/latihan/soal"} className="latihan-item">
+          <Link to={"/latihan/pengantar-soal"} className="latihan-item">
             <div className="img">
               <img src={LatihanImg2} alt="" />
             </div>

@@ -357,3 +357,46 @@ pre {
 .guess-text-correct {
   fill: #45a049 !important;
 }
+
+.button-pengantar-latihan-wrap {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    width: 30%;
+    padding: 3rem;
+    font-size: $rg;
+  }
+}
+
+.example-text {
+  font-size: $xs;
+  color: $dark;
+  width: 50%;
+}
+
+.header-example {
+  margin-top: 4rem;
+}
+
+.example-soal {
+  padding: 3rem 0;
+  h2 {
+    font-size: $sm;
+    color: $dark;
+    background-color: $yellow;
+    width: fit-content;
+    padding: 1rem;
+    box-shadow: $shadow;
+    border: 2px solid $dark;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    width: 50%;
+    border: 2px solid $dark;
+  }
+}

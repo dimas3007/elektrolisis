@@ -28,6 +28,7 @@ import AdminLayout from "./layouts/AdminLayout";
 
 import ManageUsers from "./pages/main_pages/Admin/ManageUsers";
 import Dashboard from "./pages/main_pages/Admin/Dashboard";
+import Pengantar from "./pages/main_pages/Latihan/Pengantar";
 
 function App() {
   const [modalIsOpen, setIsOpen] = useState(true);
@@ -61,6 +62,7 @@ function App() {
           <Route path="/latihan" element={<Latihan />} />
           <Route path="/latihan/tts" element={<TekaTekiSilang />} />
           <Route path="/latihan/soal" element={<Soal />} />
+          <Route path="/latihan/pengantar-soal" element={<Pengantar />} />
           <Route path="/angket" element={<Angket />} />
           <Route path="/angket/content/:angket" element={<AngketContent />} />
           <Route path="/tentang" element={<Tentang />} />
