@@ -15,6 +15,30 @@
     box-shadow: $shadow;
     flex: 45%;
 
+    .foto {
+      display: flex;
+      gap: 1.8rem;
+      .foto-img {
+        width: 100px;
+        height: 100px;
+        box-shadow: $shadow;
+        border: 2px solid $dark;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 100%;
+        }
+
+        .up {
+          position: absolute;
+          top: 65%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
     p {
       font-size: $xs;
       text-align: justify;

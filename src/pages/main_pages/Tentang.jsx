@@ -1,5 +1,8 @@
 import React from "react";
 import HeadingContent from "../../layouts/components/HeadingContent";
+import ucodeFoto from "../../assets/img/tentang/ucode.jpg";
+import paibnuFoto from "../../assets/img/tentang/paibnu.jpg";
+import bukanaFoto from "../../assets/img/tentang/bukana.jpg";
 
 const Tentang = () => {
   return (
@@ -9,7 +12,12 @@ const Tentang = () => {
       <div className="main-content">
         <div className="tentang">
           <div className="tentang-item">
-            <h2>Putri Rahmasari</h2>
+            <div className="foto">
+              <div className="foto-img">
+                <img src={ucodeFoto} alt="" />
+              </div>
+              <h2>Putri Rahmasari</h2>
+            </div>
             <p>
               <b>Putri Rahmasari</b>, lahir di Banda Aceh pada tanggal 11
               November 2002. Sekolah dasar diselesaikan pada tahun 2014 di SD
@@ -32,7 +40,12 @@ const Tentang = () => {
             </p>
           </div>
           <div className="tentang-item">
-            <h2>UCODE.ID</h2>
+            <div className="foto">
+              <div className="foto-img">
+                <img src={ucodeFoto} alt="" />
+              </div>
+              <h2>UCODE.ID</h2>
+            </div>
             <p>
               <b>ucode.id</b> adalah tim yang dibuat oleh <b>Dimas Setiaji</b>,
               seorang praktisi berpengalaman dalam web development, software
@@ -66,7 +79,12 @@ const Tentang = () => {
             </p>
           </div>
           <div className="tentang-item">
-            <h2>Dr. Ibnu Khaldun, M.Si</h2>
+            <div className="foto">
+              <div className="foto-img">
+                <img src={paibnuFoto} alt="" />
+              </div>
+              <h2>Dr. Ibnu Khaldun, M.Si</h2>
+            </div>
             <p>
               <b>Ibnu Khaldun</b>, lahir di Pulau Banyak, Tanjungpura, Langkat
               Sumatera Utara pada tanggal 10 Oktober 1966. Pada tahun 1990
@@ -88,7 +106,12 @@ const Tentang = () => {
             </p>
           </div>
           <div className="tentang-item">
-            <h2>Kana Puspita, S.Pd., M.Si.P</h2>
+            <div className="foto">
+              <div className="foto-img">
+                <img src={bukanaFoto} alt="" className="up" />
+              </div>
+              <h2>Kana Puspita, S.Pd., M.Si.P</h2>
+            </div>
             <p>
               <b>Kana Puspita</b> merupakan dosen muda kimia di Fakultas
               Keguruan dan Ilmu Pendidikan, Universitas Syiah Kuala sejak Maret
