@@ -1,6 +1,7 @@
 .tentang {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 
   .tentang-item {
     padding: 4rem;
@@ -12,6 +13,7 @@
     background-color: $cream;
     border: 2px solid $dark;
     box-shadow: $shadow;
+    flex: 45%;
 
     p {
       font-size: $xs;
