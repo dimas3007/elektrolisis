@@ -73,10 +73,6 @@ const Tentang = () => {
               LinkedIn:{" "}
               <a href="https://www.linkedin.com/in/dimas30/">Dimas Setiaji</a>
             </p>
-            <p>
-              Instagram:{" "}
-              <a href="https://www.instagram.com/ucode.id/">ucode.id</a>
-            </p>
           </div>
           <div className="tentang-item">
             <div className="foto">
