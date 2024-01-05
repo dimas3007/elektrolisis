@@ -119,7 +119,7 @@ const VideoTutorial = () => {
         const url = window.URL.createObjectURL(new Blob([blob]));
         const a = document.createElement("a");
         a.href = url;
-        a.download = "ELEKTROLISIS_26_10_2023.xlsx";
+        a.download = "ELEKTROLISIS_5_1_2024.xlsx";
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);
