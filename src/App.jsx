@@ -111,7 +111,7 @@ function App() {
             <li>
               Jika Anda ingin mengunduh materi elektrolisis pada halaman{" "}
               <b>Materi</b>, Anda dapat mengklik tombol <b>Unduh Materi</b> yang
-              berada di bagian bawah tampilan materi yang ingin diunduh.
+              berada di bagian atas tampilan materi yang ingin diunduh.
             </li>
             <li>
               Jika Anda ingin mengunduh media <i> Excel </i> Elektrolisis
