@@ -19,11 +19,6 @@
       "link": "angket-tanggapan-mahasiswa",
       "name": "Angket Tanggapan Mahasiswa",
       "google_form": "https://docs.google.com/forms/d/e/1FAIpQLScdZ4gmNWQADprsBAqmh_P1fWnGLODZDts_lwlknG4wIixbyw/viewform?embedded=true"
-    },
-    {
-      "link": "penilaian-kelayakan-materi-website",
-      "name": "Angket Penilaian Kelayakan Materi <i>Website</i>",
-      "google_form": "https://docs.google.com/forms/d/e/1FAIpQLSd60yBf7zpVjM92DSvuEoQAC3puxLpmdZg4fBZvV3IK0-71pQ/viewform?embedded=true"
     }
   ]
 }
