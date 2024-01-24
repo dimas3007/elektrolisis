@@ -1,6 +1,7 @@
 import React from "react";
 import HeadingContent from "../../layouts/components/HeadingContent";
 import ucodeFoto from "../../assets/img/tentang/ucode.jpg";
+import putriFoto from "../../assets/img/tentang/putri.png";
 import paibnuFoto from "../../assets/img/tentang/paibnu.jpg";
 import bukanaFoto from "../../assets/img/tentang/bukana.jpg";
 
@@ -14,7 +15,7 @@ const Tentang = () => {
           <div className="tentang-item">
             <div className="foto">
               <div className="foto-img">
-                <img src={ucodeFoto} alt="" />
+                <img src={putriFoto} alt="" className="up-sm" />
               </div>
               <h2>Putri Rahmasari</h2>
             </div>

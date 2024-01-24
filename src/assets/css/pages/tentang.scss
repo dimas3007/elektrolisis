@@ -30,6 +30,13 @@
           width: 100%;
         }
 
+        .up-sm {
+          position: absolute;
+          top: 70%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
         .up {
           position: absolute;
           top: 65%;
